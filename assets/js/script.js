@@ -532,8 +532,10 @@
 			loop:true,
 			margin:30,
 			nav:true,
-			smartSpeed: 3000,
-			autoplay: 4000,
+			smartSpeed: 900,
+			autoplay: true,
+			autoplayTimeout: 4000,
+			autoplayHoverPause: true,
 			navText: [ '<span class="fa fa-caret-left"></span>', '<span class="fa fa-caret-right"></span>' ],
 			responsive:{
 				0:{

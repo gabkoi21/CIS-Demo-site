@@ -5,10 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-<title>Center for Integrated Solutions | CIS</title>
+<title>CIS | Center for Integrated Solutions</title>
 
 <!-- Fav Icon -->
-<link rel="icon" href="assets/cis-images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="assets/cis-images/cis-favicon.png" type="image/png" />
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i&display=swap" rel="stylesheet">
@@ -25,11 +25,224 @@
 <link href="assets/css/style.css" rel="stylesheet">
 <link href="assets/css/responsive.css" rel="stylesheet">
 
+<style>
+    body.cis-impact-page {
+        --cis-primary: #4DB19E;
+        --cis-secondary: #202124;
+        --cis-light: #F1F8F6;
+    }
+
+    body.cis-impact-page .loader-wrap,
+    body.cis-impact-page .page_direction,
+    body.cis-impact-page .legacy-pricing-template {
+        display: none !important;
+    }
+
+    body.cis-impact-page .main-header .main-menu .navigation > li.current > a,
+    body.cis-impact-page .main-header .main-menu .navigation > li:hover > a,
+    body.cis-impact-page .main-header .header-top li i,
+    body.cis-impact-page .main-header .header-top a:hover,
+    body.cis-impact-page .main-footer .info-list li i,
+    body.cis-impact-page .main-footer a:hover {
+        color: var(--cis-primary) !important;
+    }
+
+    body.cis-impact-page .page-title::before,
+    body.cis-impact-page .main-footer,
+    body.cis-impact-page .main-footer .footer-bottom,
+    body.cis-impact-page .mobile-menu .menu-box,
+    body.cis-impact-page .sidebar-info-contents {
+        background-color: var(--cis-secondary) !important;
+    }
+
+    body.cis-impact-page .main-footer .newsletter-form button,
+    body.cis-impact-page .scroll-top,
+    body.cis-impact-page .sidebar-info-contents .subscribe-form button {
+        border-color: var(--cis-primary) !important;
+        background: var(--cis-primary) !important;
+    }
+
+    body.cis-impact-page .main-footer .widget-title h4::before {
+        background: var(--cis-primary) !important;
+    }
+
+    body.cis-impact-page .impact-intro {
+        padding: 105px 0 70px;
+        background: #fff;
+    }
+
+    body.cis-impact-page .impact-intro .sec-title h5,
+    body.cis-impact-page .impact-sector-card .icon-box,
+    body.cis-impact-page .impact-stat .number {
+        color: var(--cis-primary);
+    }
+
+    body.cis-impact-page .impact-intro h2,
+    body.cis-impact-page .impact-sector-card h3,
+    body.cis-impact-page .impact-stat h3 {
+        color: var(--cis-secondary);
+    }
+
+    body.cis-impact-page .impact-intro .lead-copy {
+        max-width: 850px;
+        margin: 0 auto;
+        color: #55585c;
+        font-size: 18px;
+        line-height: 31px;
+        text-align: center;
+    }
+
+    body.cis-impact-page .impact-stats {
+        padding: 0 0 100px;
+        background: #fff;
+    }
+
+    body.cis-impact-page .impact-stat {
+        height: 100%;
+        padding: 35px 22px;
+        border-top: 4px solid var(--cis-primary);
+        background: var(--cis-light);
+        text-align: center;
+    }
+
+    body.cis-impact-page .impact-stat .number {
+        display: block;
+        margin-bottom: 12px;
+        font-size: 48px;
+        line-height: 1;
+        font-weight: 700;
+    }
+
+    body.cis-impact-page .impact-stat h3 {
+        font-size: 18px;
+        line-height: 27px;
+    }
+
+    body.cis-impact-page .impact-sectors {
+        padding: 100px 0 70px;
+        background: var(--cis-light);
+    }
+
+    body.cis-impact-page .impact-sectors .section-heading {
+        max-width: 760px;
+        margin: 0 auto 50px;
+        text-align: center;
+    }
+
+    body.cis-impact-page .impact-sectors .section-heading .eyebrow {
+        display: block;
+        margin-bottom: 10px;
+        color: var(--cis-primary);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    body.cis-impact-page .impact-sectors .section-heading h2 {
+        color: var(--cis-secondary);
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    body.cis-impact-page .impact-sector-column {
+        margin-bottom: 30px;
+    }
+
+    body.cis-impact-page .impact-sector-card {
+        position: relative;
+        height: 100%;
+        padding: 38px 34px;
+        overflow: hidden;
+        border: 1px solid rgba(32, 33, 36, 0.08);
+        border-radius: 8px;
+        background: #fff;
+        transition: transform 300ms ease, border-color 300ms ease;
+    }
+
+    body.cis-impact-page .impact-sector-card::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: var(--cis-primary);
+        content: "";
+    }
+
+    body.cis-impact-page .impact-sector-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(77, 177, 158, 0.45);
+    }
+
+    body.cis-impact-page .impact-sector-card .icon-box {
+        margin-bottom: 22px;
+        font-size: 38px;
+        line-height: 1;
+    }
+
+    body.cis-impact-page .impact-sector-card h3 {
+        min-height: 64px;
+        margin-bottom: 14px;
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    body.cis-impact-page .impact-sector-card p {
+        margin: 0;
+        color: #5c6064;
+        line-height: 28px;
+    }
+
+    body.cis-impact-page .impact-commitment {
+        padding: 85px 0;
+        background: var(--cis-secondary);
+        text-align: center;
+    }
+
+    body.cis-impact-page .impact-commitment h2,
+    body.cis-impact-page .impact-commitment p {
+        color: #fff;
+    }
+
+    body.cis-impact-page .impact-commitment p {
+        max-width: 760px;
+        margin: 18px auto 28px;
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 17px;
+        line-height: 29px;
+    }
+
+    body.cis-impact-page .impact-commitment .theme-btn {
+        background: var(--cis-primary);
+        color: #fff;
+    }
+
+    @media only screen and (max-width: 767px) {
+        body.cis-impact-page .impact-intro,
+        body.cis-impact-page .impact-sectors {
+            padding-top: 75px;
+        }
+
+        body.cis-impact-page .impact-stat {
+            margin-bottom: 20px;
+        }
+
+        body.cis-impact-page .impact-sectors .section-heading h2 {
+            font-size: 32px;
+            line-height: 41px;
+        }
+
+        body.cis-impact-page .impact-sector-card h3 {
+            min-height: 0;
+        }
+    }
+</style>
+
 </head>
 
 
 <!-- page wrapper -->
-<body class="boxed_wrapper ltr">
+<body class="boxed_wrapper ltr cis-impact-page">
 
     <!-- Preloader -->
     <div class="loader-wrap">
@@ -291,7 +504,7 @@
                 <h1>Impact</h1>
                 <ul class="bread-crumb clearfix">
                     <li><a href="index.html">Home</a></li>
-                    <li>Pricing Plans</li>
+                    <li>Impact</li>
                 </ul>
             </div>
         </div>
@@ -299,8 +512,130 @@
     <!--End Page Title-->
 
 
-    <!-- pricing-section -->
-    <section class="pricing-section pricing-page">
+    <!-- impact overview -->
+    <section class="impact-intro">
+        <div class="auto-container">
+            <div class="sec-title centred">
+                <h5>Our Impact</h5>
+                <h2>Local Knowledge. Practical Solutions. Lasting Progress.</h2>
+            </div>
+            <p class="lead-copy">
+                CIS turns evidence, capacity strengthening, innovation, and technology into practical, locally driven
+                solutions. Across our initiatives, we equip local partners with the knowledge, systems, and tools to
+                sustain progress and continue the work.
+            </p>
+        </div>
+    </section>
+
+    <section class="impact-stats">
+        <div class="auto-container">
+            <div class="row clearfix">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="impact-stat">
+                        <span class="number">13+</span>
+                        <h3>Years of Direct Support</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="impact-stat">
+                        <span class="number">8+</span>
+                        <h3>Counties Supported</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="impact-stat">
+                        <span class="number">30+</span>
+                        <h3>Community Programs Completed</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="impact-stat">
+                        <span class="number">3</span>
+                        <h3>Core Methodological Approaches</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="impact-sectors">
+        <div class="auto-container">
+            <div class="section-heading">
+                <span class="eyebrow">Impact by Sector</span>
+                <h2>Integrated Solutions That Strengthen Systems and Communities</h2>
+            </div>
+            <div class="row clearfix">
+                <div class="col-lg-4 col-md-6 col-sm-12 impact-sector-column">
+                    <article class="impact-sector-card">
+                        <div class="icon-box"><i class="fas fa-book-reader"></i></div>
+                        <h3>Education</h3>
+                        <p>
+                            We partner with Liberia's Ministry of Education and other stakeholders to expand access to
+                            quality learning through innovative programs and the WASSCELAB platform, helping high school
+                            students prepare for examination success.
+                        </p>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 impact-sector-column">
+                    <article class="impact-sector-card">
+                        <div class="icon-box"><i class="fas fa-heartbeat"></i></div>
+                        <h3>Health</h3>
+                        <p>
+                            We advance healthier communities by supporting public health initiatives, strengthening
+                            local capacity, and improving access to quality health information and services that build
+                            well-being and resilience.
+                        </p>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 impact-sector-column">
+                    <article class="impact-sector-card">
+                        <div class="icon-box"><i class="fas fa-laptop-code"></i></div>
+                        <h3>Innovation, Science &amp; Technology</h3>
+                        <p>
+                            We foster innovation through digital skills, youth-led technology initiatives, and solutions
+                            such as WASSCELAB, working with partners to prepare Liberia for a technology-driven future.
+                        </p>
+                    </article>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 impact-sector-column">
+                    <article class="impact-sector-card">
+                        <div class="icon-box"><i class="fas fa-landmark"></i></div>
+                        <h3>Democracy &amp; Governance</h3>
+                        <p>
+                            We promote transparent and participatory governance through civic education, leadership
+                            development, and strategic partnerships with institutions such as the City of Monrovia and
+                            the Liberia Anti-Corruption Commission.
+                        </p>
+                    </article>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 impact-sector-column">
+                    <article class="impact-sector-card">
+                        <div class="icon-box"><i class="fas fa-users-cog"></i></div>
+                        <h3>Economic &amp; Human Capital Development</h3>
+                        <p>
+                            We support entrepreneurship, organisational growth, workforce readiness, leadership
+                            capacity, and skills development to strengthen inclusive economic progress.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="impact-commitment">
+        <div class="auto-container">
+            <h2>Build Lasting Impact With CIS</h2>
+            <p>
+                We collaborate with governments, development partners, institutions, and communities to turn evidence
+                into practical action and advance sustainable societies.
+            </p>
+            <a href="contact.html" class="theme-btn style-one">Partner With CIS</a>
+        </div>
+    </section>
+    <!-- impact overview end -->
+
+    <!-- legacy pricing template retained for theme compatibility -->
+    <section class="pricing-section pricing-page legacy-pricing-template" aria-hidden="true">
         <div class="auto-container">
             <div class="title-box">
                 <div class="row clearfix">
@@ -509,114 +844,125 @@
 
 
     <!-- main-footer -->
-    <footer class="main-footer alternet-5">
-        <div class="footer-upper">
-            <div class="auto-container">
-                <div class="upper-inner clearfix">
-                    <div class="text pull-left">
-                        <h2>Do you want to learn about us?</h2>
-                        <p>Consectetur adipisicing elit sed eiusmod tempor incididunt labore dolore magna aliqua.</p>
-                    </div>
-                    <div class="btn-box pull-right">
-                        <a href="index-5.html" class="theme-btn style-one">Get In Touch Today</a>
-                    </div>
+    <footer class="main-footer alternet-2">
+      <div class="footer-top">
+        <div class="auto-container">
+          <div class="widget-section">
+            <div class="row clearfix">
+              <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                <div class="footer-widget logo-widget">
+                  <figure class="footer-logo">
+                    <a href="index.html"><img src="assets/cis-images/about/cis-logo.webp" alt="" /></a>
+                  </figure>
+                  <div class="text">
+                    <p>
+                      CIS partners with communities, institutions, and development partners to turn evidence into
+                      practical action.
+                    </p>
+                  </div>
+                  <ul class="info-list clearfix">
+                    <li>
+                      <i class="fas fa-map-marker-alt"></i>
+                      Airfield Sinkor, Monrovia, Liberia
+                    </li>
+                    <li>
+                      <i class="fas fa-envelope"></i>
+                      Email
+                      <a href="mailto:c4islib@gmail.com">c4islib@gmail.com</a>
+                    </li>
+                  </ul>
+                  <ul class="social-links clearfix">
+                    <li>
+                      <a href="index.html"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                      <a href="index.html"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                      <a href="index.html"><i class="fab fa-linkedin-in"></i></a>
+                    </li>
+                    <li>
+                      <!-- <a href="index.html"><i class="fab fa-pinterest-p"></i></a> -->
+                    </li>
+                  </ul>
                 </div>
-            </div>
-        </div>
-        <div class="footer-top">
-            <div class="auto-container">
-                <div class="widget-section">
-                    <div class="row clearfix">
-                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
-                            <div class="footer-widget logo-widget">
-                                <figure class="footer-logo"><a href="index.html"><img src="assets/cis-images/about/cis-logo.webp" alt=""></a></figure>
-                                <div class="text">
-                                    <p>CIS partners with communities, institutions, and development partners to turn evidence into practical action.</p>
-                                </div>
-                                <ul class="info-list clearfix">
-                                    <li><i class="fas fa-map-marker-alt"></i>Airfield Sinkor, Monrovia, Liberia</li>
-                                    <li><i class="fas fa-envelope"></i>Email <a href="mailto:c4islib@gmail.com">c4islib@gmail.com</a></li>
-                                    <li><i class="fas fa-headphones"></i>Support <a href="tel:01005200369"></a></li>
-                                </ul>
-                                <ul class="social-links clearfix">
-                                    <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="index.html"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="index.html"><i class="fab fa-linkedin-in"></i></a></li>
-                                    <li><a href="index.html"><i class="fab fa-pinterest-p"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
-                            <div class="footer-widget links-widget ml-70">
-                                <div class="widget-title">
-                                    <h4>Useful Links</h4>
-                                </div>
-                                <div class="widget-content">
-                                    <ul class="list clearfix">
-                                        <li><a href="index.html">About Us</a></li>
-                                        <li><a href="index.html">Our Pillars</a></li>
-                                        <li><a href="index.html">Testimonials</a></li>
-                                        <li><a href="index.html">Projects</a></li>
-                                        <li><a href="index.html">Blog</a></li>
-                                        <li><a href="index.html">Privacy Policy</a></li>
-                                        <li><a href="index.html">Contact Us</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
-                            <div class="footer-widget links-widget">
-                                <div class="widget-title">
-                                    <h4>Our Pillars</h4>
-                                </div>
-                                <div class="widget-content">
-                                    <ul class="list clearfix">
-                                        <li><a href="index.html">Education</a></li>
-                                        <li><a href="index.html">Health</a></li>
-                                        <li><a href="index.html">Democracy & Governance</a></li>
-                                        <li><a href="index.html">Economic & Human Capital</a></li>
-                                        <li><a href="index.html">Information Technology</a></li>
-                                        <li><a href="index.html">Evidence & Learning</a></li>
-                                        <li><a href="index.html">Capacity Strengthening</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
-                            <div class="footer-widget newsletter-widget">
-                                <div class="widget-title">
-                                    <h4>Stay Connected</h4>
-                                </div>
-                                <div class="widget-content">
-                                    <div class="text">
-                                        <p>Receive the latest CIS news and updates</p>
-                                    </div>
-                                    <form action="contact.html" method="post" class="newsletter-form">
-                                        <div class="form-group">
-                                            <i class="far fa-user"></i>
-                                            <input type="text" name="name" placeholder="Your Name" required="">
-                                        </div>
-                                        <div class="form-group">
-                                            <i class="far fa-envelope"></i>
-                                            <input type="email" name="email" placeholder="Email address" required="">
-                                        </div>
-                                        <div class="form-group message-btn">
-                                            <button type="submit">subscribe</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                <div class="footer-widget links-widget ml-70">
+                  <div class="widget-title">
+                    <h4>Useful Links</h4>
+                  </div>
+                  <div class="widget-content">
+                    <ul class="list clearfix">
+                      <li><a href="index.html">About Us</a></li>
+                      <li><a href="index.html">Our Pillars</a></li>
+                      <li><a href="index.html">Testimonials</a></li>
+                      <li><a href="index.html">Projects</a></li>
+                      <li><a href="index.html">Blog</a></li>
+                      <li><a href="index.html">Privacy Policy</a></li>
+                      <li><a href="index.html">Contact Us</a></li>
+                    </ul>
+                  </div>
                 </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                <div class="footer-widget links-widget">
+                  <div class="widget-title">
+                    <h4>Our Pillars</h4>
+                  </div>
+                  <div class="widget-content">
+                    <ul class="list clearfix">
+                      <li><a href="index.html">Education</a></li>
+                      <li><a href="index.html">Health</a></li>
+                      <li><a href="index.html">Democracy & Governance</a></li>
+                      <li><a href="index.html">Economic & Human Capital</a></li>
+                      <li><a href="index.html">Information Technology</a></li>
+                      <li><a href="index.html">Evidence & Learning</a></li>
+                      <li><a href="index.html">Capacity Strengthening</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                <div class="footer-widget newsletter-widget">
+                  <div class="widget-title">
+                    <h4>Stay Connected</h4>
+                  </div>
+                  <div class="widget-content">
+                    <div class="text">
+                      <p>Receive the latest CIS news and updates</p>
+                    </div>
+                    <form action="contact.html" method="post" class="newsletter-form">
+                      <div class="form-group">
+                        <i class="far fa-user"></i>
+                        <input type="text" name="name" placeholder="Your Name" required="" />
+                      </div>
+                      <div class="form-group">
+                        <i class="far fa-envelope"></i>
+                        <input type="email" name="email" placeholder="Email address" required="" />
+                      </div>
+                      <div class="form-group message-btn">
+                        <button class="theme-btn style-two" type="submit">subscribe</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-        <div class="footer-bottom">
-            <div class="auto-container">
-                <div class="copyright"><p>&copy; 2020 <a href="index.html">CIS</a> - Locally driven research, innovation, and integrated solutions. All rights reserved.</p></div>
-            </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="auto-container">
+          <div class="copyright">
+            <p>
+              &copy; 2026
+              <a href="index.html">CIS</a>
+              All rights reserved.
+            </p>
+          </div>
         </div>
+      </div>
     </footer>
     <!-- main-footer end -->
 

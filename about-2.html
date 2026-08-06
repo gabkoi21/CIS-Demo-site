@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
-    <title>Center for Integrated Solutions | CIS</title>
+    <title>CIS | Center for Integrated Solutions</title>
 
     <!-- Fav Icon -->
-    <link rel="icon" href="assets/cis-images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="assets/cis-images/cis-favicon.png" type="image/png" />
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i&display=swap" rel="stylesheet" />
@@ -24,10 +24,300 @@
     <link href="assets/css/rtl.css" rel="stylesheet" />
     <link href="assets/css/style.css" rel="stylesheet" />
     <link href="assets/css/responsive.css" rel="stylesheet" />
+    <style>
+      /* Official CIS palette for the Our Approach page. */
+      body.cis-approach-page {
+        --cis-primary: #4db19e;
+        --cis-secondary: #202124;
+      }
+
+      body.cis-approach-page a:hover,
+      body.cis-approach-page .main-header.style-six .main-menu .navigation > li.current > a,
+      body.cis-approach-page .main-header.style-six .main-menu .navigation > li:hover > a,
+      body.cis-approach-page .main-header .header-top li i,
+      body.cis-approach-page .main-header .header-top li a:hover,
+      body.cis-approach-page .main-header .search-btn button:hover,
+      body.cis-approach-page .sec-title h5,
+      body.cis-approach-page #content_block_13 .progress-box .count-text,
+      body.cis-approach-page .project-block-three .lower-content .inner > span,
+      body.cis-approach-page .project-block-three .lower-content a i,
+      body.cis-approach-page .testimonial-content .text i,
+      body.cis-approach-page .testimonial-content .author-info .designation,
+      body.cis-approach-page .counter-block-one .count-outer,
+      body.cis-approach-page .main-footer .info-list li i,
+      body.cis-approach-page .main-footer a:hover {
+        color: var(--cis-primary) !important;
+      }
+
+      body.cis-approach-page .theme-btn,
+      body.cis-approach-page .search-popup input[type="submit"],
+      body.cis-approach-page .main-footer .newsletter-form button,
+      body.cis-approach-page .sidebar-info-contents .subscribe-form button,
+      body.cis-approach-page .scroll-top,
+      body.cis-approach-page #content_block_13 .progress-box .bar-inner {
+        background: var(--cis-primary) !important;
+        border-color: var(--cis-primary) !important;
+      }
+
+      body.cis-approach-page .theme-btn:hover,
+      body.cis-approach-page .main-footer .newsletter-form button:hover,
+      body.cis-approach-page .sidebar-info-contents .subscribe-form button:hover {
+        background: var(--cis-secondary) !important;
+        border-color: var(--cis-secondary) !important;
+        color: #fff !important;
+      }
+
+      body.cis-approach-page .main-header.style-six .header-top,
+      body.cis-approach-page .main-footer,
+      body.cis-approach-page .main-footer .footer-bottom,
+      body.cis-approach-page .mobile-menu .menu-box,
+      body.cis-approach-page .sidebar-info-contents {
+        background-color: var(--cis-secondary) !important;
+      }
+
+      body.cis-approach-page .page-title::before {
+        background: var(--cis-secondary);
+      }
+
+      body.cis-approach-page .feature-style-four.about-page-2 .feature-block-four .inner-box {
+        background: var(--cis-secondary);
+      }
+
+      body.cis-approach-page .feature-style-four.about-page-2 .feature-block-four:nth-child(2) .inner-box {
+        background: var(--cis-primary);
+      }
+
+      body.cis-approach-page .feature-style-four.about-page-2 .feature-block-four .inner-box::before {
+        background: var(--cis-primary);
+      }
+
+      body.cis-approach-page .feature-style-four.about-page-2 .feature-block-four:nth-child(2) .inner-box::before {
+        background: var(--cis-secondary);
+      }
+
+      body.cis-approach-page .feature-style-four.about-page-2 .feature-block-four .icon-box {
+        color: var(--cis-primary);
+      }
+
+      body.cis-approach-page .feature-style-four.about-page-2 .feature-block-four:nth-child(2) .icon-box,
+      body.cis-approach-page .feature-style-four.about-page-2 .feature-block-four:nth-child(2) h3,
+      body.cis-approach-page .feature-style-four.about-page-2 .feature-block-four:nth-child(2) p {
+        color: var(--cis-secondary);
+      }
+
+      body.cis-approach-page .project-style-four.bg-color-1 {
+        background: #f1f6f8;
+      }
+
+      body.cis-approach-page .project-style-four .title-inner .btn-box a {
+        border-color: var(--cis-primary);
+        color: var(--cis-secondary);
+      }
+
+      body.cis-approach-page .project-style-four .title-inner .btn-box a:hover,
+      body.cis-approach-page .cta-section {
+        background: var(--cis-primary) !important;
+        border-color: var(--cis-primary) !important;
+      }
+
+      body.cis-approach-page .project-style-four .two-column-carousel .owl-stage {
+        display: flex;
+      }
+
+      body.cis-approach-page .project-style-four .two-column-carousel .owl-item,
+      body.cis-approach-page .project-style-four .project-block-three,
+      body.cis-approach-page .project-style-four .project-block-three .inner-box {
+        display: flex;
+        width: 100%;
+        height: 100%;
+      }
+
+      body.cis-approach-page .project-style-four .project-block-three .inner-box {
+        display: block;
+        height: auto;
+        margin-bottom: 165px;
+        overflow: visible;
+        border: 0;
+        border-radius: 5px;
+        background: transparent;
+        box-shadow: none;
+      }
+
+      body.cis-approach-page .project-style-four .project-block-three .inner-box:hover {
+        transform: none;
+        box-shadow: none;
+      }
+
+      body.cis-approach-page .project-style-four .project-block-three .image-box {
+        height: 400px;
+        overflow: hidden;
+      }
+
+      body.cis-approach-page .project-style-four .project-block-three .image-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      body.cis-approach-page .project-style-four .project-block-three .lower-content,
+      body.cis-approach-page .project-style-four .project-block-three .lower-content .inner {
+        display: block;
+      }
+
+      body.cis-approach-page .project-style-four .project-block-three .lower-content .inner {
+        position: absolute;
+        top: -135px;
+        left: 35px;
+        width: calc(100% - 70px);
+        min-height: 300px;
+        padding: 42px 50px;
+        background: #fff;
+        border: 1px solid rgba(32, 33, 36, 0.06);
+        box-shadow: none;
+      }
+
+      body.cis-approach-page .project-style-four .owl-dots {
+        margin-top: 14px;
+        padding-top: 0;
+      }
+
+      body.cis-approach-page .project-style-four .owl-theme .owl-dots .owl-dot span {
+        margin-right: 8px;
+        margin-left: 8px;
+      }
+
+      body.cis-approach-page .project-style-four .project-block-three .lower-content a {
+        margin-top: auto;
+      }
+
+      body.cis-approach-page .project-style-four .project-block-three .lower-content .inner > span {
+        display: block;
+        min-height: 26px;
+      }
+
+      body.cis-approach-page .project-style-four .project-block-three .lower-content h3 {
+        display: flex;
+        min-height: 62px;
+        align-items: flex-start;
+      }
+
+      body.cis-approach-page .project-style-four .project-block-three .lower-content p {
+        min-height: 78px;
+      }
+
+      @media only screen and (max-width: 575px) {
+        body.cis-approach-page .project-style-four .project-block-three .inner-box {
+          margin-bottom: 30px;
+        }
+
+        body.cis-approach-page .project-style-four .project-block-three .image-box {
+          height: 300px;
+        }
+
+        body.cis-approach-page .project-style-four .project-block-three .lower-content .inner {
+          position: relative;
+          top: auto;
+          left: auto;
+          width: 100%;
+          min-height: 0;
+          padding: 30px 24px;
+        }
+
+        body.cis-approach-page .project-style-four .project-block-three .lower-content .inner > span,
+        body.cis-approach-page .project-style-four .project-block-three .lower-content h3,
+        body.cis-approach-page .project-style-four .project-block-three .lower-content p {
+          min-height: 0;
+        }
+      }
+
+      body.cis-approach-page .cta-section .btn-box a {
+        background: var(--cis-secondary);
+        color: #fff;
+      }
+
+      body.cis-approach-page .main-footer .widget-title h4::before {
+        background: var(--cis-primary) !important;
+      }
+
+      body.cis-approach-page .operating-model {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 32px;
+      }
+
+      body.cis-approach-page .operating-model .model-item {
+        padding: 24px;
+        border-left: 4px solid var(--cis-primary);
+        background: #f5f7f7;
+      }
+
+      body.cis-approach-page .operating-model .model-item h3 {
+        margin-bottom: 8px;
+        color: var(--cis-secondary);
+        font-size: 20px;
+      }
+
+      body.cis-approach-page .operating-model .model-item p {
+        margin: 0;
+      }
+
+      body.cis-approach-page .strategic-framework {
+        padding: 95px 0;
+        background: #f5f7f7;
+      }
+
+      body.cis-approach-page .template-testimonials {
+        display: none;
+      }
+
+      body.cis-approach-page .strategic-framework-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+      }
+
+      body.cis-approach-page .framework-card {
+        height: 100%;
+        padding: 34px 30px;
+        border-top: 4px solid var(--cis-primary);
+        background: #fff;
+        box-shadow: 0 10px 30px rgba(32, 33, 36, 0.08);
+      }
+
+      body.cis-approach-page .framework-card i {
+        display: block;
+        margin-bottom: 20px;
+        color: var(--cis-primary);
+        font-size: 38px;
+      }
+
+      body.cis-approach-page .framework-card h3 {
+        margin-bottom: 12px;
+        color: var(--cis-secondary);
+      }
+
+      body.cis-approach-page .framework-card p {
+        margin: 0;
+      }
+
+      @media only screen and (max-width: 991px) {
+        body.cis-approach-page .strategic-framework-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media only screen and (max-width: 575px) {
+        body.cis-approach-page .operating-model {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
 
   <!-- page wrapper -->
-  <body class="boxed_wrapper ltr">
+  <body class="boxed_wrapper ltr cis-approach-page">
     <!-- Preloader -->
     <div class="loader-wrap">
       <div class="preloader"><div class="preloader-close">Preloader Close</div></div>
@@ -170,7 +460,7 @@
                   <i class="fas fa-align-right"></i>
                 </div>
                 <div class="btn-box">
-                  <a href="about-2.html" class="theme-btn style-one">Free Estimate</a>
+                  <a href="contact.html" class="theme-btn style-one">Partner With CIS</a>
                 </div>
               </div>
             </div>
@@ -261,28 +551,30 @@
             <div class="hidden-icon"><i class="flaticon-search"></i></div>
             <div class="inner">
               <div class="icon-box"><i class="flaticon-search"></i></div>
-              <h3>Best Evidence & Learning</h3>
-              <p>CIS generates evidence and strengthens local capacity for sustainable outcomes.</p>
+              <h3>Evidence</h3>
+              <p>
+                Generating practical evidence and learning that guide integrated solutions for sustainable societies.
+              </p>
             </div>
           </div>
         </div>
         <div class="feature-block-four">
           <div class="inner-box">
-            <div class="hidden-icon"><i class="flaticon-claim"></i></div>
+            <div class="hidden-icon"><i class="flaticon-graduation-cap"></i></div>
             <div class="inner">
-              <div class="icon-box"><i class="flaticon-claim"></i></div>
-              <h3>Free Taxation Planning</h3>
-              <p>CIS generates evidence and strengthens local capacity for sustainable outcomes.</p>
+              <div class="icon-box"><i class="flaticon-graduation-cap"></i></div>
+              <h3>Capacity</h3>
+              <p>Strengthening the knowledge, systems, and leadership of local organizations and institutions.</p>
             </div>
           </div>
         </div>
         <div class="feature-block-four">
           <div class="inner-box">
-            <div class="hidden-icon"><i class="flaticon-presentation"></i></div>
+            <div class="hidden-icon"><i class="flaticon-innovation"></i></div>
             <div class="inner">
-              <div class="icon-box"><i class="flaticon-presentation"></i></div>
-              <h3>Our Investment Trading</h3>
-              <p>CIS generates evidence and strengthens local capacity for sustainable outcomes.</p>
+              <div class="icon-box"><i class="flaticon-innovation"></i></div>
+              <h3>Innovation</h3>
+              <p>Leveraging innovation and technology to address local priorities through research and development.</p>
             </div>
           </div>
         </div>
@@ -294,67 +586,54 @@
     <section class="about-style-four">
       <div class="auto-container">
         <div class="row clearfix">
+          <!-- Content Column -->
           <div class="col-lg-6 col-md-12 col-sm-12 content-column">
             <div id="content_block_13">
               <div class="content-box">
                 <div class="sec-title style-four right">
-                  <h5>About fionca</h5>
-                  <h2>Digital Future Planning Based On True Facts</h2>
+                  <h5>How We Work</h5>
+                  <h2>Local Knowledge Shapes Every Solution</h2>
                 </div>
+
                 <div class="text">
                   <p>
-                    Exercitation llamco laboris nis aliquip sed conseqrure dolorn repreh deris luptate velit excepteur
-                    duis aute irure dolor voluptate. Lorem ipsum dolor sit amet, consectetur adipisicing elit sed
-                    eiusmod.
+                    CIS begins with the priorities, knowledge, and leadership of the communities and institutions we
+                    serve. Research and evidence help us understand the challenge before solutions are designed.
                   </p>
+
                   <p>
-                    Tempor incididunt ut labore et dolore magna aliqua. Ut enim minim veniam quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip.
+                    We then work through practical partnerships that connect community needs with coordinated programs,
+                    stronger local systems, continuous learning, and outcomes that can be sustained over time.
                   </p>
                 </div>
-                <div class="progress-content">
-                  <div class="progress-box">
-                    <p>exective planning</p>
-                    <div class="bar">
-                      <div class="bar-inner count-bar" data-percent="65%"></div>
-                      <span class="count-text">65%</span>
-                    </div>
+
+                <div class="operating-model">
+                  <div class="model-item">
+                    <h3>Locally Driven Solutions</h3>
+                    <p>We turn research and local knowledge into integrated solutions designed to last.</p>
                   </div>
-                  <div class="progress-box">
-                    <p>corporate Analysis</p>
-                    <div class="bar">
-                      <div class="bar-inner count-bar" data-percent="90%"></div>
-                      <span class="count-text">90%</span>
-                    </div>
-                  </div>
-                  <div class="progress-box">
-                    <p>Business optimization</p>
-                    <div class="bar">
-                      <div class="bar-inner count-bar" data-percent="50%"></div>
-                      <span class="count-text">50%</span>
-                    </div>
-                  </div>
-                  <div class="progress-box">
-                    <p>the tax management</p>
-                    <div class="bar">
-                      <div class="bar-inner count-bar" data-percent="70%"></div>
-                      <span class="count-text">70%</span>
-                    </div>
+                  <div class="model-item">
+                    <h3>Practical Partnerships</h3>
+                    <p>
+                      We connect community priorities with coordinated programs, local monitoring, and durable outcomes.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- Image Column -->
           <div class="col-lg-6 col-md-12 col-sm-12 image-column">
             <div id="image_block_four">
               <div class="image-box">
                 <div class="pattern-layer" style="background-image: url(assets/cis-images/shape/shape-23.png)"></div>
-                <figure
-                  class="image wow slideInRight animated animated"
-                  data-wow-delay="00ms"
-                  data-wow-duration="1500ms"
-                >
-                  <img src="assets/cis-images/about/community-development.jpg" alt="" />
+
+                <figure class="image wow slideInRight animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+                  <img
+                    src="assets/cis-images/about/community-development.jpg"
+                    alt="CIS working with communities and development partners in Liberia"
+                  />
                 </figure>
               </div>
             </div>
@@ -362,52 +641,36 @@
         </div>
       </div>
     </section>
-    <!-- about-style-four end -->
 
     <!-- project-style-four -->
     <section class="project-style-four bg-color-1">
       <div class="auto-container">
         <div class="title-inner clearfix">
           <div class="sec-title style-four right pull-left">
-            <h5>our case studies</h5>
-            <h2>Recent Projects</h2>
+            <h5>Our Approach in Action</h5>
+            <h2>Featured Initiatives &amp; Track Record</h2>
           </div>
-          <div class="btn-box pull-right"><a href="index-5.html">View More Projects</a></div>
+          <div class="btn-box pull-right"><a href="contact.html">Discuss a Partnership</a></div>
         </div>
         <div class="two-column-carousel owl-carousel owl-theme owl-nav-none">
           <div class="project-block-three">
             <div class="inner-box">
               <figure class="image-box">
-                <img src="assets/cis-images/about/public-health-initiative.jpg" alt="" />
+                <img
+                  src="assets/cis-images/portfolio/locally-led-development-summit.jpg"
+                  alt="Participants at the Locally-led Development Summit 2024"
+                />
               </figure>
               <div class="lower-content">
                 <div class="inner">
-                  <span>Solution Planning</span>
-                  <h3>Advisory Research Solutions</h3>
+                  <span>Localization &amp; Partnership</span>
+                  <h3>Locally-led Development Summit 2024</h3>
                   <p>
-                    Acepteur sintas haecat sed non sed dui proident sunt sed ipsum tempor adipisicing elit sed incidunt.
+                    Brought together nearly 200 participants to advance localization, partnership, and local capacity.
                   </p>
-                  <a href="index-5.html">
+                  <a href="contact.html">
                     <i class="fas fa-arrow-right"></i>
-                    <span>Read More</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="project-block-three">
-            <div class="inner-box">
-              <figure class="image-box"><img src="assets/cis-images/about/technology-innovation.jpg" alt="" /></figure>
-              <div class="lower-content">
-                <div class="inner">
-                  <span>Solution Planning</span>
-                  <h3>Client Market Insights</h3>
-                  <p>
-                    Acepteur sintas haecat sed non sed dui proident sunt sed ipsum tempor adipisicing elit sed incidunt.
-                  </p>
-                  <a href="index-5.html">
-                    <i class="fas fa-arrow-right"></i>
-                    <span>Read More</span>
+                    <span>Work With CIS</span>
                   </a>
                 </div>
               </div>
@@ -416,36 +679,22 @@
           <div class="project-block-three">
             <div class="inner-box">
               <figure class="image-box">
-                <img src="assets/cis-images/about/public-health-initiative.jpg" alt="" />
+                <img
+                  src="assets/cis-images/infor/governance-program-04.jpg"
+                  alt="Asset declaration and verification system initiative"
+                />
               </figure>
               <div class="lower-content">
                 <div class="inner">
-                  <span>Solution Planning</span>
-                  <h3>Advisory Research Solutions</h3>
+                  <span>Digital Governance</span>
+                  <h3>Asset Declaration &amp; Verification System</h3>
                   <p>
-                    Acepteur sintas haecat sed non sed dui proident sunt sed ipsum tempor adipisicing elit sed incidunt.
+                    Developed requirements for a World Bank-funded digital system supporting transparency and
+                    accountability.
                   </p>
-                  <a href="index-5.html">
+                  <a href="contact.html">
                     <i class="fas fa-arrow-right"></i>
-                    <span>Read More</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="project-block-three">
-            <div class="inner-box">
-              <figure class="image-box"><img src="assets/cis-images/about/technology-innovation.jpg" alt="" /></figure>
-              <div class="lower-content">
-                <div class="inner">
-                  <span>Solution Planning</span>
-                  <h3>Client Market Insights</h3>
-                  <p>
-                    Acepteur sintas haecat sed non sed dui proident sunt sed ipsum tempor adipisicing elit sed incidunt.
-                  </p>
-                  <a href="index-5.html">
-                    <i class="fas fa-arrow-right"></i>
-                    <span>Read More</span>
+                    <span>Work With CIS</span>
                   </a>
                 </div>
               </div>
@@ -454,18 +703,21 @@
           <div class="project-block-three">
             <div class="inner-box">
               <figure class="image-box">
-                <img src="assets/cis-images/about/public-health-initiative.jpg" alt="" />
+                <img
+                  src="assets/cis-images/infor/governance-program-01.jpg"
+                  alt="Monrovia City capacity development initiative"
+                />
               </figure>
               <div class="lower-content">
                 <div class="inner">
-                  <span>Solution Planning</span>
-                  <h3>Advisory Research Solutions</h3>
+                  <span>Institutional Capacity</span>
+                  <h3>Monrovia City Capacity Development</h3>
                   <p>
-                    Acepteur sintas haecat sed non sed dui proident sunt sed ipsum tempor adipisicing elit sed incidunt.
+                    Strengthened staff capacity, community mediation, fundraising systems, and environmental education.
                   </p>
-                  <a href="index-5.html">
+                  <a href="contact.html">
                     <i class="fas fa-arrow-right"></i>
-                    <span>Read More</span>
+                    <span>Work With CIS</span>
                   </a>
                 </div>
               </div>
@@ -473,17 +725,69 @@
           </div>
           <div class="project-block-three">
             <div class="inner-box">
-              <figure class="image-box"><img src="assets/cis-images/about/technology-innovation.jpg" alt="" /></figure>
+              <figure class="image-box">
+                <img
+                  src="assets/cis-images/blog/liberia-national-police.jpg"
+                  alt="Liberia National Police digital transformation partnership"
+                />
+              </figure>
               <div class="lower-content">
                 <div class="inner">
-                  <span>Solution Planning</span>
-                  <h3>Client Market Insights</h3>
+                  <span>Evidence-based Policing</span>
+                  <h3>Liberia National Police Digital Transformation</h3>
                   <p>
-                    Acepteur sintas haecat sed non sed dui proident sunt sed ipsum tempor adipisicing elit sed incidunt.
+                    Improved crime-data systems, digital services, and officer capacity in data collection and
+                    analytics.
                   </p>
-                  <a href="index-5.html">
+                  <a href="contact.html">
                     <i class="fas fa-arrow-right"></i>
-                    <span>Read More</span>
+                    <span>Work With CIS</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-block-three">
+            <div class="inner-box">
+              <figure class="image-box">
+                <img
+                  src="assets/cis-images/infor/economic-development-03.jpg"
+                  alt="Teach For Liberia Alumni Association strategy initiative"
+                />
+              </figure>
+              <div class="lower-content">
+                <div class="inner">
+                  <span>Leadership &amp; Strategy</span>
+                  <h3>Teach For Liberia Alumni Strategy</h3>
+                  <p>
+                    Supported leadership analysis and an actionable strategic plan for sustainable association growth.
+                  </p>
+                  <a href="contact.html">
+                    <i class="fas fa-arrow-right"></i>
+                    <span>Work With CIS</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-block-three">
+            <div class="inner-box">
+              <figure class="image-box">
+                <img
+                  src="assets/cis-images/about/economic-human-capital-development.jpg"
+                  alt="Governance and civic education initiative"
+                />
+              </figure>
+              <div class="lower-content">
+                <div class="inner">
+                  <span>Democracy &amp; Governance</span>
+                  <h3>Governance &amp; Civic Education Programs</h3>
+                  <p>
+                    Advanced civic education, citizen engagement, leadership development, and stronger institutions.
+                  </p>
+                  <a href="contact.html">
+                    <i class="fas fa-arrow-right"></i>
+                    <span>Work With CIS</span>
                   </a>
                 </div>
               </div>
@@ -492,10 +796,48 @@
         </div>
       </div>
     </section>
+
     <!-- project-style-four end -->
 
-    <!-- testimonial-style-two -->
-    <section class="testimonial-style-two about-page-2">
+    <!-- strategic-framework -->
+    <section class="strategic-framework">
+      <div class="auto-container">
+        <div class="sec-title centred">
+          <h5>Strategic Framework</h5>
+          <h2>What Guides Our Approach</h2>
+        </div>
+        <div class="strategic-framework-grid">
+          <article class="framework-card">
+            <i class="fas fa-bullseye" aria-hidden="true"></i>
+            <h3>Our Mission</h3>
+            <p>
+              To generate evidence, strengthen capacity, and deliver locally driven research and development solutions
+              using innovation and technology to advance sustainable societies.
+            </p>
+          </article>
+          <article class="framework-card">
+            <i class="fas fa-eye" aria-hidden="true"></i>
+            <h3>Our Vision</h3>
+            <p>
+              To be a leading development firm for innovation, research, evidence, and integrated solutions for
+              sustainable societies across Africa and the world.
+            </p>
+          </article>
+          <article class="framework-card">
+            <i class="fas fa-hands-helping" aria-hidden="true"></i>
+            <h3>Our Commitment</h3>
+            <p>
+              We equip local partners with the knowledge, systems, and tools needed to sustain progress and continue the
+              work long after an initiative ends.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- strategic-framework end -->
+
+    <!-- legacy testimonial markup retained but not displayed -->
+    <section class="testimonial-style-two about-page-2 template-testimonials" aria-hidden="true">
       <div class="auto-container">
         <div class="sec-title centred">
           <h5>testimonials</h5>
@@ -604,19 +946,7 @@
     <!-- testimonial-style-two end -->
 
     <!-- cta-section -->
-    <section class="cta-section">
-      <div class="pattern-layer" style="background-image: url(assets/cis-images/shape/shape-3.png)"></div>
-      <div class="auto-container">
-        <div class="inner-container clearfix">
-          <div class="title pull-left">
-            <h2>We help you to unlock & unleash the power within.</h2>
-          </div>
-          <div class="btn-box pull-right">
-            <a href="index.html">get in touch</a>
-          </div>
-        </div>
-      </div>
-    </section>
+
     <!-- cta-section end -->
 
     <!-- fun-fact -->
@@ -626,33 +956,36 @@
           <div class="col-lg-3 col-md-6 col-sm-12 counter-column">
             <div class="counter-block-one wow slideInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
               <div class="count-outer count-box">
-                <span class="count-text" data-speed="1500" data-stop="254">0</span>
+                <span class="count-text" data-speed="1500" data-stop="13">0</span>
+                +
               </div>
-              <p>Expert Consultants</p>
+              <p>Years of Direct Support</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 counter-column">
             <div class="counter-block-one wow slideInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
               <div class="count-outer count-box">
-                <span class="count-text" data-speed="1500" data-stop="930">0</span>
+                <span class="count-text" data-speed="1500" data-stop="8">0</span>
+                +
               </div>
-              <p>Our Trusted Clients</p>
+              <p>Counties Supported</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 counter-column">
             <div class="counter-block-one wow slideInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
               <div class="count-outer count-box">
-                <span class="count-text" data-speed="1500" data-stop="826">0</span>
+                <span class="count-text" data-speed="1500" data-stop="30">0</span>
+                +
               </div>
-              <p>Orders in Queue</p>
+              <p>Community Programs Completed</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 counter-column">
             <div class="counter-block-one wow slideInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
               <div class="count-outer count-box">
-                <span class="count-text" data-speed="1500" data-stop="720">0</span>
+                <span class="count-text" data-speed="1500" data-stop="3">0</span>
               </div>
-              <p>Projects Delivered</p>
+              <p>Core Methodological Approaches</p>
             </div>
           </div>
         </div>
@@ -661,7 +994,7 @@
     <!-- fun-fact end -->
 
     <!-- main-footer -->
-    <footer class="main-footer">
+    <footer class="main-footer alternet-2">
       <div class="footer-top">
         <div class="auto-container">
           <div class="widget-section">
@@ -687,16 +1020,8 @@
                       Email
                       <a href="mailto:c4islib@gmail.com">c4islib@gmail.com</a>
                     </li>
-                    <li>
-                      <i class="fas fa-headphones"></i>
-                      Support
-                      <a href="tel:01005200369"></a>
-                    </li>
                   </ul>
                   <ul class="social-links clearfix">
-                    <li>
-                      <a href="index.html"><i class="fab fa-twitter"></i></a>
-                    </li>
                     <li>
                       <a href="index.html"><i class="fab fa-facebook-f"></i></a>
                     </li>
@@ -707,7 +1032,7 @@
                       <a href="index.html"><i class="fab fa-linkedin-in"></i></a>
                     </li>
                     <li>
-                      <a href="index.html"><i class="fab fa-pinterest-p"></i></a>
+                      <!-- <a href="index.html"><i class="fab fa-pinterest-p"></i></a> -->
                     </li>
                   </ul>
                 </div>
@@ -767,7 +1092,7 @@
                         <input type="email" name="email" placeholder="Email address" required="" />
                       </div>
                       <div class="form-group message-btn">
-                        <button class="theme-btn style-one" type="submit">subscribe</button>
+                        <button class="theme-btn style-two" type="submit">subscribe</button>
                       </div>
                     </form>
                   </div>
@@ -781,9 +1106,9 @@
         <div class="auto-container">
           <div class="copyright">
             <p>
-              &copy; 2020
+              &copy; 2026
               <a href="index.html">CIS</a>
-              - Locally driven research, innovation, and integrated solutions. All rights reserved.
+              All rights reserved.
             </p>
           </div>
         </div>
@@ -813,8 +1138,8 @@
                   </div>
                   <div class="text">
                     <p>
-                      Exercitation ullamco laboris nis aliquip sed conseqrure dolorn repreh deris ptate velit ecepteur
-                      duis.
+                      CIS turns evidence and local knowledge into practical solutions that strengthen communities and
+                      institutions.
                     </p>
                   </div>
                 </div>
