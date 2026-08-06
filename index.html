@@ -20,28 +20,199 @@
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <link href="assets/css/jquery.fancybox.min.css" rel="stylesheet" />
     <link href="assets/css/animate.css" rel="stylesheet" />
+    <link href="assets/css/nice-select.css" rel="stylesheet" />
     <link href="assets/css/color.css" rel="stylesheet" />
     <link href="assets/css/rtl.css" rel="stylesheet" />
     <link href="assets/css/style.css" rel="stylesheet" />
     <link href="assets/css/responsive.css" rel="stylesheet" />
+    <style>
+      /* Keep the CIS palette consistent on this homepage variant. */
+      body.cis-home-variant {
+        --cis-primary: #4db19e;
+        --cis-secondary: #202124;
+      }
+
+      body.cis-home-variant a:hover,
+      body.cis-home-variant .main-menu .navigation > li:hover > a,
+      body.cis-home-variant .main-menu .navigation > li.current > a,
+      body.cis-home-variant .sec-title h5,
+      body.cis-home-variant .service-block-two h4 a:hover,
+      body.cis-home-variant .news-block-four h3 a:hover {
+        color: var(--cis-primary) !important;
+      }
+
+      body.cis-home-variant .theme-btn.style-one,
+      body.cis-home-variant .theme-btn.style-two,
+      body.cis-home-variant .theme-btn.style-four,
+      body.cis-home-variant .newsletter-form button,
+      body.cis-home-variant .policy-form button {
+        background: var(--cis-primary) !important;
+        border-color: var(--cis-primary) !important;
+      }
+
+      body.cis-home-variant .theme-btn:hover,
+      body.cis-home-variant .newsletter-form button:hover,
+      body.cis-home-variant .policy-form button:hover {
+        background: var(--cis-secondary) !important;
+        border-color: var(--cis-secondary) !important;
+      }
+
+      body.cis-home-variant .bg-color-1,
+      body.cis-home-variant .bg-color-2 {
+        background: var(--cis-primary) !important;
+      }
+
+      body.cis-home-variant .policy-section.bg-color-2 {
+        background: #202124 !important;
+      }
+
+      body.cis-home-variant .our-mission {
+        background: #fff !important;
+        width: 100%;
+        min-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      body.cis-home-variant .team-section .team-block-one .image-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 170px;
+        padding: 22px;
+        background: #fff;
+        border: none;
+      }
+
+      body.cis-home-variant .team-section .team-block-one .image-box img {
+        width: 100%;
+        height: 125px;
+        object-fit: contain;
+        opacity: 1;
+      }
+
+      body.cis-home-variant .team-section .team-block-one:hover .image-box img {
+        opacity: 1;
+        transform: none;
+      }
+
+      body.cis-home-variant .team-section .sec-title.style-two h5 {
+        padding-left: 0;
+      }
+
+      body.cis-home-variant .team-section .sec-title.style-two h5::before {
+        display: none;
+      }
+
+      body.cis-home-variant #video_block_one .video-btn .play-icon {
+        color: #4db19e;
+      }
+
+      body.cis-home-variant .scroll-top.style-two {
+        background: #4db19e;
+      }
+
+      body.cis-home-variant .banner-section.style-two .owl-theme .owl-nav .owl-prev,
+      body.cis-home-variant .banner-section.style-two .owl-theme .owl-nav .owl-next,
+      body.cis-home-variant .banner-section.style-two .owl-theme .owl-nav .owl-prev:hover,
+      body.cis-home-variant .banner-section.style-two .owl-theme .owl-nav .owl-next:hover {
+        background: #4db19e;
+      }
+
+      body.cis-home-variant #image_block_one .award-box .box {
+        display: flex;
+        width: 190px;
+        height: 190px;
+        padding: 28px 24px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      body.cis-home-variant #image_block_one .award-box .impact-icon {
+        margin-bottom: 12px;
+        color: #fff;
+        font-size: 42px;
+        line-height: 1;
+      }
+
+      body.cis-home-variant #image_block_one .award-box .impact-copy {
+        font-size: 13px;
+        line-height: 18px;
+      }
+
+      body.cis-home-variant #image_block_one .award-box .impact-copy strong {
+        display: block;
+        margin-bottom: 3px;
+        font-size: 17px;
+        line-height: 21px;
+      }
+
+      body.cis-home-variant .icon-box,
+      body.cis-home-variant .feature-block-two .inner-box:hover,
+      body.cis-home-variant .service-block-two .inner-box:hover {
+        border-color: var(--cis-primary) !important;
+      }
+
+      body.cis-home-variant .owl-theme .owl-dots .owl-dot.active span,
+      body.cis-home-variant .owl-theme .owl-dots .owl-dot:hover span {
+        background: var(--cis-primary) !important;
+      }
+
+      body.cis-home-variant .main-header.style-two .header-top .social-links li a,
+      body.cis-home-variant .main-header.style-two .header-upper .info-box .info-list li i,
+      body.cis-home-variant .main-header.style-two .header-upper .info-box .info-list li p a:hover,
+      body.cis-home-variant .main-header.style-two .header-lower .search-btn button:hover,
+      body.cis-home-variant .service-block-two .inner-box .icon-box,
+      body.cis-home-variant .service-block-two .inner-box h4 a:hover,
+      body.cis-home-variant .service-block-two .inner-box .link a:hover span,
+      body.cis-home-variant #content_block_five .content-box .info-list li i,
+      body.cis-home-variant #content_block_five .content-box .info-list li a:hover {
+        color: var(--cis-primary) !important;
+      }
+
+      body.cis-home-variant .main-header.style-two .header-top .social-links li a:hover,
+      body.cis-home-variant .main-header.style-two .header-upper .info-box .info-list li:hover i,
+      body.cis-home-variant .main-menu .navigation > li > ul > li > a,
+      body.cis-home-variant .sec-title:not(.light) h2 {
+        color: var(--cis-secondary);
+      }
+
+      body.cis-home-variant .service-block-two .inner-box .icon-box:before,
+      body.cis-home-variant .feature-block-two .inner-box .lower-content .inner:before,
+      body.cis-home-variant #content_block_four .content-box .tab-btn-box .tab-btns li.active-btn,
+      body.cis-home-variant #content_block_four .content-box .tab-btn-box .tab-btns li:hover,
+      body.cis-home-variant #content_block_six .tab-btn-box .tab-btns li:before {
+        background: var(--cis-primary) !important;
+        border-color: var(--cis-primary) !important;
+      }
+
+      body.cis-home-variant #image_block_two .image-box .content-box,
+      body.cis-home-variant .protect-form .inner-box .zip-form .form-group input:focus,
+      body.cis-home-variant .service-block-two .inner-box .link a:hover span {
+        border-color: var(--cis-primary) !important;
+      }
+
+      body.cis-home-variant #image_block_one .image-box .award-box .box {
+        background: linear-gradient(180deg, var(--cis-primary), var(--cis-secondary)) !important;
+      }
+
+      body.cis-home-variant .main-footer,
+      body.cis-home-variant .footer-bottom {
+        background-color: var(--cis-secondary);
+      }
+    </style>
   </head>
 
   <!-- page wrapper -->
-  <body class="boxed_wrapper ltr">
+  <body class="boxed_wrapper ltr cis-home-variant">
     <!-- Preloader -->
     <div class="loader-wrap">
-      <div class="preloader"><div class="preloader-close">Preloader Close</div></div>
+      <div class="preloader style-two"></div>
       <div class="layer layer-one"><span class="overlay"></span></div>
       <div class="layer layer-two"><span class="overlay"></span></div>
       <div class="layer layer-three"><span class="overlay"></span></div>
     </div>
-
-    <!-- page-direction -->
-    <div class="page_direction">
-      <div class="demo-rtl direction_switch"><button class="rtl">RTL</button></div>
-      <div class="demo-ltr direction_switch"><button class="ltr">LTR</button></div>
-    </div>
-    <!-- page-direction end -->
 
     <!-- search-popup -->
     <div id="search-popup" class="search-popup">
@@ -78,31 +249,17 @@
     <!-- search-popup end -->
 
     <!-- main header -->
-    <header class="main-header style-one">
+    <header class="main-header style-two">
       <div class="header-top">
         <div class="auto-container">
           <div class="top-inner clearfix">
-            <ul class="info top-left pull-left">
-              <li>
-                <i class="fas fa-map-marker-alt"></i>
-                Airfield Sinkor, Monrovia, Liberia
-              </li>
-              <li>
-                <i class="fas fa-headphones"></i>
-                Support
-                <a href="tel:01005200369"></a>
-              </li>
-            </ul>
             <div class="top-right pull-right">
               <ul class="social-links clearfix">
                 <li>
                   <a href="index.html"><i class="fab fa-facebook-f"></i></a>
                 </li>
                 <li>
-                  <a href="index.html"><i class="fab fa-google-plus-g"></i></a>
-                </li>
-                <li>
-                  <a href="index.html"><i class="fab fa-twitter"></i></a>
+                  <a href="index.html"></a>
                 </li>
                 <li>
                   <a href="index.html"><i class="fab fa-linkedin-in"></i></a>
@@ -115,17 +272,52 @@
           </div>
         </div>
       </div>
-      <div class="header-lower">
+      <div class="header-upper">
         <div class="auto-container">
-          <div class="outer-box clearfix">
+          <div class="upper-inner clearfix">
             <div class="logo-box pull-left">
               <figure class="logo">
-                <a href="index.html">
-                  <img class="site-brand-logo" src="assets/cis-images/about/cis-logo.webp" alt="CIS logo" />
-                </a>
+                <a href="index.html"><img src="assets/cis-images/about/cis-logo.webp" alt="" /></a>
               </figure>
             </div>
-            <div class="menu-area pull-right">
+            <div class="info-box pull-right">
+              <ul class="info-list clearfix">
+                <li>
+                  <i class="fas fa-envelope"></i>
+                  <p>
+                    Email Us
+                    <br />
+                    <a href="mailto:partnership@c4islib.org">partnership@c4islib.org</a>
+                  </p>
+                </li>
+
+                <li>
+                  <i class="far fa-clock"></i>
+                  <p>
+                    Locally Driven Solutions
+                    <br />
+                    Monday – Friday: 9:00 AM – 5:00 PM
+                  </p>
+                </li>
+
+                <li>
+                  <i class="fas fa-map-marker-alt"></i>
+                  <p>
+                    Airfield, Sinkor,
+                    <br />
+                    Monrovia, Montserrado, Liberia
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-lower">
+        <div class="outer-box">
+          <div class="auto-container">
+            <div class="menu-area clearfix">
               <!--Mobile Navigation Toggler-->
               <div class="mobile-nav-toggler">
                 <i class="icon-bar"></i>
@@ -135,109 +327,22 @@
               <nav class="main-menu navbar-expand-md navbar-light">
                 <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                   <ul class="navigation clearfix">
-                    <li class="current dropdown">
-                      <li><a href="ourapproach.html">Home Page Two</a></li>
-                      <ul>
-                        <li><a href="index.html">Home Page One</a></li>
-                        <li><a href="ourapproach.html">Home Page Two</a></li>
-                        <li><a href="index-3.html">Home Page Three</a></li>
-                        <li><a href="index-4.html">Home Page Four</a></li>
-                        <li><a href="index-5.html">Home Page Five</a></li>
-                        <li><a href="index-onepage.html">Home OnePage</a></li>
-                        <li class="dropdown">
-                          <a href="index.html">Header Style</a>
-                          <ul>
-                            <li><a href="index.html">Header Style One</a></li>
-                            <li><a href="ourapproach.html">Header Style Two</a></li>
-                            <li><a href="index-3.html">Header Style Three</a></li>
-                            <li><a href="index-4.html">Header Style Four</a></li>
-                            <li><a href="index-5.html">Header Style Five</a></li>
-                          </ul>
-                        </li>
-                      </ul>
+                    <li class="dropdown">
+                      <a href="index.html">Home</a>
                     </li>
                     <li class="dropdown">
-                      <a href="index.html">About</a>
+                      <a href="about.html">About</a>
                       <ul>
-                        <li><a href="about-1.html">About CIS</a></li>
-                        <li><a href="about-2.html">Our Approach</a></li>
+                        <li><a href="about.html">About CIS</a></li>
+                        <li><a href="ourapproach.html">Our Approach</a></li>
                         <li><a href="team.html">Our Team</a></li>
-                        <li><a href="pricing.html">Impact</a></li>
                       </ul>
                     </li>
                     <li class="dropdown">
-                      <a href="index.html">Services</a>
-                      <ul>
-                        <li><a href="service-1.html">Service Page 01</a></li>
-                        <li><a href="service-2.html">Service Page 02</a></li>
-                        <li><a href="financial-analysis.html">Evidence & Learning</a></li>
-                        <li><a href="taxation-planning.html">Taxation Planning</a></li>
-                        <li><a href="investment-trading.html">Investment Trading</a></li>
-                        <li><a href="wealth-marketing.html">Wealth Marketing</a></li>
-                        <li><a href="planning-strategies.html">Planning Strategies</a></li>
-                      </ul>
+                      <a href="service.html">Services</a>
                     </li>
                     <li class="dropdown">
-                      <a href="index.html">Elements</a>
-                      <div class="megamenu">
-                        <div class="row clearfix">
-                          <div class="col-lg-3 column">
-                            <ul>
-                              <li><h4>Elements 1</h4></li>
-                              <li><a href="feature-element-1.html">Feature 01</a></li>
-                              <li><a href="feature-element-2.html">Feature 02</a></li>
-                              <li><a href="feature-element-3.html">Feature 03</a></li>
-                              <li><a href="about-element-1.html">About 01</a></li>
-                              <li><a href="about-element-2.html">About 02</a></li>
-                              <li><a href="about-element-3.html">About 03</a></li>
-                              <li><a href="about-element-4.html">About 04</a></li>
-                              <li><a href="stats-element.html">Stats Element</a></li>
-                            </ul>
-                          </div>
-                          <div class="col-lg-3 column">
-                            <ul>
-                              <li><h4>Elements 2</h4></li>
-                              <li><a href="news-element-1.html">News 01</a></li>
-                              <li><a href="news-element-2.html">News 02</a></li>
-                              <li><a href="funfact-element-1.html">Fun Fact 01</a></li>
-                              <li><a href="funfact-element-2.html">Fun Fact 02</a></li>
-                              <li><a href="service-element-1.html">Service 01</a></li>
-                              <li><a href="service-element-2.html">Service 02</a></li>
-                              <li><a href="skills-element.html">Skills Element</a></li>
-                              <li><a href="clients-element.html">Clients</a></li>
-                            </ul>
-                          </div>
-                          <div class="col-lg-3 column">
-                            <ul>
-                              <li><h4>Elements 3</h4></li>
-                              <li><a href="team-element-1.html">Team 01</a></li>
-                              <li><a href="team-element-2.html">Team 02</a></li>
-                              <li><a href="pricing-element.html">Pricing</a></li>
-                              <li><a href="testimonial-element-1.html">Testimonial 01</a></li>
-                              <li><a href="testimonial-element-2.html">Testimonial 02</a></li>
-                              <li><a href="testimonial-element-3.html">Testimonial 03</a></li>
-                              <li><a href="work-element-1.html">Working 01</a></li>
-                              <li><a href="work-element-2.html">Working 02</a></li>
-                            </ul>
-                          </div>
-                          <div class="col-lg-3 column">
-                            <ul>
-                              <li><h4>Elements 4</h4></li>
-                              <li><a href="project-element-1.html">Project 01</a></li>
-                              <li><a href="project-element-2.html">Project 02</a></li>
-                              <li><a href="chart-element.html">Chart Element</a></li>
-                              <li><a href="footer-element-1.html">Footer 01</a></li>
-                              <li><a href="footer-element-2.html">Footer 02</a></li>
-                              <li><a href="footer-element-3.html">Footer 03</a></li>
-                              <li><a href="footer-element-4.html">Footer 04</a></li>
-                              <li><a href="footer-element-5.html">Footer 05</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="dropdown">
-                      <a href="index.html">Blog</a>
+                      <a href="blog-grid.html">Blog</a>
                       <ul>
                         <li><a href="blog-grid.html">Blog Grid</a></li>
                         <li><a href="blog-classic.html">Blog Classic</a></li>
@@ -250,13 +355,12 @@
               </nav>
               <div class="menu-right-content clearfix">
                 <div class="search-btn">
-                  <button type="button" class="search-toggler"><i class="flaticon-search-1"></i></button>
-                </div>
-                <div class="nav-btn nav-toggler navSidebar-button clearfix">
-                  <i class="fas fa-align-right"></i>
+                  <button type="button" class="search-toggler">
+                    <i class="flaticon-search-1"></i>
+                  </button>
                 </div>
                 <div class="btn-box">
-                  <a href="index.html" class="theme-btn style-one">Free Estimate</a>
+                  <a href="index.html" class="theme-btn style-two">Get Free Quote</a>
                 </div>
               </div>
             </div>
@@ -270,13 +374,7 @@
           <div class="outer-box clearfix">
             <div class="logo-box pull-left">
               <figure class="logo">
-                <a href="index.html">
-                  <img
-                    class="site-brand-logo site-brand-logo--sticky"
-                    src="assets/cis-images/about/cis-logo.webp"
-                    alt="CIS logo"
-                  />
-                </a>
+                <a href="index.html"><img src="assets/cis-images/about/cis-logo.webp" alt="" /></a>
               </figure>
             </div>
             <div class="menu-area pull-right">
@@ -297,16 +395,11 @@
 
       <nav class="menu-box">
         <div class="nav-logo">
-          <a href="index.html">
-            <img
-              class="site-brand-logo site-brand-logo--mobile"
-              src="assets/cis-images/about/cis-logo.webp"
-              alt="CIS logo"
-              title="CIS"
-            />
-          </a>
+          <a href="index.html"><img src="assets/cis-images/about/cis-logo.webp" alt="" title="" /></a>
         </div>
-        <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
+        <div class="menu-outer">
+          <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+        </div>
         <div class="contact-info">
           <h4>Contact Info</h4>
           <ul>
@@ -339,23 +432,59 @@
     <!-- End Mobile Menu -->
 
     <!-- banner-section -->
-    <section class="banner-section">
+    <section class="banner-section style-two">
       <div class="banner-carousel owl-theme owl-carousel owl-dots-none">
         <div class="slide-item">
-          <div class="image-layer" style="background-image: url(assets/cis-images/headers/home-hero-01.jpg)"></div>
+          <div class="image-layer" style="background-image: url(assets/cis-images/headers/home-hero-04.jpg)"></div>
           <div class="auto-container">
             <div class="content-box">
-              <h5>Center for Integrated Solutions</h5>
+              <h5>Center for Integrated Solutions for</h5>
               <h1>
                 Advancing Sustainable Societies
                 <br />
                 Through Locally Driven Solutions
               </h1>
+              <p>
+                At CIS, we generate evidence, strengthen capacity, and deliver locally driven research and development
+                solutions.
+                <br />
+                repraderit luptate velit excepteur ocaan ipsum.
+              </p>
               <div class="btn-box">
-                <a href="#pillars" class="theme-btn style-one">Explore Our Pillars</a>
-                <a href="contact.html" class="user-btn">
-                  <i class="far fa-envelope"></i>
-                  <span>Contact Us</span>
+                <a href="index.html" class="theme-btn style-two">
+                  <i class="fas fa-atom"></i>
+                  How We Help
+                </a>
+                <a href="index" class="user-btn-two">
+                  <i class="far fa-user"></i>
+                  Find an Agent
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-item">
+          <div class="image-layer" style="background-image: url(assets/cis-images/headers/home-hero-01.jpg)"></div>
+          <div class="auto-container">
+            <div class="content-box centred">
+              <h1>
+                Evidence, Capacity, and Innovation
+                <br />
+                for Sustainable Societies
+              </h1>
+              <p>
+                We combine innovation, technology, and community knowledge to respond to local priorities.
+                <br />
+                repraderit luptate velit excepteur ocaan ipsum.
+              </p>
+              <div class="btn-box">
+                <a href="index.html" class="theme-btn style-two">
+                  <i class="fas fa-atom"></i>
+                  How We Help
+                </a>
+                <a href="index" class="user-btn-two">
+                  <i class="far fa-user"></i>
+                  Find an Agent
                 </a>
               </div>
             </div>
@@ -364,46 +493,22 @@
         <div class="slide-item">
           <div class="image-layer" style="background-image: url(assets/cis-images/headers/home-hero-02.jpg)"></div>
           <div class="auto-container">
-            <div class="content-box centred">
-              <ul class="list-item clearfix">
-                <li>
-                  .&nbsp;
-                  <a href="about-1.html">Evidence</a>
-                  &nbsp;.&nbsp;
-                </li>
-                <li>
-                  <a href="service-1.html">Capacity</a>
-                  &nbsp;.&nbsp;
-                </li>
-                <li>
-                  <a href="project-element-1.html">Innovation</a>
-                  &nbsp;.&nbsp;
-                </li>
-              </ul>
-              <h1>
-                Evidence, Capacity, and Innovation
-                <br />
-                for Sustainable Societies
-              </h1>
-              <div class="btn-box">
-                <a href="about-1.html" class="theme-btn style-one mar-0">Learn About CIS</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="slide-item">
-          <div class="image-layer" style="background-image: url(assets/cis-images/headers/home-hero-03.jpg)"></div>
-          <div class="auto-container">
             <div class="content-box">
-              <h5>Locally driven research and development</h5>
               <h1>
                 Integrated Solutions
                 <br />
                 That Respond to Local Priorities
               </h1>
+              <p>
+                We work with communities, institutions, and partners to advance sustainable societies.
+                <br />
+                repraderit luptate velit excepteur ocaan.
+              </p>
               <div class="btn-box">
-                <a href="project-element-1.html" class="theme-btn style-one mr-10">View Projects</a>
-                <a href="contact.html" class="banner-btn-two">Work With CIS</a>
+                <a href="index.html" class="theme-btn style-two mar-0">
+                  <i class="fas fa-atom"></i>
+                  How We Help
+                </a>
               </div>
             </div>
           </div>
@@ -412,173 +517,80 @@
     </section>
     <!-- banner-section end -->
 
-    <!-- info-section -->
-    <section class="info-section">
+    <!-- about-style-two -->
+    <section class="about-style-two">
+      <div class="pattern-layer" style="background-image: url(assets/cis-images/shape/shape-4.png)"></div>
       <div class="auto-container">
         <div class="row clearfix">
-          <div class="col-lg-7 col-md-12 col-sm-12 title-column">
-            <div class="title-inner">
-              <div class="year-box">
-                <figure class="image-box"><img src="assets/cis-images/icons/year-icon.png" alt="" /></figure>
-                <h2>13</h2>
-                <h3>Years in Liberia</h3>
-              </div>
-              <div class="title">
-                <h2>
-                  Years of Struggle
-                  <span></span>
-                  Better Strategy With Quality Business
-                </h2>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-5 col-md-12 col-sm-12 text-column">
-            <div class="text">
-              <p>
-                Beniam quis nostrud exercitation sed lamco laboris nis aliquip sed conseqa sed rure repreh derit luptate
-                velit excepteur ocaan dcats ipsum aliquip eduis aute irure reprehy enderit dui voluptate ipsum velit
-                esse cillum dolore ipsum.
-              </p>
-              <a href="about-1.html">
-                <i class="fas fa-arrow-right"></i>
-                <span>Who We Are</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- info-section end -->
-
-    <!-- feature-section -->
-    <section class="feature-section" id="pillars">
-      <div class="auto-container">
-        <div class="row clearfix">
-          <div class="col-lg-4 col-md-6 col-sm-12 feature-block">
-            <div
-              class="feature-block-one wow fadeInUp animated animated"
-              data-wow-delay="00ms"
-              data-wow-duration="1500ms"
-            >
-              <div class="inner-box">
-                <figure class="image-box">
-                  <img src="assets/cis-images/pageimages/cis-community-engagement.jpg" alt="" />
-                </figure>
-                <div class="lower-content">
-                  <div class="inner">
-                    <h3>Education</h3>
-                    <a href="index.html">
-                      <span>Read more</span>
-                      <i class="fas fa-arrow-right"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12 feature-block">
-            <div
-              class="feature-block-one wow fadeInUp animated animated"
-              data-wow-delay="300ms"
-              data-wow-duration="1500ms"
-            >
-              <div class="inner-box">
-                <figure class="image-box">
-                  <img src="assets/cis-images/pageimages/foundational-learning-literacy.jpg" alt="" />
-                </figure>
-                <div class="lower-content">
-                  <div class="inner">
-                    <h3>Health</h3>
-                    <a href="index.html">
-                      <span>Read more</span>
-                      <i class="fas fa-arrow-right"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12 feature-block">
-            <div
-              class="feature-block-one wow fadeInUp animated animated"
-              data-wow-delay="600ms"
-              data-wow-duration="1500ms"
-            >
-              <div class="inner-box">
-                <figure class="image-box">
-                  <img src="assets/cis-images/pageimages/economic-human-capital-development.jpg" alt="" />
-                </figure>
-                <div class="lower-content">
-                  <div class="inner">
-                    <h3>Economic &amp; Human Capital</h3>
-                    <a href="index.html">
-                      <span>Read more</span>
-                      <i class="fas fa-arrow-right"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- feature-section end -->
-
-    <!-- about-section -->
-    <section class="about-section bg-color-1">
-      <div class="auto-container">
-        <div class="row clearfix">
-          <div class="col-lg-6 col-md-12 col-sm-12 video-column">
-            <div class="video-inner">
-              <figure class="image-box"><img src="assets/cis-images/about/about-01.jpg" alt="" /></figure>
-              <div class="video-btn">
-                <a
-                  href="https://www.youtube.com/watch?v=nfP5N9Yc72A&amp;t=28s"
-                  class="lightbox-image"
-                  data-caption=""
-                  style="background-image: url(assets/cis-images/resource/btn-bg.png)"
-                >
-                  <i class="fas fa-play"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-12 col-sm-12 content-column">
-            <div id="content_block_one">
+          <div class="col-lg-7 col-md-12 col-sm-12 content-column">
+            <div id="content_block_three">
               <div class="content-box">
-                <div class="sec-title left">
-                  <h5>About fionca</h5>
-                  <h2>Largest Demand Partnership Buidling Financial Experts</h2>
+                <div class="sec-title style-two">
+                  <h5>About CIS</h5>
+                  <h2>Locally driven research and integrated solutions</h2>
                 </div>
                 <div class="text">
                   <p>
-                    Exercitation llamco laboris nis aliquip sed conseqrure dolorn repreh deris luptate velit excepteur
-                    duis aute irure dolor voluptate.
+                    Center for Integrated Solutions is a leading development firm that generates evidence, strengthens
+                    capacity, and delivers locally driven research and development solutions across Africa and the
+                    world.
                   </p>
                 </div>
                 <div class="inner-box">
-                  <div class="single-item">
-                    <div class="icon-box">
-                      <span class="bg-box"></span>
-                      <i class="flaticon-computer-1"></i>
+                  <div class="row clearfix">
+                    <div class="col-lg-6 col-md-6 col-sm-12 single-column">
+                      <div class="single-item">
+                        <div class="icon-box">
+                          <i class="flaticon-shield-1"></i>
+                        </div>
+                        <h5><a href="index.html">Evidence</a></h5>
+                        <p>We generate practical evidence and learning to guide integrated solutions.</p>
+                      </div>
                     </div>
-                    <h4><a href="index.html">Support On Raising Funds</a></h4>
-                    <p>
-                      Veniam quis nostrud exercitason ullamco ipsum laboris sed ut perspiciatis unde omnis iste natus.
-                    </p>
-                  </div>
-                  <div class="single-item">
-                    <div class="icon-box">
-                      <span class="bg-box"></span>
-                      <i class="flaticon-browser-1"></i>
+                    <div class="col-lg-6 col-md-6 col-sm-12 single-column">
+                      <div class="single-item">
+                        <div class="icon-box">
+                          <i class="flaticon-broker"></i>
+                        </div>
+                        <h5>
+                          <a href="index.html">Strengthening Capacity</a>
+                        </h5>
+                        <p>We strengthen the knowledge, systems, and leadership of local partners.</p>
+                      </div>
                     </div>
-                    <h4><a href="index.html">Outsourced Consulting Business</a></h4>
-                    <p>
-                      Ad mini veniam quis nostrud exercitas tion ullamco ipsum sed ut perspiciatis unde omnis iste
-                      natus.
-                    </p>
+                    <div class="col-lg-6 col-md-6 col-sm-12 single-column">
+                      <div class="single-item">
+                        <div class="icon-box">
+                          <i class="flaticon-safe-5"></i>
+                        </div>
+                        <h5><a href="index.html">Innovation</a></h5>
+                        <p>We use innovation and technology to address local priorities.</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 single-column">
+                      <div class="single-item">
+                        <div class="icon-box">
+                          <i class="flaticon-briefcase"></i>
+                        </div>
+                        <h5><a href="index.html">Partnerships</a></h5>
+                        <p>We connect community needs with practical programs and durable outcomes.</p>
+                      </div>
+                    </div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-12 col-sm-12 image-column">
+            <div id="image_block_two">
+              <div class="image-box">
+                <figure class="image">
+                  <img src="assets/cis-images/about/about-02.jpg" alt="" />
+                </figure>
+                <div class="content-box">
+                  <i class="fas fa-headset"></i>
+                  <h4>Partner with CIS</h4>
+                  <h5>Let's discuss your next project</h5>
                 </div>
               </div>
             </div>
@@ -586,255 +598,90 @@
         </div>
       </div>
     </section>
-    <!-- about-section end -->
+    <!-- about-style-two end -->
 
-    <!-- service-section -->
-    <section class="service-section">
-      <div class="auto-container">
-        <div class="title-box">
-          <div class="row clearfix">
-            <div class="col-lg-6 col-md-12 col-sm-12 title-column">
-              <div class="sec-title right">
-                <h5>What we provides</h5>
-                <h2>
-                  Get Exceptional
-                  <br />
-                  Service For Growth
-                </h2>
-              </div>
-            </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 text-column">
-              <div class="text">
-                <p>We combine innovation, technology, and community knowledge to advance sustainable societies.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="inner-content">
-          <div class="row clearfix">
-            <div class="col-lg-4 col-md-6 col-sm-12 service-block">
-              <div
-                class="service-block-one wow fadeInUp animated animated"
-                data-wow-delay="00ms"
-                data-wow-duration="1500ms"
-              >
-                <div class="inner-box">
-                  <h4><a href="planning-strategies.html">Planning Strategies</a></h4>
-                  <div class="inner">
-                    <div class="icon-box"><i class="flaticon-rocket"></i></div>
-                    <p>
-                      CIS designs practical, locally driven solutions that respond to community and institutional
-                      priorities.
-                    </p>
-                    <a href="planning-strategies.html">
-                      <i class="fas fa-arrow-right"></i>
-                      <span>Read More</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 service-block">
-              <div
-                class="service-block-one wow fadeInUp animated animated"
-                data-wow-delay="300ms"
-                data-wow-duration="1500ms"
-              >
-                <div class="inner-box">
-                  <h4><a href="financial-analysis.html">Educations</a></h4>
-                  <div class="inner">
-                    <div class="icon-box"><i class="flaticon-innovation-1"></i></div>
-                    <p>
-                      CIS designs practical, locally driven solutions that respond to community and institutional
-                      priorities.
-                    </p>
-                    <a href="financial-analysis.html">
-                      <i class="fas fa-arrow-right"></i>
-                      <span>Read More</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 service-block">
-              <div
-                class="service-block-one wow fadeInUp animated animated"
-                data-wow-delay="600ms"
-                data-wow-duration="1500ms"
-              >
-                <div class="inner-box">
-                  <h4><a href="investment-trading.html">Manage Investment</a></h4>
-                  <div class="inner">
-                    <div class="icon-box"><i class="flaticon-presentation"></i></div>
-                    <p>
-                      CIS designs practical, locally driven solutions that respond to community and institutional
-                      priorities.
-                    </p>
-                    <a href="investment-trading.html">
-                      <i class="fas fa-arrow-right"></i>
-                      <span>Read More</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 service-block">
-              <div
-                class="service-block-one wow fadeInUp animated animated"
-                data-wow-delay="00ms"
-                data-wow-duration="1500ms"
-              >
-                <div class="inner-box">
-                  <h4><a href="investment-trading.html">Process Development</a></h4>
-                  <div class="inner">
-                    <div class="icon-box"><i class="flaticon-target"></i></div>
-                    <p>
-                      CIS designs practical, locally driven solutions that respond to community and institutional
-                      priorities.
-                    </p>
-                    <a href="investment-trading.html">
-                      <i class="fas fa-arrow-right"></i>
-                      <span>Read More</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 service-block">
-              <div
-                class="service-block-one wow fadeInUp animated animated"
-                data-wow-delay="300ms"
-                data-wow-duration="1500ms"
-              >
-                <div class="inner-box">
-                  <h4><a href="wealth-marketing.html">Wealth Marketing</a></h4>
-                  <div class="inner">
-                    <div class="icon-box"><i class="flaticon-idea"></i></div>
-                    <p>
-                      CIS designs practical, locally driven solutions that respond to community and institutional
-                      priorities.
-                    </p>
-                    <a href="wealth-marketing.html">
-                      <i class="fas fa-arrow-right"></i>
-                      <span>Read More</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 service-block">
-              <div
-                class="service-block-one wow fadeInUp animated animated"
-                data-wow-delay="600ms"
-                data-wow-duration="1500ms"
-              >
-                <div class="inner-box">
-                  <h4><a href="taxation-planning.html">Business Tax Reforms</a></h4>
-                  <div class="inner">
-                    <div class="icon-box"><i class="flaticon-search"></i></div>
-                    <p>
-                      CIS designs practical, locally driven solutions that respond to community and institutional
-                      priorities.
-                    </p>
-                    <a href="taxation-planning.html">
-                      <i class="fas fa-arrow-right"></i>
-                      <span>Read More</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- service-section end -->
-
-    <!-- project-section -->
-    <section class="project-section">
-      <div class="fluid-container">
-        <div class="project-carousel theme-carousel owl-theme owl-carousel owl-dots-none owl-nav-none">
-          <div class="project-block-one">
-            <div class="inner-box">
-              <figure class="image-box"><img src="assets/cis-images/about/community-development.jpg" alt="" /></figure>
-              <div class="lower-content">
-                <p>Corporate Management</p>
-                <h2><a href="index.html">Global Management Apps</a></h2>
-              </div>
-            </div>
-          </div>
-          <div class="project-block-one">
-            <div class="inner-box">
-              <figure class="image-box"><img src="assets/cis-images/about/democracy-governance.jpg" alt="" /></figure>
-              <div class="lower-content">
-                <p>Financial Initiatives</p>
-                <h2><a href="index.html">Planning & Task Completion</a></h2>
-              </div>
-            </div>
-          </div>
-          <div class="project-block-one">
-            <div class="inner-box">
-              <figure class="image-box">
-                <img src="assets/cis-images/about/economic-human-capital-development.jpg" alt="" />
-              </figure>
-              <div class="lower-content">
-                <p>Corporate Management</p>
-                <h2><a href="index.html">Private Workshop Assistant</a></h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- project-section end -->
-
-    <!-- impact-stats -->
-    <section class="annual-stats impact-stats" aria-labelledby="impact-stats-title">
+    <!-- CIS Impact Statistics -->
+    <section class="annual-stats">
       <div class="auto-container">
         <div class="row clearfix">
+          <!-- Content Column -->
           <div class="col-lg-6 col-md-12 col-sm-12 content-column">
             <div id="content_block_two">
               <div class="content-box">
                 <div class="sec-title left">
-                  <h5>Our impact at a glance</h5>
-                  <h2 id="impact-stats-title">Locally driven work. Measurable progress.</h2>
+                  <h5>Our Impact</h5>
+                  <h2>Locally Driven Solutions Creating Lasting Impact</h2>
                 </div>
+
                 <div class="text">
                   <p>
-                    CIS turns evidence, capacity strengthening, innovation, and technology into practical solutions.
-                    Our work equips communities and local institutions with the knowledge, systems, and tools to sustain
-                    progress across Liberia.
+                    CIS transforms evidence, capacity strengthening, innovation, and technology into practical, locally
+                    driven solutions. We equip communities, institutions, and local partners with the knowledge,
+                    systems, and tools needed to sustain progress across Liberia.
                   </p>
                 </div>
-                <div class="inner-box impact-stat-grid">
-                  <article class="impact-stat-card">
-                    <strong>13</strong>
-                    <span>Years</span>
-                    <p>of direct support in Liberia</p>
-                  </article>
-                  <article class="impact-stat-card">
-                    <strong>8+</strong>
-                    <span>Counties</span>
-                    <p>supported across Liberia</p>
-                  </article>
-                  <article class="impact-stat-card">
-                    <strong>30+</strong>
-                    <span>Programs</span>
-                    <p>completed with communities</p>
-                  </article>
+
+                <div class="inner-box clearfix">
+                  <!-- Years of Support -->
+                  <div class="single-progress-box">
+                    <div class="box">
+                      <div class="piechart" data-fg-color="#4DB19E" data-value="1">
+                        <span>13</span>
+                      </div>
+
+                      <h5>
+                        Years of Direct
+                        <br />
+                        Support
+                      </h5>
+
+                      <h3>Across Liberia</h3>
+                    </div>
+                  </div>
+
+                  <!-- Counties Supported -->
+                  <div class="single-progress-box">
+                    <div class="box">
+                      <div class="piechart" data-fg-color="#202124" data-value="1">
+                        <span>8+</span>
+                      </div>
+
+                      <h5>
+                        Counties
+                        <br />
+                        Supported
+                      </h5>
+
+                      <h3>30+ Programs Completed</h3>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- Image Column -->
           <div class="col-lg-6 col-md-12 col-sm-12 image-column">
             <div id="image_block_one">
               <div class="image-box">
                 <div class="pattern-layer" style="background-image: url(assets/cis-images/shape/shape-1.png)"></div>
-                <figure class="image"><img src="assets/cis-images/about/technology-innovation.jpg" alt="CIS technology and innovation work" /></figure>
+
+                <figure class="image">
+                  <img
+                    src="assets/cis-images/about/community-development.jpg"
+                    alt="CIS team members collaborating with a community development partner in Liberia"
+                  />
+                </figure>
+
                 <div class="award-box">
                   <div class="box">
-                    <figure class="icon-box"><img src="assets/cis-images/icons/icon-1.png" alt="" /></figure>
-                    <span>Evidence, capacity, and innovation for sustainable societies</span>
+                    <div class="impact-icon" aria-hidden="true">
+                      <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <span class="impact-copy">
+                      <strong>13+ Years</strong>
+                      Empowering Communities Across Liberia
+                    </span>
                   </div>
                 </div>
               </div>
@@ -843,334 +690,711 @@
         </div>
       </div>
     </section>
-    <!-- impact-stats end -->
 
-    <!-- world-cyber -->
-    <section class="world-cyber bg-color-1">
-      <div class="pattern-layer" style="background-image: url(assets/cis-images/shape/shape-2.png)"></div>
+    <!-- service-style-two -->
+    <section class="service-style-two bg-color-2">
+      <div class="pattern-layer" style="background-image: url(assets/cis-images/shape/shape-5.png)"></div>
       <div class="auto-container">
-        <div class="sec-title centred">
-          <h5>Working across Liberia and beyond</h5>
-          <h2>Working Everywhere</h2>
+        <div class="sec-title light centred">
+          <h5>Core pillars of work</h5>
+          <h2>
+            Integrated Solutions
+            <br />
+            for Sustainable Societies
+          </h2>
+          <p>
+            CIS works across education, health, governance, economic development, technology, and community engagement.
+            <br />
+            excepteur duis aute irure dolor voluptate voluptatem accusa
+          </p>
         </div>
-        <div class="office-location">
-          <div class="location-area">
-            <div class="location-box">
-              <div class="address-box">
-                <figure class="icon-box"><img src="assets/cis-images/icons/icon-2.png" alt="" /></figure>
-                <p>Serve you to reach best profits and goals.</p>
-              </div>
-            </div>
-            <div class="location-box">
-              <div class="address-box">
-                <figure class="icon-box"><img src="assets/cis-images/icons/icon-2.png" alt="" /></figure>
-                <p>Serve you to reach best profits and goals.</p>
-              </div>
-            </div>
-            <div class="location-box">
-              <div class="address-box">
-                <figure class="icon-box"><img src="assets/cis-images/icons/icon-2.png" alt="" /></figure>
-                <p>Serve you to reach best profits and goals.</p>
-              </div>
-            </div>
-            <div class="location-box">
-              <div class="address-box">
-                <figure class="icon-box"><img src="assets/cis-images/icons/icon-2.png" alt="" /></figure>
-                <p>Serve you to reach best profits and goals.</p>
-              </div>
-            </div>
-            <div class="location-box">
-              <div class="address-box">
-                <figure class="icon-box"><img src="assets/cis-images/icons/icon-2.png" alt="" /></figure>
-                <p>Serve you to reach best profits and goals.</p>
-              </div>
-            </div>
-            <div class="location-box">
-              <div class="address-box">
-                <figure class="icon-box"><img src="assets/cis-images/icons/icon-2.png" alt="" /></figure>
-                <p>Serve you to reach best profits and goals.</p>
-              </div>
-            </div>
-            <div class="location-box">
-              <div class="address-box">
-                <figure class="icon-box"><img src="assets/cis-images/icons/icon-2.png" alt="" /></figure>
-                <p>Serve you to reach best profits and goals.</p>
-              </div>
-            </div>
-            <div class="location-box">
-              <div class="address-box">
-                <figure class="icon-box"><img src="assets/cis-images/icons/icon-2.png" alt="" /></figure>
-                <p>Serve you to reach best profits and goals.</p>
+        <div class="row clearfix">
+          <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+            <div class="service-block-two wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+              <div class="inner-box">
+                <div class="icon-box"><i class="flaticon-graduation-cap"></i></div>
+                <h4><a href="index.html">Education</a></h4>
+                <p>Foundational learning, literacy, instructional support, and community engagement.</p>
+                <div class="link">
+                  <a href="index.html">
+                    <i class="fas fa-arrow-right"></i>
+                    <span>Read More</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+            <div class="service-block-two wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+              <div class="inner-box">
+                <div class="icon-box"><i class="flaticon-hospital"></i></div>
+                <h4><a href="index.html">Health</a></h4>
+                <p>Health systems strengthening, WASH interventions, and stronger local service delivery.</p>
+                <div class="link">
+                  <a href="index.html">
+                    <i class="fas fa-arrow-right"></i>
+                    <span>Read More</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+            <div class="service-block-two wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+              <div class="inner-box">
+                <div class="icon-box"><i class="flaticon-law"></i></div>
+                <h4><a href="index.html">Democracy &amp; Governance</a></h4>
+                <p>Civic participation, accountability, leadership development, and governance institutions.</p>
+                <div class="link">
+                  <a href="index.html">
+                    <i class="fas fa-arrow-right"></i>
+                    <span>Read More</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+            <div class="service-block-two wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+              <div class="inner-box">
+                <div class="icon-box"><i class="flaticon-growth"></i></div>
+                <h4><a href="index.html">Economic &amp; Human Capital</a></h4>
+                <p>Skills development, livelihoods support, entrepreneurship, and workforce readiness.</p>
+                <div class="link">
+                  <a href="index.html">
+                    <i class="fas fa-arrow-right"></i>
+                    <span>Read More</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+            <div class="service-block-two wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+              <div class="inner-box">
+                <div class="icon-box"><i class="flaticon-computer"></i></div>
+                <h4><a href="index.html">Information Technology</a></h4>
+                <p>Software applications, data platforms, and digital systems for better decisions.</p>
+                <div class="link">
+                  <a href="index.html">
+                    <i class="fas fa-arrow-right"></i>
+                    <span>Read More</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+            <div class="service-block-two wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+              <div class="inner-box">
+                <div class="icon-box"><i class="flaticon-networking"></i></div>
+                <h4><a href="index.html">Community Engagement</a></h4>
+                <p>Locally led partnerships that connect community needs with durable outcomes.</p>
+                <div class="link">
+                  <a href="index.html">
+                    <i class="fas fa-arrow-right"></i>
+                    <span>Read More</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- service-style-two end -->
+
+    <!-- protect-form -->
+    <section class="protect-form centred">
+      <div class="auto-container">
+        <div class="inner-box">
+          <h2>Solutions That Strengthen Communities</h2>
+          <h3>Not sure which policy suits you the best? Find our agent</h3>
+          <form action="index.html" method="post" class="zip-form">
+            <div class="form-group clearfix">
+              <input type="text" name="zip" placeholder="contact us " required="" />
+              <button class="theme-btn style-two" type="submit">
+                <i class="far fa-user"></i>
+                Contact Us
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- protect-form end -->
+
+    <!-- our-mission -->
+    <section class="our-mission bg-color-1">
+      <div class="pattern-layer" style="background-image: url(assets/cis-images/shape/shape-6.png)"></div>
+      <div class="auto-container">
+        <div class="row clearfix">
+          <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+            <div id="content_block_four">
+              <div class="content-box">
+                <div class="tabs-box">
+                  <div class="tab-btn-box">
+                    <ul class="tab-btns tab-buttons clearfix">
+                      <li class="tab-btn active-btn" data-tab="#tab-1">Vision</li>
+                      <li class="tab-btn" data-tab="#tab-2">Mission</li>
+                      <!-- <li class="tab-btn" data-tab="#tab-3">Strategy</li> -->
+                    </ul>
+                  </div>
+                  <div class="tabs-content">
+                    <div class="tab active-tab" id="tab-1">
+                      <div class="content-inner">
+                        <h3>Our Vision</h3>
+                        <p>
+                          To be a leading development firm for innovation, research, evidence, and integrated solutions
+                          for sustainable societies across Africa and the world.
+                        </p>
+                        <ul class="list-item clearfix">
+                          <li>Innovation and research</li>
+                          <li>Evidence-led solutions</li>
+                          <li>Integrated development approaches</li>
+                          <li>Sustainable societies across Africa and the world</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="tab" id="tab-2">
+                      <div class="content-inner">
+                        <h3>Our Mission</h3>
+                        <p>
+                          To generate evidence, strengthen capacity, and deliver locally driven research and development
+                          solutions by using innovation and technology to advance sustainable societies.
+                        </p>
+                        <ul class="list-item clearfix">
+                          <li>Generate evidence</li>
+                          <li>Strengthen capacity</li>
+                          <li>Deliver locally driven solutions</li>
+                          <li>Use innovation and technology</li>
+                        </ul>
+                      </div>
+                      <div class="tab active-tab" id="tab-1">
+                        <div class="content-inner">
+                          <h3>Our Vision</h3>
+                          <p>
+                            To be a leading development firm for innovation, research, evidence, and integrated
+                            solutions for sustainable societies across Africa and the world.
+                          </p>
+                          <ul class="list-item clearfix">
+                            <li>Innovation and research</li>
+                            <li>Evidence-led solutions</li>
+                            <li>Integrated development approaches</li>
+                            <li>Sustainable societies across Africa and the world</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab" id="tab-3">
+                      <div class="content-inner">
+                        <h3>Living a Confident Life</h3>
+                        <p>
+                          Exercitation llamco laboris nis aliquip sed conseqrure dolorn repreh deris luptate velit
+                          excepteur duis aute irure dolor voluptate voluptatem accusa ntium doloremque laudantium totam
+                          rem.
+                        </p>
+                        <ul class="list-item clearfix">
+                          <li>Aliquip ex ea consequat sed duis</li>
+                          <li>Irure dolor voluptate velit esse</li>
+                          <li>Cillum dolore eu fugiat nulla pariatur</li>
+                          <li>Excepteur sint occaecat cupidatat non</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-12 video-column">
+            <div id="video_block_one">
+              <div class="video-inner">
+                <figure class="image-box">
+                  <img src="assets/cis-images/resource/mission-1.jpg" alt="" />
+                </figure>
+                <div class="video-btn">
+                  <span class="play-icon" aria-hidden="true">
+                    <i class="fas fa-play"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- our-mission end -->
+
+    <!-- team-section -->
+    <section class="team-section">
+      <div class="auto-container">
+        <div class="upper-box clearfix">
+          <div class="sec-title style-two pull-left">
+            <h5>Our network</h5>
+            <h2>Our Partners</h2>
+          </div>
+          <div class="btn-box pull-right"></div>
+        </div>
+        <div class="four-item-carousel owl-carousel owl-theme owl-nav-none owl-dot-style-one">
+          <div class="team-block-one">
+            <div class="inner-box">
+              <figure class="image-box">
+                <img src="assets/cis-images/team/partner-logo-01.png" alt="" />
+              </figure>
+              <div class="lower-content"></div>
+            </div>
+          </div>
+          <div class="team-block-one">
+            <div class="inner-box">
+              <figure class="image-box">
+                <img src="assets/cis-images/team/partner-logo-02.png" alt="" />
+              </figure>
+              <div class="lower-content"></div>
+            </div>
+          </div>
+          <div class="team-block-one">
+            <div class="inner-box">
+              <figure class="image-box">
+                <img src="assets/cis-images/team/partner-logo-03.png" alt="" />
+              </figure>
+              <div class="lower-content"></div>
+            </div>
+          </div>
+          <div class="team-block-one">
+            <div class="inner-box">
+              <figure class="image-box">
+                <img src="assets/cis-images/team/partner-logo-04.png" alt="" />
+              </figure>
+              <div class="lower-content"></div>
+            </div>
+          </div>
+          <div class="team-block-one">
+            <div class="inner-box">
+              <figure class="image-box">
+                <img src="assets/cis-images/team/partner-logo-05.png" alt="" />
+              </figure>
+              <div class="lower-content"></div>
+            </div>
+          </div>
+          <div class="team-block-one">
+            <div class="inner-box">
+              <figure class="image-box">
+                <img src="assets/cis-images/team/partner-logo-06.png" alt="" />
+              </figure>
+              <div class="lower-content"></div>
+            </div>
+          </div>
+          <div class="team-block-one">
+            <div class="inner-box">
+              <figure class="image-box">
+                <img src="assets/cis-images/team/partner-logo-07.png" alt="" />
+              </figure>
+              <div class="lower-content"></div>
+            </div>
+          </div>
+
+          <div class="team-block-one">
+            <div class="inner-box">
+              <figure class="image-box">
+                <img src="assets/cis-images/team/partner-logo-010.png" alt="" />
+              </figure>
+              <div class="lower-content"></div>
+            </div>
+          </div>
+          <div class="team-block-one">
+            <div class="inner-box">
+              <figure class="image-box">
+                <img src="assets/cis-images/team/partner-logo-011.png" alt="" />
+              </figure>
+              <div class="lower-content"></div>
+            </div>
+          </div>
+
+          <div class="team-block-one">
+            <div class="inner-box">
+              <figure class="image-box">
+                <img src="assets/cis-images/team/partner-logo-013.png" alt="" />
+              </figure>
+              <div class="lower-content"></div>
+            </div>
+          </div>
+          <div class="team-block-one">
+            <div class="inner-box">
+              <figure class="image-box">
+                <img src="assets/cis-images/team/partner-logo-014.png" alt="" />
+              </figure>
+              <div class="lower-content"></div>
+            </div>
+          </div>
+          <div class="team-block-one">
+            <div class="inner-box">
+              <figure class="image-box">
+                <img src="assets/cis-images/team/partner-logo-015.png" alt="" />
+              </figure>
+              <div class="lower-content"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- team-section end -->
+
+    <!-- world-cyber -->
+    <section class="world-cyber about-page-1">
+      <div class="pattern-layer" style="background-image: url(assets/cis-images/about/maps.png)"></div>
+      <div class="auto-container">
+        <div class="sec-title centred">
+          <h5>Working across Liberia and beyond</h5>
+          <h2>CIS Working Everywhere</h2>
+        </div>
+        <div class="office-location">
+          <div class="location-area"></div>
         </div>
       </div>
     </section>
     <!-- world-cyber end -->
 
-    <!-- support-section -->
-    <section class="support-section">
+    <!-- view-plans -->
+    <section class="view-plans">
+      <div class="pattern-layer" style="background-image: url(assets/cis-images/shape/shape-8.png)"></div>
       <div class="auto-container">
-        <div class="inner-container">
-          <div class="row clearfix">
-            <div class="col-lg-7 col-md-12 col-sm-12 inner-column">
-              <div class="inner-box">
+        <div class="inner-container clearfix">
+          <div class="pattern-layer" style="background-image: url(assets/cis-images/shape/shape-7.png)"></div>
+          <div class="text pull-left">
+            <h5>Let get started</h5>
+            <h2>Not sure about the right insurance for you?</h2>
+            <h3>We have got some best insurance plans and solutions</h3>
+          </div>
+          <div class="btn-box pull-right">
+            <a href="index.html" class="theme-btn style-one">View All Plans</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- view-plans end -->
+
+    <!-- testimonial-style-two -->
+    <section class="testimonial-style-two">
+      <div class="auto-container">
+        <div class="sec-title centred">
+          <h5>testimonials</h5>
+          <h2>What Client Saying</h2>
+        </div>
+        <div class="three-item-carousel owl-carousel owl-theme owl-nav-none owl-dot-style-one">
+          <div class="testimonial-content">
+            <div class="inner-box">
+              <div class="text">
+                <i class="fas fa-quote-right"></i>
+                <p>
+                  Fugiat nulla pariatur excepteur sint sed cupidatat non proident, sunt in culp quip deserunt mollit
+                  animy est laborum sed perspiciatis unde omnis iste.
+                </p>
+              </div>
+              <!-- <div class="author-info">
+                <figure class="image-box">
+                  <img src="assets/cis-images/avatar/team-member-006.jpg" alt="" />
+                </figure>
+                <h5>Nelson Edward</h5>
+                <span class="designation">CIS Partner</span>
+              </div> -->
+            </div>
+          </div>
+          <div class="testimonial-content">
+            <div class="inner-box">
+              <div class="text">
+                <i class="fas fa-quote-right"></i>
+                <p>
+                  Fugiat nulla pariatur excepteur sint sed cupidatat non proident, sunt in culp quip deserunt mollit
+                  animy est laborum sed perspiciatis unde omnis iste.
+                </p>
+              </div>
+              <!-- <div class="author-info">
+                <figure class="image-box">
+                  <img src="assets/cis-images/avatar/team-member-007.jpg" alt="" />
+                </figure>
+                <h5>Thomas Saleh</h5>
+                <span class="designation">CIS Partner</span>
+              </div> -->
+            </div>
+          </div>
+          <div class="testimonial-content">
+            <div class="inner-box">
+              <div class="text">
+                <i class="fas fa-quote-right"></i>
+                <p>
+                  Fugiat nulla pariatur excepteur sint sed cupidatat non proident, sunt in culp quip deserunt mollit
+                  animy est laborum sed perspiciatis unde omnis iste.
+                </p>
+              </div>
+              <!-- <div class="author-info">
+                <figure class="image-box">
+                  <img src="assets/cis-images/avatar/team-member-008.jpg" alt="" />
+                </figure>
+                <h5>Nelson Edward</h5>
+                <span class="designation">CIS Partner</span>
+              </div> -->
+            </div>
+          </div>
+          <div class="testimonial-content">
+            <div class="inner-box">
+              <div class="text">
+                <i class="fas fa-quote-right"></i>
+                <p>
+                  Fugiat nulla pariatur excepteur sint sed cupidatat non proident, sunt in culp quip deserunt mollit
+                  animy est laborum sed perspiciatis unde omnis iste.
+                </p>
+              </div>
+              <!-- <div class="author-info">
+                <figure class="image-box">
+                  <img src="assets/cis-images/avatar/team-member-006.jpg" alt="" />
+                </figure>
+                <h5>Nelson Edward</h5>
+                <span class="designation">CIS Partner</span>
+              </div> -->
+            </div>
+          </div>
+          <div class="testimonial-content">
+            <div class="inner-box">
+              <div class="text">
+                <i class="fas fa-quote-right"></i>
+                <p>
+                  Fugiat nulla pariatur excepteur sint sed cupidatat non proident, sunt in culp quip deserunt mollit
+                  animy est laborum sed perspiciatis unde omnis iste.
+                </p>
+              </div>
+              <!-- <div class="author-info">
+                <figure class="image-box">
+                  <img src="assets/cis-images/avatar/team-member-007.jpg" alt="" />
+                </figure>
+                <h5>Thomas Saleh</h5>
+                <span class="designation">CIS Partner</span>
+              </div> -->
+            </div>
+          </div>
+          <div class="testimonial-content">
+            <div class="inner-box">
+              <div class="text">
+                <i class="fas fa-quote-right"></i>
+                <p>
+                  Fugiat nulla pariatur excepteur sint sed cupidatat non proident, sunt in culp quip deserunt mollit
+                  animy est laborum sed perspiciatis unde omnis iste.
+                </p>
+              </div>
+              <!-- <div class="author-info">
+                <figure class="image-box">
+                  <img src="assets/cis-images/avatar/team-member-008.jpg" alt="" />
+                </figure>
+                <h5>Nelson Edward</h5>
+                <span class="designation">CIS Partner</span>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- testimonial-style-two end -->
+
+    <!-- policy-section -->
+    <section class="policy-section bg-color-2">
+      <div class="pattern-layer" style="background-image: url(assets/cis-images/shape/shape-9.png)"></div>
+      <div class="auto-container">
+        <div class="row clearfix">
+          <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+            <div id="content_block_five">
+              <div class="content-box">
                 <div class="sec-title light left">
-                  <h5>try our service</h5>
-                  <h2>Get Free Quote</h2>
+                  <h5>Get in Touch</h5>
+                  <h2>Partner with CIS</h2>
                   <p>
-                    Ad mini veniam quis nostrud ipsum exercitas tion ullamco ipsum laboris sed ut perspiciatis unde.
+                    We collaborate with communities, development partners, donors, and institutions to deliver
+                    innovative, evidence-based solutions that create sustainable impact across Liberia.
                   </p>
                 </div>
-                <form action="contact.html" method="post" class="submit-form">
-                  <div class="form-group">
-                    <input type="text" name="name" placeholder="Your Name" required="" />
-                  </div>
-                  <div class="form-group">
-                    <input type="email" name="email" placeholder="Email address" required="" />
-                  </div>
-                  <div class="form-group">
-                    <input type="text" name="phone" placeholder="Phone" required="" />
-                  </div>
-                  <div class="form-group">
-                    <textarea name="message" placeholder="Message"></textarea>
-                  </div>
-                  <div class="form-group message-btn">
-                    <button type="submit" class="theme-btn style-one">request estimate</button>
-                  </div>
-                </form>
-              </div>
-            </div>
-            <div class="col-lg-5 col-md-12 col-sm-12 info-column">
-              <div class="info-inner">
-                <figure class="image-box">
-                  <img src="assets/cis-images/about/public-health-initiative.jpg" alt="" />
-                </figure>
-                <div class="info-box">
-                  <figure class="info-logo"><img src="assets/cis-images/icons/info-logo.png" alt="" /></figure>
-                  <div class="icon-box"><i class="fas fa-phone"></i></div>
-                  <h2><a href="tel:18003698527">1-800-369-8527</a></h2>
-                  <div class="email"><a href="mailto:c4islib@gmail.com">c4islib@gmail.com</a></div>
-                  <ul class="list-item clearfix">
-                    <li>
-                      .&nbsp;
-                      <a href="index.html">Experienced</a>
-                      &nbsp;.
-                    </li>
-                    <li>
-                      <a href="index.html">Specialized</a>
-                      &nbsp;.
-                    </li>
-                    <li>
-                      <a href="index.html">Professional</a>
-                      &nbsp;.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- support-section end -->
 
-    <!-- testimonial-section -->
-    <section class="testimonial-section" style="background-image: url(assets/cis-images/background/testimonial-bg.jpg)">
-      <div class="auto-container">
-        <div class="title-box">
-          <div class="row clearfix">
-            <div class="col-lg-6 col-md-12 col-sm-12 title-column">
-              <div class="sec-title right">
-                <h5>testimonials</h5>
-                <h2>
-                  What Our Loving
-                  <br />
-                  Clients Saying
-                </h2>
-              </div>
-            </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 text-column">
-              <div class="text">
-                <p>We combine innovation, technology, and community knowledge to advance sustainable societies.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-inner">
-          <div class="client-testimonial-carousel owl-carousel owl-theme owl-nav-none owl-dots-none">
-            <div class="testimonial-block">
-              <div class="text">
-                <p>
-                  Aspernatur aut odit aut fugit sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
-                  nesciunt. Neque porro quisquam estm qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit
-                  sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam sd ipsum quaerat
-                  voluptatem.
-                </p>
-              </div>
-            </div>
-            <div class="testimonial-block">
-              <div class="text">
-                <p>
-                  Aspernatur aut odit aut fugit sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
-                  nesciunt. Neque porro quisquam estm qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit
-                  sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam sd ipsum quaerat
-                  voluptatem.
-                </p>
-              </div>
-            </div>
-            <div class="testimonial-block">
-              <div class="text">
-                <p>
-                  Aspernatur aut odit aut fugit sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
-                  nesciunt. Neque porro quisquam estm qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit
-                  sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam sd ipsum quaerat
-                  voluptatem.
-                </p>
-              </div>
-            </div>
-            <div class="testimonial-block">
-              <div class="text">
-                <p>
-                  Aspernatur aut odit aut fugit sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
-                  nesciunt. Neque porro quisquam estm qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit
-                  sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam sd ipsum quaerat
-                  voluptatem.
-                </p>
-              </div>
-            </div>
-            <div class="testimonial-block">
-              <div class="text">
-                <p>
-                  Aspernatur aut odit aut fugit sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
-                  nesciunt. Neque porro quisquam estm qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit
-                  sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam sd ipsum quaerat
-                  voluptatem.
-                </p>
-              </div>
-            </div>
-            <div class="testimonial-block">
-              <div class="text">
-                <p>
-                  Aspernatur aut odit aut fugit sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
-                  nesciunt. Neque porro quisquam estm qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit
-                  sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam sd ipsum quaerat
-                  voluptatem.
-                </p>
-              </div>
-            </div>
-            <div class="testimonial-block">
-              <div class="text">
-                <p>
-                  Aspernatur aut odit aut fugit sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
-                  nesciunt. Neque porro quisquam estm qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit
-                  sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam sd ipsum quaerat
-                  voluptatem.
-                </p>
-              </div>
-            </div>
-            <div class="testimonial-block">
-              <div class="text">
-                <p>
-                  Aspernatur aut odit aut fugit sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
-                  nesciunt. Neque porro quisquam estm qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit
-                  sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam sd ipsum quaerat
-                  voluptatem.
-                </p>
-              </div>
-            </div>
-            <div class="testimonial-block">
-              <div class="text">
-                <p>
-                  Aspernatur aut odit aut fugit sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
-                  nesciunt. Neque porro quisquam estm qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit
-                  sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam sd ipsum quaerat
-                  voluptatem.
-                </p>
-              </div>
-            </div>
-            <div class="testimonial-block">
-              <div class="text">
-                <p>
-                  Aspernatur aut odit aut fugit sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
-                  nesciunt. Neque porro quisquam estm qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit
-                  sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam sd ipsum quaerat
-                  voluptatem.
-                </p>
+                <ul class="info-list clearfix">
+                  <li>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Our Office</h4>
+                    <p>
+                      Airfield Junction, Sinkor
+                      <br />
+                      Monrovia, Montserrado, Liberia
+                    </p>
+                  </li>
+
+                  <li>
+                    <i class="fas fa-phone-volume"></i>
+                    <h4>Call Us</h4>
+                    <p>
+                      <a href="tel:+231777222021">(231) 777-222-021</a>
+                    </p>
+                  </li>
+
+                  <li>
+                    <i class="fas fa-envelope-open"></i>
+                    <h4>Email Us</h4>
+                    <p>
+                      <a href="mailto:partnership@c4islib.org">partnership@c4islib.org</a>
+                    </p>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
-          <div class="client-thumb-outer">
-            <div class="client-thumbs-carousel owl-carousel owl-theme owl-nav-none owl-dots-none">
-              <div class="thumb-item">
-                <figure class="thumb-box"><img src="assets/cis-images/avatar/team-member-001.jpg" alt="" /></figure>
-                <div class="info-box">
-                  <h5>Robert Smith</h5>
-                  <span class="designation">Senior Manager</span>
-                </div>
-              </div>
-              <div class="thumb-item">
-                <figure class="thumb-box"><img src="assets/cis-images/avatar/team-member-0021.jpg" alt="" /></figure>
-                <div class="info-box">
-                  <h5>Christine Eva</h5>
-                  <span class="designation">Senior Manager</span>
-                </div>
-              </div>
-              <div class="thumb-item">
-                <figure class="thumb-box"><img src="assets/cis-images/avatar/team-member-003.jpg" alt="" /></figure>
-                <div class="info-box">
-                  <h5>Jhon Doe</h5>
-                  <span class="designation">Senior Manager</span>
-                </div>
-              </div>
-              <div class="thumb-item">
-                <figure class="thumb-box"><img src="assets/cis-images/avatar/team-member-004.jpg" alt="" /></figure>
-                <div class="info-box">
-                  <h5>Robert</h5>
-                  <span class="designation">Senior Manager</span>
-                </div>
-              </div>
-              <div class="thumb-item">
-                <figure class="thumb-box"><img src="assets/cis-images/avatar/team-member-005.jpg" alt="" /></figure>
-                <div class="info-box">
-                  <h5>Tomas Tom</h5>
-                  <span class="designation">Senior Manager</span>
-                </div>
-              </div>
-              <div class="thumb-item">
-                <figure class="thumb-box"><img src="assets/cis-images/avatar/team-member-001.jpg" alt="" /></figure>
-                <div class="info-box">
-                  <h5>Robert Smith</h5>
-                  <span class="designation">Senior Manager</span>
-                </div>
-              </div>
-              <div class="thumb-item">
-                <figure class="thumb-box"><img src="assets/cis-images/avatar/team-member-0021.jpg" alt="" /></figure>
-                <div class="info-box">
-                  <h5>Christine Eva</h5>
-                  <span class="designation">Senior Manager</span>
-                </div>
-              </div>
-              <div class="thumb-item">
-                <figure class="thumb-box"><img src="assets/cis-images/avatar/team-member-003.jpg" alt="" /></figure>
-                <div class="info-box">
-                  <h5>Jhon Doe</h5>
-                  <span class="designation">Senior Manager</span>
-                </div>
-              </div>
-              <div class="thumb-item">
-                <figure class="thumb-box"><img src="assets/cis-images/avatar/team-member-004.jpg" alt="" /></figure>
-                <div class="info-box">
-                  <h5>Robert</h5>
-                  <span class="designation">Senior Manager</span>
-                </div>
-              </div>
-              <div class="thumb-item">
-                <figure class="thumb-box"><img src="assets/cis-images/avatar/team-member-005.jpg" alt="" /></figure>
-                <div class="info-box">
-                  <h5>Tomas Tom</h5>
-                  <span class="designation">Senior Manager</span>
+
+          <div class="col-lg-6 col-md-12 col-sm-12 inner-column">
+            <div id="content_block_six">
+              <div class="content-box">
+                <div class="tabs-box">
+                  <div class="tab-btn-box">
+                    <ul class="tab-btns tab-buttons clearfix">
+                      <li class="tab-btn active-btn" data-tab="#tab-4">Contact Us</li>
+                      <!-- <li class="tab-btn" data-tab="#tab-5">Home</li>
+                      <li class="tab-btn" data-tab="#tab-6">Car</li>
+                      <li class="tab-btn" data-tab="#tab-7">Health</li> -->
+                    </ul>
+                  </div>
+                  <div class="tabs-content">
+                    <div class="tab active-tab" id="tab-4">
+                      <div class="content-inner">
+                        <p>
+                          Select a product to start a quote. Or call us at
+                          <a href="tel:01005200369">0100-5200-369</a>
+                        </p>
+                        <form action="index.html" method="post">
+                          <div class="form-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" name="name" placeholder="Name" required="" />
+                          </div>
+                          <div class="form-group">
+                            <i class="fas fa-envelope-open"></i>
+                            <input type="email" name="email" placeholder="Email" required="" />
+                          </div>
+                          <div class="form-group">
+                            <i class="fas fa-chess-knight"></i>
+                            <div class="select-box">
+                              <select class="wide">
+                                <option data-display="Select">Select a plan</option>
+                                <option value="1">Education</option>
+                                <option value="2">Health</option>
+                                <option value="3" disabled>A disabled option</option>
+                                <option value="4">Democracy & Governance</option>
+                                <option value="5">Economic & Human Capital</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-group message-btn">
+                            <button type="submit" class="theme-btn style-two">start my insurance plan</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="tab" id="tab-5">
+                      <div class="content-inner">
+                        <p>
+                          Select a product to start a quote. Or call us at
+                          <a href="tel:01005200369">0100-5200-369</a>
+                        </p>
+                        <form action="index.html" method="post">
+                          <div class="form-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" name="name" placeholder="Name" required="" />
+                          </div>
+                          <div class="form-group">
+                            <i class="fas fa-envelope-open"></i>
+                            <input type="email" name="email" placeholder="Email" required="" />
+                          </div>
+                          <div class="form-group">
+                            <i class="fas fa-chess-knight"></i>
+                            <div class="select-box">
+                              <select class="wide">
+                                <option data-display="Select">Select a plan</option>
+                                <option value="1">Education</option>
+                                <option value="2">Health</option>
+                                <option value="3" disabled>A disabled option</option>
+                                <option value="4">Democracy & Governance</option>
+                                <option value="5">Economic & Human Capital</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-group message-btn">
+                            <button type="submit" class="theme-btn style-two">start my insurance plan</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="tab" id="tab-6">
+                      <div class="content-inner">
+                        <p>
+                          Select a product to start a quote. Or call us at
+                          <a href="tel:01005200369">0100-5200-369</a>
+                        </p>
+                        <form action="index.html" method="post">
+                          <div class="form-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" name="name" placeholder="Name" required="" />
+                          </div>
+                          <div class="form-group">
+                            <i class="fas fa-envelope-open"></i>
+                            <input type="email" name="email" placeholder="Email" required="" />
+                          </div>
+                          <div class="form-group">
+                            <i class="fas fa-chess-knight"></i>
+                            <div class="select-box">
+                              <select class="wide">
+                                <option data-display="Select">Select a plan</option>
+                                <option value="1">Education</option>
+                                <option value="2">Health</option>
+                                <option value="3" disabled>A disabled option</option>
+                                <option value="4">Democracy & Governance</option>
+                                <option value="5">Economic & Human Capital</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-group message-btn">
+                            <button type="submit" class="theme-btn style-two">start my insurance plan</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="tab" id="tab-7">
+                      <div class="content-inner">
+                        <p>
+                          Select a product to start a quote. Or call us at
+                          <a href="tel:01005200369">0100-5200-369</a>
+                        </p>
+                        <form action="index.html" method="post">
+                          <div class="form-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" name="name" placeholder="Name" required="" />
+                          </div>
+                          <div class="form-group">
+                            <i class="fas fa-envelope-open"></i>
+                            <input type="email" name="email" placeholder="Email" required="" />
+                          </div>
+                          <div class="form-group">
+                            <i class="fas fa-chess-knight"></i>
+                            <div class="select-box">
+                              <select class="wide">
+                                <option data-display="Select">Select a plan</option>
+                                <option value="1">Education</option>
+                                <option value="2">Health</option>
+                                <option value="3" disabled>A disabled option</option>
+                                <option value="4">Democracy & Governance</option>
+                                <option value="5">Economic & Human Capital</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-group message-btn">
+                            <button type="submit" class="theme-btn style-two">start my insurance plan</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1178,10 +1402,10 @@
         </div>
       </div>
     </section>
-    <!-- testimonial-section end -->
+    <!-- policy-section end -->
 
     <!-- news-section -->
-    <section class="news-section bg-color-1">
+    <section class="news-section style-two">
       <div class="auto-container">
         <div class="sec-title centred">
           <h5>Read the articles</h5>
@@ -1203,25 +1427,10 @@
                       <a href="index.html">CIS</a>
                     </li>
                     <li>January 31, 2020</li>
-                    <li class="share">
-                      <a href="#"><i class="fas fa-share-alt"></i></a>
-                      <ul class="social-links">
-                        <li>
-                          <a href="index.html"><i class="fab fa-facebook-f"></i></a>
-                        </li>
-                        <li>
-                          <a href="index.html"><i class="fab fa-twitter"></i></a>
-                        </li>
-                        <li>
-                          <a href="index.html"><i class="fab fa-vimeo-v"></i></a>
-                        </li>
-                        <li>
-                          <a href="index.html"><i class="fab fa-linkedin-in"></i></a>
-                        </li>
-                      </ul>
-                    </li>
                   </ul>
-                  <h3><a href="blog-details.html">Take Action For Benefits Of Your Business</a></h3>
+                  <h3>
+                    <a href="blog-details.html">Take Action For Benefits Of Your Business</a>
+                  </h3>
                   <p>
                     Exea conse quat duis irurey dolor sed reprehen derit volupta velit cilum lorem incididunt labore sed
                     magna exceptur aliqua.
@@ -1255,25 +1464,10 @@
                       <a href="index.html">CIS</a>
                     </li>
                     <li>January 30, 2020</li>
-                    <li class="share">
-                      <a href="#"><i class="fas fa-share-alt"></i></a>
-                      <ul class="social-links">
-                        <li>
-                          <a href="index.html"><i class="fab fa-facebook-f"></i></a>
-                        </li>
-                        <li>
-                          <a href="index.html"><i class="fab fa-twitter"></i></a>
-                        </li>
-                        <li>
-                          <a href="index.html"><i class="fab fa-vimeo-v"></i></a>
-                        </li>
-                        <li>
-                          <a href="index.html"><i class="fab fa-linkedin-in"></i></a>
-                        </li>
-                      </ul>
-                    </li>
                   </ul>
-                  <h3><a href="blog-details.html">Improve Your Investment Through Money</a></h3>
+                  <h3>
+                    <a href="blog-details.html">Improve Your Investment Through Money</a>
+                  </h3>
                   <p>
                     Exea conse quat duis irurey dolor sed reprehen derit volupta velit cilum lorem incididunt labore sed
                     magna exceptur aliqua.
@@ -1305,25 +1499,10 @@
                       <a href="index.html">CIS</a>
                     </li>
                     <li>January 29, 2020</li>
-                    <li class="share">
-                      <a href="#"><i class="fas fa-share-alt"></i></a>
-                      <ul class="social-links">
-                        <li>
-                          <a href="index.html"><i class="fab fa-facebook-f"></i></a>
-                        </li>
-                        <li>
-                          <a href="index.html"><i class="fab fa-twitter"></i></a>
-                        </li>
-                        <li>
-                          <a href="index.html"><i class="fab fa-vimeo-v"></i></a>
-                        </li>
-                        <li>
-                          <a href="index.html"><i class="fab fa-linkedin-in"></i></a>
-                        </li>
-                      </ul>
-                    </li>
                   </ul>
-                  <h3><a href="blog-details.html">Isolate & Reframe Beliefs For The Future</a></h3>
+                  <h3>
+                    <a href="blog-details.html">Isolate & Reframe Beliefs For The Future</a>
+                  </h3>
                   <p>
                     Exea conse quat duis irurey dolor sed reprehen derit volupta velit cilum lorem incididunt labore sed
                     magna exceptur aliqua.
@@ -1342,87 +1521,6 @@
       </div>
     </section>
     <!-- news-section end -->
-
-    <!-- clients-section -->
-    <section class="clients-section">
-      <div class="auto-container">
-        <div class="clients-carousel owl-carousel owl-theme owl-dots-none owl-nav-none">
-          <figure class="client-logo">
-            <a href="index.html"><img src="assets/cis-images/clients/clients-1.png" alt="" /></a>
-          </figure>
-          <figure class="client-logo">
-            <a href="index.html"><img src="assets/cis-images/clients/clients-2.png" alt="" /></a>
-          </figure>
-          <figure class="client-logo">
-            <a href="index.html"><img src="assets/cis-images/clients/clients-3.png" alt="" /></a>
-          </figure>
-          <figure class="client-logo">
-            <a href="index.html"><img src="assets/cis-images/clients/clients-4.png" alt="" /></a>
-          </figure>
-          <figure class="client-logo">
-            <a href="index.html"><img src="assets/cis-images/clients/clients-5.png" alt="" /></a>
-          </figure>
-        </div>
-      </div>
-    </section>
-    <!-- clients-section end -->
-
-    <!-- cta-section -->
-    <section class="cta-section">
-      <div class="pattern-layer" style="background-image: url(assets/cis-images/shape/shape-3.png)"></div>
-      <div class="auto-container">
-        <div class="inner-container clearfix">
-          <div class="title pull-left">
-            <h2>We help you to unlock & unleash the power within.</h2>
-          </div>
-          <div class="btn-box pull-right">
-            <a href="index.html">get in touch</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- cta-section end -->
-
-    <!-- fun-fact -->
-    <section class="fun-fact centred">
-      <div class="auto-container">
-        <div class="row clearfix">
-          <div class="col-lg-3 col-md-6 col-sm-12 counter-column">
-            <div class="counter-block-one wow slideInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
-              <div class="count-outer count-box">
-                <span class="count-text" data-speed="1500" data-stop="254">0</span>
-              </div>
-              <p>Expert Consultants</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-12 counter-column">
-            <div class="counter-block-one wow slideInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
-              <div class="count-outer count-box">
-                <span class="count-text" data-speed="1500" data-stop="930">0</span>
-              </div>
-              <p>Our Trusted Clients</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-12 counter-column">
-            <div class="counter-block-one wow slideInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
-              <div class="count-outer count-box">
-                <span class="count-text" data-speed="1500" data-stop="826">0</span>
-              </div>
-              <p>Orders in Queue</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-12 counter-column">
-            <div class="counter-block-one wow slideInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
-              <div class="count-outer count-box">
-                <span class="count-text" data-speed="1500" data-stop="720">0</span>
-              </div>
-              <p>Projects Delivered</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- fun-fact end -->
 
     <!-- main-footer -->
     <footer class="main-footer alternet-2">
@@ -1548,7 +1646,7 @@
     <!-- main-footer end -->
 
     <!--Scroll to top-->
-    <button class="scroll-top scroll-to-target" data-target="html">
+    <button class="scroll-top style-two scroll-to-target" data-target="html">
       <span class="fa fa-arrow-up"></span>
     </button>
 
@@ -1565,13 +1663,7 @@
               <div class="content-inner">
                 <div class="upper-box">
                   <div class="logo">
-                    <a href="index.html">
-                      <img
-                        class="site-brand-logo site-brand-logo--sidebar"
-                        src="assets/cis-images/about/cis-logo.webp"
-                        alt="CIS logo"
-                      />
-                    </a>
+                    <a href="index.html"><img src="assets/cis-images/about/cis-logo.webp" alt="" /></a>
                   </div>
                   <div class="text">
                     <p>
