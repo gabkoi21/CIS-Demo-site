@@ -5039,13 +5039,13 @@ h4 a{
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
-  color: #222;
+  color: #202124;
   margin-bottom: 5px;
 }
 
 #content_block_three .content-box  .inner-box .single-item h5 a{
   display: inline-block;
-  color: #222;
+  color: #202124;
 }
 
 #content_block_three .content-box  .inner-box .single-item h5 a:hover{
@@ -5120,7 +5120,7 @@ h4 a{
 #image_block_two .image-box .content-box h5{
   font-size: 18px;
   line-height: 26px;
-  color: #222;
+  color: #202124;
   font-weight: 400;
 }
 
@@ -5521,7 +5521,8 @@ h4 a{
   bottom: 35px;
 }
 
-#video_block_one .video-inner .video-btn a{
+#video_block_one .video-inner .video-btn a,
+#video_block_one .video-inner .video-btn .play-icon{
   position: relative;
   display: inline-block;
   width: 100px;
@@ -5533,8 +5534,10 @@ h4 a{
   border-radius: 50%;
 }
 
-#video_block_one .video-inner .video-btn a:after, 
-#video_block_one .video-inner .video-btn a:before {
+#video_block_one .video-inner .video-btn a:after,
+#video_block_one .video-inner .video-btn a:before,
+#video_block_one .video-inner .video-btn .play-icon:after,
+#video_block_one .video-inner .video-btn .play-icon:before {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -5556,7 +5559,8 @@ h4 a{
   transition: all .4s ease;
 }
 
-#video_block_one .video-inner .video-btn a:after {
+#video_block_one .video-inner .video-btn a:after,
+#video_block_one .video-inner .video-btn .play-icon:after {
   -webkit-animation-delay: .6s;
   animation-delay: .6s;
 }

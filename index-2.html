@@ -29,7 +29,7 @@
       /* Keep the CIS palette consistent on this homepage variant. */
       body.cis-home-variant {
         --cis-primary: #4db19e;
-        --cis-primary-dark: #347f73;
+        --cis-secondary: #202124;
       }
 
       body.cis-home-variant a:hover,
@@ -53,8 +53,8 @@
       body.cis-home-variant .theme-btn:hover,
       body.cis-home-variant .newsletter-form button:hover,
       body.cis-home-variant .policy-form button:hover {
-        background: var(--cis-primary-dark) !important;
-        border-color: var(--cis-primary-dark) !important;
+        background: var(--cis-secondary) !important;
+        border-color: var(--cis-secondary) !important;
       }
 
       body.cis-home-variant .bg-color-1,
@@ -96,6 +96,58 @@
         transform: none;
       }
 
+      body.cis-home-variant .team-section .sec-title.style-two h5 {
+        padding-left: 0;
+      }
+
+      body.cis-home-variant .team-section .sec-title.style-two h5::before {
+        display: none;
+      }
+
+      body.cis-home-variant #video_block_one .video-btn .play-icon {
+        color: #4db19e;
+      }
+
+      body.cis-home-variant .scroll-top.style-two {
+        background: #4db19e;
+      }
+
+      body.cis-home-variant .banner-section.style-two .owl-theme .owl-nav .owl-prev,
+      body.cis-home-variant .banner-section.style-two .owl-theme .owl-nav .owl-next,
+      body.cis-home-variant .banner-section.style-two .owl-theme .owl-nav .owl-prev:hover,
+      body.cis-home-variant .banner-section.style-two .owl-theme .owl-nav .owl-next:hover {
+        background: #4db19e;
+      }
+
+      body.cis-home-variant #image_block_one .award-box .box {
+        display: flex;
+        width: 190px;
+        height: 190px;
+        padding: 28px 24px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      body.cis-home-variant #image_block_one .award-box .impact-icon {
+        margin-bottom: 12px;
+        color: #fff;
+        font-size: 42px;
+        line-height: 1;
+      }
+
+      body.cis-home-variant #image_block_one .award-box .impact-copy {
+        font-size: 13px;
+        line-height: 18px;
+      }
+
+      body.cis-home-variant #image_block_one .award-box .impact-copy strong {
+        display: block;
+        margin-bottom: 3px;
+        font-size: 17px;
+        line-height: 21px;
+      }
+
       body.cis-home-variant .icon-box,
       body.cis-home-variant .feature-block-two .inner-box:hover,
       body.cis-home-variant .service-block-two .inner-box:hover {
@@ -106,6 +158,49 @@
       body.cis-home-variant .owl-theme .owl-dots .owl-dot:hover span {
         background: var(--cis-primary) !important;
       }
+
+      body.cis-home-variant .main-header.style-two .header-top .social-links li a,
+      body.cis-home-variant .main-header.style-two .header-upper .info-box .info-list li i,
+      body.cis-home-variant .main-header.style-two .header-upper .info-box .info-list li p a:hover,
+      body.cis-home-variant .main-header.style-two .header-lower .search-btn button:hover,
+      body.cis-home-variant .service-block-two .inner-box .icon-box,
+      body.cis-home-variant .service-block-two .inner-box h4 a:hover,
+      body.cis-home-variant .service-block-two .inner-box .link a:hover span,
+      body.cis-home-variant #content_block_five .content-box .info-list li i,
+      body.cis-home-variant #content_block_five .content-box .info-list li a:hover {
+        color: var(--cis-primary) !important;
+      }
+
+      body.cis-home-variant .main-header.style-two .header-top .social-links li a:hover,
+      body.cis-home-variant .main-header.style-two .header-upper .info-box .info-list li:hover i,
+      body.cis-home-variant .main-menu .navigation > li > ul > li > a,
+      body.cis-home-variant .sec-title:not(.light) h2 {
+        color: var(--cis-secondary);
+      }
+
+      body.cis-home-variant .service-block-two .inner-box .icon-box:before,
+      body.cis-home-variant .feature-block-two .inner-box .lower-content .inner:before,
+      body.cis-home-variant #content_block_four .content-box .tab-btn-box .tab-btns li.active-btn,
+      body.cis-home-variant #content_block_four .content-box .tab-btn-box .tab-btns li:hover,
+      body.cis-home-variant #content_block_six .tab-btn-box .tab-btns li:before {
+        background: var(--cis-primary) !important;
+        border-color: var(--cis-primary) !important;
+      }
+
+      body.cis-home-variant #image_block_two .image-box .content-box,
+      body.cis-home-variant .protect-form .inner-box .zip-form .form-group input:focus,
+      body.cis-home-variant .service-block-two .inner-box .link a:hover span {
+        border-color: var(--cis-primary) !important;
+      }
+
+      body.cis-home-variant #image_block_one .image-box .award-box .box {
+        background: linear-gradient(180deg, var(--cis-primary), var(--cis-secondary)) !important;
+      }
+
+      body.cis-home-variant .main-footer,
+      body.cis-home-variant .footer-bottom {
+        background-color: var(--cis-secondary);
+      }
     </style>
   </head>
 
@@ -113,9 +208,7 @@
   <body class="boxed_wrapper ltr cis-home-variant">
     <!-- Preloader -->
     <div class="loader-wrap">
-      <div class="preloader style-two">
-        <div class="preloader-close">Preloader Close</div>
-      </div>
+      <div class="preloader style-two"></div>
       <div class="layer layer-one"><span class="overlay"></span></div>
       <div class="layer layer-two"><span class="overlay"></span></div>
       <div class="layer layer-three"><span class="overlay"></span></div>
@@ -166,7 +259,7 @@
                   <a href="index.html"><i class="fab fa-facebook-f"></i></a>
                 </li>
                 <li>
-                  <a href="index.html"><i class="fab fa-twitter"></i></a>
+                  <a href="index.html"></a>
                 </li>
                 <li>
                   <a href="index.html"><i class="fab fa-linkedin-in"></i></a>
@@ -426,10 +519,6 @@
     </section>
     <!-- banner-section end -->
 
-    <!-- feature-style-two -->
-
-    <!-- feature-style-two end -->
-
     <!-- about-style-two -->
     <section class="about-style-two">
       <div class="pattern-layer" style="background-image: url(assets/cis-images/shape/shape-4.png)"></div>
@@ -501,12 +590,9 @@
                   <img src="assets/cis-images/about/about-02.jpg" alt="" />
                 </figure>
                 <div class="content-box">
-                  <i class="fas fa-headphones-alt"></i>
-                  <h4>Save Money, Save Life!</h4>
-                  <h5>
-                    Any questions? Call
-                    <a href="tel:01005200369"></a>
-                  </h5>
+                  <i class="fas fa-headset"></i>
+                  <h4>Partner with CIS</h4>
+                  <h5>Let's discuss your next project</h5>
                 </div>
               </div>
             </div>
@@ -516,68 +602,88 @@
     </section>
     <!-- about-style-two end -->
 
-    <!-- Thi is the graph analysis -->
+    <!-- CIS Impact Statistics -->
     <section class="annual-stats">
       <div class="auto-container">
         <div class="row clearfix">
+          <!-- Content Column -->
           <div class="col-lg-6 col-md-12 col-sm-12 content-column">
             <div id="content_block_two">
               <div class="content-box">
                 <div class="sec-title left">
-                  <h5>annual Stats</h5>
-                  <h2>Graph Shows Net Value Profit Assembling</h2>
+                  <h5>Our Impact</h5>
+                  <h2>Locally Driven Solutions Creating Lasting Impact</h2>
                 </div>
+
                 <div class="text">
                   <p>
-                    Exercitation llamco laboris nis aliquip sed conseqrure dolorn repreh deris luptate velit excepteur
-                    duis aute irure dolor voluptate labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea reprehenderit in voluptate.
+                    CIS transforms evidence, capacity strengthening, innovation, and technology into practical, locally
+                    driven solutions. We equip communities, institutions, and local partners with the knowledge,
+                    systems, and tools needed to sustain progress across Liberia.
                   </p>
                 </div>
+
                 <div class="inner-box clearfix">
+                  <!-- Years of Support -->
                   <div class="single-progress-box">
                     <div class="box">
-                      <div class="piechart" data-fg-color="#204669" data-value=".75">
-                        <span>.75</span>
+                      <div class="piechart" data-fg-color="#4DB19E" data-value="1">
+                        <span>13</span>
                       </div>
+
                       <h5>
-                        Global Flexibility
+                        Years of Direct
                         <br />
-                        Investment
+                        Support
                       </h5>
-                      <h3>Upto 75% Asests</h3>
+
+                      <h3>Across Liberia</h3>
                     </div>
                   </div>
+
+                  <!-- Counties Supported -->
                   <div class="single-progress-box">
                     <div class="box">
-                      <div class="piechart" data-fg-color="#da2c46" data-value=".25">
-                        <span>.25</span>
+                      <div class="piechart" data-fg-color="#202124" data-value="1">
+                        <span>8+</span>
                       </div>
+
                       <h5>
-                        Security Financial
+                        Counties
                         <br />
-                        Solutions
+                        Supported
                       </h5>
-                      <h3>Upto 25% Efficient</h3>
+
+                      <h3>30+ Programs Completed</h3>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- Image Column -->
           <div class="col-lg-6 col-md-12 col-sm-12 image-column">
             <div id="image_block_one">
               <div class="image-box">
                 <div class="pattern-layer" style="background-image: url(assets/cis-images/shape/shape-1.png)"></div>
+
                 <figure class="image">
-                  <img src="assets/cis-images/about/technology-innovation.jpg" alt="" />
+                  <img
+                    src="assets/cis-images/about/community-development.jpg"
+                    alt="CIS team members collaborating with a community development partner in Liberia"
+                  />
                 </figure>
+
                 <div class="award-box">
                   <div class="box">
-                    <figure class="icon-box">
-                      <img src="assets/cis-images/icons/icon-1.png" alt="" />
-                    </figure>
-                    <span>Financial & Consulting Award 2019-2020</span>
+                    <div class="impact-icon" aria-hidden="true">
+                      <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <span class="impact-copy">
+                      <strong>13+ Years</strong>
+                      Empowering Communities Across Liberia
+                    </span>
                   </div>
                 </div>
               </div>
@@ -698,6 +804,7 @@
         </div>
       </div>
     </section>
+
     <!-- service-style-two end -->
 
     <!-- protect-form -->
@@ -708,10 +815,10 @@
           <h3>Not sure which policy suits you the best? Find our agent</h3>
           <form action="index-2.html" method="post" class="zip-form">
             <div class="form-group clearfix">
-              <input type="text" name="zip" placeholder="Enter ZipCode" required="" />
+              <input type="text" name="zip" placeholder="contact us " required="" />
               <button class="theme-btn style-two" type="submit">
                 <i class="far fa-user"></i>
-                Find an Agent
+                Contact Us
               </button>
             </div>
           </form>
@@ -810,13 +917,9 @@
                   <img src="assets/cis-images/resource/mission-1.jpg" alt="" />
                 </figure>
                 <div class="video-btn">
-                  <a
-                    href="https://www.youtube.com/watch?v=nfP5N9Yc72A&amp;t=28s"
-                    class="lightbox-image"
-                    data-caption=""
-                  >
+                  <span class="play-icon" aria-hidden="true">
                     <i class="fas fa-play"></i>
-                  </a>
+                  </span>
                 </div>
               </div>
             </div>
@@ -853,9 +956,92 @@
               <div class="lower-content"></div>
             </div>
           </div>
+          <div class="team-block-one">
+            <div class="inner-box">
+              <figure class="image-box">
+                <img src="assets/cis-images/team/partner-logo-03.png" alt="" />
+              </figure>
+              <div class="lower-content"></div>
+            </div>
+          </div>
+          <div class="team-block-one">
+            <div class="inner-box">
+              <figure class="image-box">
+                <img src="assets/cis-images/team/partner-logo-04.png" alt="" />
+              </figure>
+              <div class="lower-content"></div>
+            </div>
+          </div>
+          <div class="team-block-one">
+            <div class="inner-box">
+              <figure class="image-box">
+                <img src="assets/cis-images/team/partner-logo-05.png" alt="" />
+              </figure>
+              <div class="lower-content"></div>
+            </div>
+          </div>
+          <div class="team-block-one">
+            <div class="inner-box">
+              <figure class="image-box">
+                <img src="assets/cis-images/team/partner-logo-06.png" alt="" />
+              </figure>
+              <div class="lower-content"></div>
+            </div>
+          </div>
+          <div class="team-block-one">
+            <div class="inner-box">
+              <figure class="image-box">
+                <img src="assets/cis-images/team/partner-logo-07.png" alt="" />
+              </figure>
+              <div class="lower-content"></div>
+            </div>
+          </div>
+
+          <div class="team-block-one">
+            <div class="inner-box">
+              <figure class="image-box">
+                <img src="assets/cis-images/team/partner-logo-010.png" alt="" />
+              </figure>
+              <div class="lower-content"></div>
+            </div>
+          </div>
+          <div class="team-block-one">
+            <div class="inner-box">
+              <figure class="image-box">
+                <img src="assets/cis-images/team/partner-logo-011.png" alt="" />
+              </figure>
+              <div class="lower-content"></div>
+            </div>
+          </div>
+
+          <div class="team-block-one">
+            <div class="inner-box">
+              <figure class="image-box">
+                <img src="assets/cis-images/team/partner-logo-013.png" alt="" />
+              </figure>
+              <div class="lower-content"></div>
+            </div>
+          </div>
+          <div class="team-block-one">
+            <div class="inner-box">
+              <figure class="image-box">
+                <img src="assets/cis-images/team/partner-logo-014.png" alt="" />
+              </figure>
+              <div class="lower-content"></div>
+            </div>
+          </div>
+          <div class="team-block-one">
+            <div class="inner-box">
+              <figure class="image-box">
+                <img src="assets/cis-images/team/partner-logo-015.png" alt="" />
+              </figure>
+              <div class="lower-content"></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
     <!-- team-section end -->
 
     <!-- world-cyber -->
@@ -909,13 +1095,13 @@
                   animy est laborum sed perspiciatis unde omnis iste.
                 </p>
               </div>
-              <div class="author-info">
+              <!-- <div class="author-info">
                 <figure class="image-box">
                   <img src="assets/cis-images/avatar/team-member-006.jpg" alt="" />
                 </figure>
                 <h5>Nelson Edward</h5>
                 <span class="designation">CIS Partner</span>
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="testimonial-content">
@@ -927,13 +1113,13 @@
                   animy est laborum sed perspiciatis unde omnis iste.
                 </p>
               </div>
-              <div class="author-info">
+              <!-- <div class="author-info">
                 <figure class="image-box">
                   <img src="assets/cis-images/avatar/team-member-007.jpg" alt="" />
                 </figure>
                 <h5>Thomas Saleh</h5>
                 <span class="designation">CIS Partner</span>
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="testimonial-content">
@@ -945,13 +1131,13 @@
                   animy est laborum sed perspiciatis unde omnis iste.
                 </p>
               </div>
-              <div class="author-info">
+              <!-- <div class="author-info">
                 <figure class="image-box">
                   <img src="assets/cis-images/avatar/team-member-008.jpg" alt="" />
                 </figure>
                 <h5>Nelson Edward</h5>
                 <span class="designation">CIS Partner</span>
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="testimonial-content">
@@ -963,13 +1149,13 @@
                   animy est laborum sed perspiciatis unde omnis iste.
                 </p>
               </div>
-              <div class="author-info">
+              <!-- <div class="author-info">
                 <figure class="image-box">
                   <img src="assets/cis-images/avatar/team-member-006.jpg" alt="" />
                 </figure>
                 <h5>Nelson Edward</h5>
                 <span class="designation">CIS Partner</span>
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="testimonial-content">
@@ -981,13 +1167,13 @@
                   animy est laborum sed perspiciatis unde omnis iste.
                 </p>
               </div>
-              <div class="author-info">
+              <!-- <div class="author-info">
                 <figure class="image-box">
                   <img src="assets/cis-images/avatar/team-member-007.jpg" alt="" />
                 </figure>
                 <h5>Thomas Saleh</h5>
                 <span class="designation">CIS Partner</span>
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="testimonial-content">
@@ -999,13 +1185,13 @@
                   animy est laborum sed perspiciatis unde omnis iste.
                 </p>
               </div>
-              <div class="author-info">
+              <!-- <div class="author-info">
                 <figure class="image-box">
                   <img src="assets/cis-images/avatar/team-member-008.jpg" alt="" />
                 </figure>
                 <h5>Nelson Edward</h5>
                 <span class="designation">CIS Partner</span>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -1022,51 +1208,55 @@
             <div id="content_block_five">
               <div class="content-box">
                 <div class="sec-title light left">
-                  <h5>try a policy</h5>
-                  <h2>Get Free Quote</h2>
+                  <h5>Get in Touch</h5>
+                  <h2>Partner with CIS</h2>
                   <p>
-                    Et mini veniam quis nostrud ipsum exercitastion ullamco ipsum laboris sed ipsum ut perspiciatis
-                    unde.
+                    We collaborate with communities, development partners, donors, and institutions to deliver
+                    innovative, evidence-based solutions that create sustainable impact across Liberia.
                   </p>
                 </div>
+
                 <ul class="info-list clearfix">
                   <li>
                     <i class="fas fa-map-marker-alt"></i>
-                    <h4>Company Head Office</h4>
-                    <p>838 Andy Street, Madison, New Jersy 08003</p>
-                  </li>
-                  <li>
-                    <i class="fas fa-phone-volume"></i>
-                    <h4>Request a Callback</h4>
+                    <h4>Our Office</h4>
                     <p>
-                      <a href="tel:01005200369">0 (100) 5200 369</a>
-                      /
-                      <a href="tel:01005200123">0 (100) 5200 123</a>
+                      Airfield Junction, Sinkor
+                      <br />
+                      Monrovia, Montserrado, Liberia
                     </p>
                   </li>
+
+                  <li>
+                    <i class="fas fa-phone-volume"></i>
+                    <h4>Call Us</h4>
+                    <p>
+                      <a href="tel:+231777222021">(231) 777-222-021</a>
+                    </p>
+                  </li>
+
                   <li>
                     <i class="fas fa-envelope-open"></i>
-                    <h4>Email Support</h4>
+                    <h4>Email Us</h4>
                     <p>
-                      <a href="mailto:info@my-domain.com">info@my-domain.com</a>
-                      /
-                      <a href="mailto:support@info.com">support@info.com</a>
+                      <a href="mailto:partnership@c4islib.org">partnership@c4islib.org</a>
                     </p>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
+
           <div class="col-lg-6 col-md-12 col-sm-12 inner-column">
             <div id="content_block_six">
               <div class="content-box">
                 <div class="tabs-box">
                   <div class="tab-btn-box">
                     <ul class="tab-btns tab-buttons clearfix">
-                      <li class="tab-btn active-btn" data-tab="#tab-4">Life</li>
-                      <li class="tab-btn" data-tab="#tab-5">Home</li>
+                      <li class="tab-btn active-btn" data-tab="#tab-4">Contact Us</li>
+                      <!-- <li class="tab-btn" data-tab="#tab-5">Home</li>
                       <li class="tab-btn" data-tab="#tab-6">Car</li>
-                      <li class="tab-btn" data-tab="#tab-7">Health</li>
+                      <li class="tab-btn" data-tab="#tab-7">Health</li> -->
                     </ul>
                   </div>
                   <div class="tabs-content">
@@ -1361,16 +1551,8 @@
                       Email
                       <a href="mailto:c4islib@gmail.com">c4islib@gmail.com</a>
                     </li>
-                    <li>
-                      <i class="fas fa-headphones"></i>
-                      Support
-                      <a href="tel:01005200369"></a>
-                    </li>
                   </ul>
                   <ul class="social-links clearfix">
-                    <li>
-                      <a href="index.html"><i class="fab fa-twitter"></i></a>
-                    </li>
                     <li>
                       <a href="index.html"><i class="fab fa-facebook-f"></i></a>
                     </li>
@@ -1381,7 +1563,7 @@
                       <a href="index.html"><i class="fab fa-linkedin-in"></i></a>
                     </li>
                     <li>
-                      <a href="index.html"><i class="fab fa-pinterest-p"></i></a>
+                      <!-- <a href="index.html"><i class="fab fa-pinterest-p"></i></a> -->
                     </li>
                   </ul>
                 </div>
@@ -1455,9 +1637,9 @@
         <div class="auto-container">
           <div class="copyright">
             <p>
-              &copy; 2020
+              &copy; 2026
               <a href="index.html">CIS</a>
-              - Locally driven research, innovation, and integrated solutions. All rights reserved.
+              All rights reserved.
             </p>
           </div>
         </div>

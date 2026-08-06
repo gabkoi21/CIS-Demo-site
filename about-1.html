@@ -24,10 +24,87 @@
     <link href="assets/css/rtl.css" rel="stylesheet" />
     <link href="assets/css/style.css" rel="stylesheet" />
     <link href="assets/css/responsive.css" rel="stylesheet" />
+    <style>
+      /* Official CIS palette for the About page. */
+      body.cis-about-page {
+        --cis-primary: #4db19e;
+        --cis-secondary: #202124;
+      }
+
+      body.cis-about-page a:hover,
+      body.cis-about-page .main-header.style-six .main-menu .navigation > li.current > a,
+      body.cis-about-page .main-header.style-six .main-menu .navigation > li:hover > a,
+      body.cis-about-page .main-header .header-top li i,
+      body.cis-about-page .main-header .header-top li a:hover,
+      body.cis-about-page .main-header .search-btn button:hover,
+      body.cis-about-page .info-section .year-box h2,
+      body.cis-about-page .info-section .text-column .text a i,
+      body.cis-about-page .sec-title h5,
+      body.cis-about-page .team-block-one .lower-content h3 a:hover,
+      body.cis-about-page .team-block-one .ovellay-box .social-links li a:hover,
+      body.cis-about-page .main-footer .info-list li i,
+      body.cis-about-page .main-footer a:hover {
+        color: var(--cis-primary) !important;
+      }
+
+      body.cis-about-page .theme-btn,
+      body.cis-about-page .search-popup input[type="submit"],
+      body.cis-about-page .main-footer .newsletter-form button,
+      body.cis-about-page .sidebar-info-contents .subscribe-form button,
+      body.cis-about-page .scroll-top,
+      body.cis-about-page .owl-dot-style-one .owl-dots .owl-dot.active span,
+      body.cis-about-page .owl-dot-style-one .owl-dots .owl-dot span:hover,
+      body.cis-about-page #content_block_three .tab-btn-box .tab-btns li.active-btn,
+      body.cis-about-page #content_block_three .tab-btn-box .tab-btns li:hover {
+        background: var(--cis-primary) !important;
+        border-color: var(--cis-primary) !important;
+      }
+
+      body.cis-about-page .theme-btn:hover,
+      body.cis-about-page .main-footer .newsletter-form button:hover,
+      body.cis-about-page .sidebar-info-contents .subscribe-form button:hover {
+        background: var(--cis-secondary) !important;
+        border-color: var(--cis-secondary) !important;
+        color: #fff !important;
+      }
+
+      body.cis-about-page .about-style-two.about-page-1.bg-color-1 {
+        background: #fff;
+      }
+
+      body.cis-about-page #image_block_two .image-box .content-box,
+      body.cis-about-page .info-section .text-column .text a span {
+        border-color: var(--cis-primary) !important;
+      }
+
+      body.cis-about-page #image_block_two .image-box .content-box i,
+      body.cis-about-page #image_block_two .image-box .content-box h5 a,
+      body.cis-about-page .counter-block-four .count-outer {
+        color: var(--cis-primary) !important;
+      }
+
+      body.cis-about-page .video-section.about-page-1::before,
+      body.cis-about-page .main-footer,
+      body.cis-about-page .main-footer .footer-bottom,
+      body.cis-about-page .mobile-menu .menu-box,
+      body.cis-about-page .sidebar-info-contents {
+        background-color: var(--cis-secondary) !important;
+      }
+
+      body.cis-about-page .video-section.about-page-1 .inner-box .video-btn::before,
+      body.cis-about-page .video-section.about-page-1 .inner-box .video-btn::after,
+      body.cis-about-page .main-footer .widget-title h4::before {
+        background: var(--cis-primary) !important;
+      }
+
+      body.cis-about-page .page-title::before {
+        background: var(--cis-secondary);
+      }
+    </style>
   </head>
 
   <!-- page wrapper -->
-  <body class="boxed_wrapper ltr">
+  <body class="boxed_wrapper ltr cis-about-page">
     <!-- Preloader -->
     <div class="loader-wrap">
       <div class="preloader"><div class="preloader-close">Preloader Close</div></div>
@@ -508,54 +585,61 @@
     <section class="funfact-style-four about-page-1 centred">
       <div class="auto-container">
         <div class="row clearfix">
+          <!-- Years -->
           <div class="col-lg-3 col-md-6 col-sm-12 counter-column">
             <div class="counter-block-four wow slideInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
               <div class="count-outer count-box">
-                <span class="count-text" data-speed="1500" data-stop="10">0</span>
-                k
-              </div>
-              <h3>
-                Global
-                <br />
-                Customers
-              </h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-12 counter-column">
-            <div class="counter-block-four wow slideInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
-              <div class="count-outer count-box">
-                <span class="count-text" data-speed="1500" data-stop="5">0</span>
-                k+
-              </div>
-              <h3>
-                Projects
-                <br />
-                Completed
-              </h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-12 counter-column">
-            <div class="counter-block-four wow slideInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
-              <div class="count-outer count-box">
-                <span class="count-text" data-speed="1500" data-stop="370">0</span>
-              </div>
-              <h3>
-                Expert
-                <br />
-                Employees
-              </h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-12 counter-column">
-            <div class="counter-block-four wow slideInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
-              <div class="count-outer count-box">
-                <span class="count-text" data-speed="1500" data-stop="75">0</span>
+                <span class="count-text" data-speed="1500" data-stop="13">0</span>
                 +
               </div>
               <h3>
-                Countries
+                Years of
                 <br />
-                Served
+                Direct Support
+              </h3>
+            </div>
+          </div>
+
+          <!-- Counties -->
+          <div class="col-lg-3 col-md-6 col-sm-12 counter-column">
+            <div class="counter-block-four wow slideInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+              <div class="count-outer count-box">
+                <span class="count-text" data-speed="1500" data-stop="8">0</span>
+                +
+              </div>
+              <h3>
+                Counties
+                <br />
+                Supported
+              </h3>
+            </div>
+          </div>
+
+          <!-- Programs -->
+          <div class="col-lg-3 col-md-6 col-sm-12 counter-column">
+            <div class="counter-block-four wow slideInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+              <div class="count-outer count-box">
+                <span class="count-text" data-speed="1500" data-stop="30">0</span>
+                +
+              </div>
+              <h3>
+                Community
+                <br />
+                Programs
+              </h3>
+            </div>
+          </div>
+
+          <!-- Pillars -->
+          <div class="col-lg-3 col-md-6 col-sm-12 counter-column">
+            <div class="counter-block-four wow slideInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+              <div class="count-outer count-box">
+                <span class="count-text" data-speed="1500" data-stop="5">0</span>
+              </div>
+              <h3>
+                Core
+                <br />
+                Pillars
               </h3>
             </div>
           </div>
@@ -594,8 +678,8 @@
               </div>
               <div class="text">
                 <p>
-                  Meet the specialists combining innovation, technology, and community knowledge to advance
-                  sustainable societies.
+                  Meet the specialists combining innovation, technology, and community knowledge to advance sustainable
+                  societies.
                 </p>
               </div>
             </div>
