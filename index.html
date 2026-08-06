@@ -24,12 +24,221 @@
     <link href="assets/css/color.css" rel="stylesheet" />
     <link href="assets/css/rtl.css" rel="stylesheet" />
     <link href="assets/css/style.css" rel="stylesheet" />
-    <link href="assets/css/responsive.css" rel="stylesheet" />
+    <link href="assets/css/responsive.css?v=20260806-1" rel="stylesheet" />
     <style>
       /* Keep the CIS palette consistent on this homepage variant. */
       body.cis-home-variant {
         --cis-primary: #4db19e;
         --cis-secondary: #202124;
+      }
+
+      @media only screen and (max-width: 767px) {
+        body.cis-home-variant .banner-section.style-two,
+        body.cis-home-variant .banner-section.style-two .banner-carousel,
+        body.cis-home-variant .banner-section.style-two .owl-stage-outer {
+          margin-bottom: 0 !important;
+          padding-bottom: 0 !important;
+        }
+
+        body.cis-home-variant .banner-section.style-two .owl-stage {
+          display: block;
+        }
+
+        body.cis-home-variant .banner-section.style-two .owl-item {
+          display: block;
+        }
+
+        body.cis-home-variant .banner-section.style-two .banner-carousel .slide-item {
+          width: 100%;
+          height: 560px !important;
+          min-height: 560px !important;
+          padding: 110px 0 45px !important;
+        }
+
+        body.cis-home-variant .banner-section.style-two .banner-carousel .content-box {
+          height: auto !important;
+          min-height: 0 !important;
+          text-align: center;
+        }
+
+        body.cis-home-variant .banner-section.style-two .banner-carousel .content-box h5 {
+          display: block;
+          width: 100%;
+          margin-bottom: 12px;
+          padding-left: 0;
+          font-size: 14px;
+          line-height: 20px;
+          white-space: normal;
+        }
+
+        body.cis-home-variant .banner-section.style-two .banner-carousel .content-box h5::before {
+          display: none;
+        }
+
+        body.cis-home-variant .banner-section.style-two .banner-carousel .content-box h1 {
+          margin-bottom: 16px;
+          font-size: 34px !important;
+          line-height: 40px !important;
+        }
+
+        body.cis-home-variant .banner-section.style-two .banner-carousel .content-box p {
+          margin-bottom: 25px;
+          font-size: 15px;
+          line-height: 24px;
+        }
+
+        body.cis-home-variant .banner-section.style-two .banner-carousel .content-box h5,
+        body.cis-home-variant .banner-section.style-two .banner-carousel .content-box h1,
+        body.cis-home-variant .banner-section.style-two .banner-carousel .content-box p,
+        body.cis-home-variant .banner-section.style-two .banner-carousel .content-box .btn-box {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+
+        body.cis-home-variant .banner-section.style-two .banner-carousel .content-box h1 br,
+        body.cis-home-variant .banner-section.style-two .banner-carousel .content-box p br {
+          display: none;
+        }
+
+        body.cis-home-variant .banner-section.style-two .banner-carousel .btn-box {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 12px;
+        }
+
+        body.cis-home-variant .banner-section.style-two .banner-carousel .btn-box a {
+          width: 100%;
+          max-width: 220px;
+          margin: 0 !important;
+        }
+
+        body.cis-home-variant .about-style-two {
+          margin-top: 16px !important;
+          padding-top: 0 !important;
+        }
+
+        body.cis-home-variant .service-style-two {
+          padding: 60px 0 30px;
+        }
+
+        body.cis-home-variant .service-style-two .sec-title {
+          margin-bottom: 45px;
+        }
+
+        body.cis-home-variant .service-style-two .sec-title h2 br,
+        body.cis-home-variant .service-style-two .sec-title p br {
+          display: none;
+        }
+
+        body.cis-home-variant .service-style-two .service-block-two .inner-box {
+          max-width: 360px;
+          min-height: 0;
+          margin: 0 auto 36px;
+          padding: 0 15px !important;
+          text-align: center;
+        }
+
+        body.cis-home-variant .service-style-two .service-block-two .icon-box {
+          position: relative;
+          top: auto;
+          left: auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 72px !important;
+          height: 72px !important;
+          margin: 0 auto 20px;
+          background: var(--cis-primary);
+          border: 3px solid rgba(255, 255, 255, 0.35) !important;
+          border-radius: 50%;
+          color: #fff !important;
+          font-size: 36px !important;
+          line-height: 1;
+        }
+
+        body.cis-home-variant .service-style-two .service-block-two .icon-box::before {
+          display: none;
+        }
+
+        body.cis-home-variant .service-style-two .service-block-two .icon-box i,
+        body.cis-home-variant .service-style-two .service-block-two .icon-box i::before {
+          display: block;
+          margin: 0;
+          color: #fff !important;
+          font-size: 36px !important;
+          line-height: 1;
+        }
+
+        body.cis-home-variant .service-style-two .service-block-two h4 {
+          margin-bottom: 10px;
+          line-height: 30px;
+        }
+
+        body.cis-home-variant .service-style-two .service-block-two p {
+          margin-bottom: 14px;
+          line-height: 24px;
+        }
+
+        body.cis-home-variant .protect-form .inner-box h2 {
+          font-size: 27px !important;
+          line-height: 34px !important;
+        }
+
+        body.cis-home-variant .protect-form .inner-box h3 {
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        body.cis-home-variant .about-style-two {
+          padding-bottom: 48px !important;
+        }
+
+        body.cis-home-variant .annual-stats {
+          padding: 48px 0 28px !important;
+        }
+
+        body.cis-home-variant .protect-form .inner-box {
+          margin-top: -25px;
+          padding: 40px 20px 45px;
+        }
+
+        body.cis-home-variant .our-mission {
+          margin-top: -220px;
+          padding: 280px 0 48px;
+        }
+
+        body.cis-home-variant .team-section {
+          padding: 48px 0 20px;
+        }
+
+        body.cis-home-variant .team-section .team-block-one .inner-box {
+          margin-bottom: 32px;
+        }
+
+        body.cis-home-variant .world-cyber.about-page-1 {
+          padding: 48px 0;
+        }
+
+        body.cis-home-variant .world-cyber.about-page-1 .sec-title {
+          margin-bottom: 35px;
+        }
+
+        body.cis-home-variant .view-plans .inner-container {
+          padding: 45px 24px;
+        }
+
+        body.cis-home-variant .testimonial-style-two {
+          padding: 48px 0;
+        }
+
+        body.cis-home-variant .policy-section {
+          padding: 48px 0;
+        }
+
+        body.cis-home-variant .news-section.style-two {
+          padding: 48px 0 28px;
+        }
       }
 
       body.cis-home-variant a:hover,
@@ -201,6 +410,39 @@
       body.cis-home-variant .footer-bottom {
         background-color: var(--cis-secondary);
       }
+
+      body.cis-home-variant .service-style-two .service-block-two .icon-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--cis-primary);
+        border-color: rgba(255, 255, 255, 0.35) !important;
+        color: #fff !important;
+        line-height: 1;
+      }
+
+      body.cis-home-variant .service-style-two .service-block-two .inner-box {
+        padding-left: 105px;
+      }
+
+      body.cis-home-variant .service-style-two .service-block-two .icon-box {
+        width: 82px;
+        height: 82px;
+        font-size: 42px;
+      }
+
+      body.cis-home-variant .service-style-two .service-block-two .icon-box::before {
+        display: none;
+      }
+
+      body.cis-home-variant .service-style-two .service-block-two .icon-box i,
+      body.cis-home-variant .service-style-two .service-block-two .icon-box i::before {
+        display: block;
+        margin: 0;
+        color: #fff !important;
+        line-height: 1;
+        font-size: 42px;
+      }
     </style>
   </head>
 
@@ -272,6 +514,7 @@
           </div>
         </div>
       </div>
+
       <div class="header-upper">
         <div class="auto-container">
           <div class="upper-inner clearfix">
@@ -515,6 +758,7 @@
         </div>
       </div>
     </section>
+
     <!-- banner-section end -->
 
     <!-- about-style-two -->
