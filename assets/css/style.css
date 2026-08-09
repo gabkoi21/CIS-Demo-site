@@ -675,6 +675,12 @@ img {
   width: 100%;
 }
 
+/* Hide the Services item in the desktop, sticky, and mobile navigation site-wide. */
+.main-menu .navigation li:has(> a[href="service.html"]),
+.mobile-menu .navigation li:has(> a[href="service.html"]){
+  display: none !important;
+}
+
 .main-header.style-one .header-top{
   position: relative;
   display: block;
@@ -3294,7 +3300,12 @@ h4 a{
 
 .annual-stats{
   position: relative;
-  padding: 95px 0px;
+  margin-bottom: 0px;
+  padding: 72px 0px 80px;
+}
+
+.annual-stats > .auto-container > .row{
+  align-items: center;
 }
 
 #content_block_two .content-box .sec-title{
@@ -3304,7 +3315,7 @@ h4 a{
 #content_block_two .content-box .text{
   position: relative;
   display: block;
-  margin-bottom: 54px;
+  margin-bottom: 38px;
 }
 
 #content_block_two .content-box .single-progress-box{

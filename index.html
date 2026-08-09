@@ -30,9 +30,75 @@
       body.cis-home-variant {
         --cis-primary: #4db19e;
         --cis-secondary: #202124;
+        --cis-section-space: 80px;
+        --cis-section-space-tablet: 64px;
+      }
+
+      /* Homepage spacing rhythm: consistent outer gutters and section breathing room. */
+      body.cis-home-variant .auto-container {
+        padding-right: 24px;
+        padding-left: 24px;
+      }
+
+      body.cis-home-variant .about-style-two,
+      body.cis-home-variant .service-style-two,
+      body.cis-home-variant .team-section,
+      body.cis-home-variant .testimonial-style-two,
+      body.cis-home-variant .policy-section {
+        padding-top: var(--cis-section-space);
+        padding-bottom: var(--cis-section-space);
+      }
+
+      body.cis-home-variant .sec-title {
+        margin-bottom: 44px;
+      }
+
+      body.cis-home-variant .sec-title h2:last-child,
+      body.cis-home-variant .sec-title p:last-child {
+        margin-bottom: 0;
+      }
+
+      body.cis-home-variant .team-section .team-block-one .inner-box,
+      body.cis-home-variant .news-section.style-two .news-block-four .inner-box {
+        margin-bottom: 30px;
+      }
+
+      body.cis-home-variant .view-plans .inner-container {
+        padding: 52px 56px;
+      }
+
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        body.cis-home-variant .auto-container {
+          padding-right: 28px;
+          padding-left: 28px;
+        }
+
+        body.cis-home-variant .about-style-two,
+        body.cis-home-variant .service-style-two,
+        body.cis-home-variant .annual-stats,
+        body.cis-home-variant .team-section,
+        body.cis-home-variant .testimonial-style-two,
+        body.cis-home-variant .policy-section {
+          padding-top: var(--cis-section-space-tablet);
+          padding-bottom: var(--cis-section-space-tablet);
+        }
+
+        body.cis-home-variant .sec-title,
+        body.cis-home-variant .service-style-two .sec-title {
+          margin-bottom: 40px;
+        }
+
+        body.cis-home-variant .view-plans .inner-container {
+          padding: 48px 40px;
+        }
       }
 
       @media only screen and (max-width: 767px) {
+        body.cis-home-variant .auto-container {
+          padding-right: 18px;
+          padding-left: 18px;
+        }
+
         body.cis-home-variant .banner-section.style-two,
         body.cis-home-variant .banner-section.style-two .banner-carousel,
         body.cis-home-variant .banner-section.style-two .owl-stage-outer {
@@ -123,7 +189,7 @@
         }
 
         body.cis-home-variant .service-style-two .sec-title {
-          margin-bottom: 45px;
+          margin-bottom: 36px;
         }
 
         body.cis-home-variant .service-style-two .sec-title h2 br,
@@ -204,8 +270,8 @@
         }
 
         body.cis-home-variant .our-mission {
-          margin-top: -220px;
-          padding: 280px 0 48px;
+          margin-top: 0;
+          padding: 48px 0;
         }
 
         body.cis-home-variant .team-section {
@@ -225,7 +291,9 @@
         }
 
         body.cis-home-variant .view-plans .inner-container {
-          padding: 45px 24px;
+          margin-right: 0;
+          margin-left: 0;
+          padding: 40px 22px;
         }
 
         body.cis-home-variant .testimonial-style-two {
@@ -279,8 +347,22 @@
         background: #fff !important;
         width: 100%;
         min-width: 100%;
+        margin-top: 0;
         margin-left: 0;
         margin-right: 0;
+        padding: var(--cis-section-space) 0;
+      }
+
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        body.cis-home-variant .our-mission {
+          padding: var(--cis-section-space-tablet) 0;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        body.cis-home-variant .our-mission {
+          padding: 48px 0;
+        }
       }
 
       body.cis-home-variant .team-section .team-block-one .image-box {
@@ -387,6 +469,139 @@
         color: var(--cis-secondary);
       }
 
+      body.cis-home-variant .main-header.style-two .header-upper .info-list li h4 {
+        margin: 0 0 2px;
+        color: var(--cis-secondary);
+        font-size: 15px;
+        line-height: 20px;
+      }
+
+      body.cis-home-variant .main-header.style-two .header-upper .info-list li p {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      /* Compact contact bar above the main navigation. */
+      body.cis-home-variant .main-header.style-two .header-top .top-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+      }
+
+      body.cis-home-variant .main-header.style-two .header-top .info-box,
+      body.cis-home-variant .main-header.style-two .header-top .top-right {
+        float: none !important;
+      }
+
+      body.cis-home-variant .main-header.style-two .header-top .top-right {
+        margin-left: 32px;
+        margin-right: 10px;
+      }
+
+      body.cis-home-variant .main-header.style-two .header-top .social-links {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+      }
+
+      body.cis-home-variant .main-header.style-two .header-top .social-links li,
+      body.cis-home-variant .main-header.style-two .header-top .social-links li:first-child {
+        margin-right: 0;
+      }
+
+      body.cis-home-variant .main-header.style-two .header-top .info-list {
+        display: flex;
+        align-items: center;
+      }
+
+      body.cis-home-variant .main-header.style-two .header-top .info-list li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 18px 0 0;
+        padding: 0 18px 0 0;
+        border-right: 1px solid #c1d0e1;
+      }
+
+      body.cis-home-variant .main-header.style-two .header-top .info-list li::before {
+        display: none;
+      }
+
+      body.cis-home-variant .main-header.style-two .header-top .info-list li:last-child {
+        margin-right: 0;
+        padding-right: 0;
+        border-right: 0;
+      }
+
+      body.cis-home-variant .main-header.style-two .header-top .info-list li i {
+        color: var(--cis-primary);
+        font-size: 15px;
+      }
+
+      body.cis-home-variant .main-header.style-two .header-top .info-list li p {
+        margin: 0;
+        color: var(--cis-secondary);
+        font-size: 12px;
+        line-height: 16px;
+      }
+
+      body.cis-home-variant .main-header.style-two .header-top .top-label {
+        display: block;
+        color: #6f7a86;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        line-height: 13px;
+        text-transform: uppercase;
+      }
+
+      /* Keep the standalone logo row compact and vertically balanced. */
+      body.cis-home-variant .main-header.style-two .header-upper {
+        padding: 8px 0;
+      }
+
+      body.cis-home-variant .main-header.style-two .header-upper .upper-inner {
+        display: flex;
+        align-items: center;
+        min-height: 64px;
+      }
+
+      body.cis-home-variant .main-header.style-two .header-upper .logo-box,
+      body.cis-home-variant .main-header.style-two .header-upper .logo {
+        margin: 0;
+      }
+
+      body.cis-home-variant .main-header.style-two .header-upper .logo img {
+        display: block;
+        width: auto;
+        max-height: 64px;
+      }
+
+      @media only screen and (max-width: 767px) {
+        body.cis-home-variant .main-header.style-two .header-top .top-inner {
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        body.cis-home-variant .main-header.style-two .header-top .top-right {
+          margin-right: 0;
+          margin-left: 0;
+        }
+
+        body.cis-home-variant .main-header.style-two .header-top .info-list {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px;
+        }
+
+        body.cis-home-variant .main-header.style-two .header-top .info-list li {
+          margin: 0;
+          padding: 0;
+          border: 0;
+        }
+      }
+
       body.cis-home-variant .service-block-two .inner-box .icon-box:before,
       body.cis-home-variant .feature-block-two .inner-box .lower-content .inner:before,
       body.cis-home-variant #content_block_four .content-box .tab-btn-box .tab-btns li.active-btn,
@@ -443,6 +658,60 @@
         line-height: 1;
         font-size: 42px;
       }
+
+      /* Give the wide About CIS photo enough height to balance its content column. */
+      @media only screen and (min-width: 992px) {
+        body.cis-home-variant .about-style-two .row {
+          align-items: stretch;
+        }
+
+        body.cis-home-variant .about-style-two .image-column,
+        body.cis-home-variant .about-style-two #image_block_two,
+        body.cis-home-variant .about-style-two #image_block_two .image-box {
+          display: flex;
+          flex: 1 1 auto;
+        }
+
+        body.cis-home-variant .about-style-two #image_block_two .image-box {
+          min-height: 560px;
+          margin-top: 0;
+        }
+
+        body.cis-home-variant .about-style-two #image_block_two .image {
+          flex: 1 1 auto;
+          height: auto;
+        }
+
+        body.cis-home-variant .about-style-two #image_block_two .image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+
+      @media only screen and (max-width: 991px) {
+        body.cis-home-variant .about-style-two #image_block_two .image-box {
+          margin-top: 24px;
+        }
+
+        body.cis-home-variant .about-style-two #image_block_two .image {
+          height: 420px;
+        }
+
+        body.cis-home-variant .about-style-two #image_block_two .image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        body.cis-home-variant .about-style-two #image_block_two .image {
+          height: 320px;
+        }
+      }
     </style>
   </head>
 
@@ -495,13 +764,37 @@
       <div class="header-top">
         <div class="auto-container">
           <div class="top-inner clearfix">
+            <div class="info-box pull-right">
+              <ul class="info-list clearfix">
+                <li>
+                  <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                  <p>
+                    <span class="top-label">Our Office</span>
+                    Monrovia, Montserrado, Liberia
+                  </p>
+                </li>
+
+                <li>
+                  <i class="fas fa-phone-volume" aria-hidden="true"></i>
+                  <p>
+                    <span class="top-label">Call Us</span>
+                    <a href="tel:+231777222021">(231) 777-222-021</a>
+                  </p>
+                </li>
+
+                <li>
+                  <i class="fas fa-envelope-open" aria-hidden="true"></i>
+                  <p>
+                    <span class="top-label">Email Us</span>
+                    <a href="mailto:partnership@c4islib.org">partnership@c4islib.org</a>
+                  </p>
+                </li>
+              </ul>
+            </div>
             <div class="top-right pull-right">
               <ul class="social-links clearfix">
                 <li>
                   <a href="index.html"><i class="fab fa-facebook-f"></i></a>
-                </li>
-                <li>
-                  <a href="index.html"></a>
                 </li>
                 <li>
                   <a href="index.html"><i class="fab fa-linkedin-in"></i></a>
@@ -522,36 +815,6 @@
               <figure class="logo">
                 <a href="index.html"><img src="assets/cis-images/about/cis-logo.webp" alt="" /></a>
               </figure>
-            </div>
-            <div class="info-box pull-right">
-              <ul class="info-list clearfix">
-                <li>
-                  <i class="fas fa-envelope"></i>
-                  <p>
-                    Email Us
-                    <br />
-                    <a href="mailto:partnership@c4islib.org">partnership@c4islib.org</a>
-                  </p>
-                </li>
-
-                <li>
-                  <i class="far fa-clock"></i>
-                  <p>
-                    Locally Driven Solutions
-                    <br />
-                    Monday – Friday: 9:00 AM – 5:00 PM
-                  </p>
-                </li>
-
-                <li>
-                  <i class="fas fa-map-marker-alt"></i>
-                  <p>
-                    Airfield, Sinkor,
-                    <br />
-                    Monrovia, Montserrado, Liberia
-                  </p>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
@@ -580,9 +843,6 @@
                         <li><a href="ourapproach.html">Our Approach</a></li>
                         <li><a href="team.html">Our Team</a></li>
                       </ul>
-                    </li>
-                    <li class="dropdown">
-                      <a href="service.html">Services</a>
                     </li>
                     <li class="dropdown">
                       <a href="blog-grid.html">Blog</a>
@@ -845,95 +1105,6 @@
     <!-- about-style-two end -->
 
     <!-- CIS Impact Statistics -->
-    <section class="annual-stats">
-      <div class="auto-container">
-        <div class="row clearfix">
-          <!-- Content Column -->
-          <div class="col-lg-6 col-md-12 col-sm-12 content-column">
-            <div id="content_block_two">
-              <div class="content-box">
-                <div class="sec-title left">
-                  <h5>Our Impact</h5>
-                  <h2>Locally Driven Solutions Creating Lasting Impact</h2>
-                </div>
-
-                <div class="text">
-                  <p>
-                    CIS transforms evidence, capacity strengthening, innovation, and technology into practical, locally
-                    driven solutions. We equip communities, institutions, and local partners with the knowledge,
-                    systems, and tools needed to sustain progress across Liberia.
-                  </p>
-                </div>
-
-                <div class="inner-box clearfix">
-                  <!-- Years of Support -->
-                  <div class="single-progress-box">
-                    <div class="box">
-                      <div class="piechart" data-fg-color="#4DB19E" data-value="1">
-                        <span>13</span>
-                      </div>
-
-                      <h5>
-                        Years of Direct
-                        <br />
-                        Support
-                      </h5>
-
-                      <h3>Across Liberia</h3>
-                    </div>
-                  </div>
-
-                  <!-- Counties Supported -->
-                  <div class="single-progress-box">
-                    <div class="box">
-                      <div class="piechart" data-fg-color="#202124" data-value="1">
-                        <span>8+</span>
-                      </div>
-
-                      <h5>
-                        Counties
-                        <br />
-                        Supported
-                      </h5>
-
-                      <h3>30+ Programs Completed</h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Image Column -->
-          <div class="col-lg-6 col-md-12 col-sm-12 image-column">
-            <div id="image_block_one">
-              <div class="image-box">
-                <div class="pattern-layer" style="background-image: url(assets/cis-images/shape/shape-1.png)"></div>
-
-                <figure class="image">
-                  <img
-                    src="assets/cis-images/about/community-development.jpg"
-                    alt="CIS team members collaborating with a community development partner in Liberia"
-                  />
-                </figure>
-
-                <div class="award-box">
-                  <div class="box">
-                    <div class="impact-icon" aria-hidden="true">
-                      <i class="fas fa-hands-helping"></i>
-                    </div>
-                    <span class="impact-copy">
-                      <strong>13+ Years</strong>
-                      Empowering Communities Across Liberia
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- service-style-two -->
     <section class="service-style-two bg-color-2">
@@ -1047,27 +1218,95 @@
       </div>
     </section>
 
-    <!-- service-style-two end -->
-
-    <!-- protect-form -->
-    <section class="protect-form centred">
+    <section class="annual-stats">
       <div class="auto-container">
-        <div class="inner-box">
-          <h2>Solutions That Strengthen Communities</h2>
-          <h3>Not sure which policy suits you the best? Find our agent</h3>
-          <form action="index.html" method="post" class="zip-form">
-            <div class="form-group clearfix">
-              <input type="text" name="zip" placeholder="contact us " required="" />
-              <button class="theme-btn style-two" type="submit">
-                <i class="far fa-user"></i>
-                Contact Us
-              </button>
+        <div class="row clearfix">
+          <!-- Content Column -->
+          <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+            <div id="content_block_two">
+              <div class="content-box">
+                <div class="sec-title left">
+                  <h5>Our Impact</h5>
+                  <h2>Locally Driven Solutions Creating Lasting Impact</h2>
+                </div>
+
+                <div class="text">
+                  <p>
+                    CIS transforms evidence, capacity strengthening, innovation, and technology into practical, locally
+                    driven solutions. We equip communities, institutions, and local partners with the knowledge,
+                    systems, and tools needed to sustain progress across Liberia.
+                  </p>
+                </div>
+
+                <div class="inner-box clearfix">
+                  <!-- Years of Support -->
+                  <div class="single-progress-box">
+                    <div class="box">
+                      <div class="piechart" data-fg-color="#4DB19E" data-value="1">
+                        <span>13</span>
+                      </div>
+
+                      <h5>
+                        Years of Direct
+                        <br />
+                        Support
+                      </h5>
+
+                      <h3>Across Liberia</h3>
+                    </div>
+                  </div>
+
+                  <!-- Counties Supported -->
+                  <div class="single-progress-box">
+                    <div class="box">
+                      <div class="piechart" data-fg-color="#202124" data-value="1">
+                        <span>8+</span>
+                      </div>
+
+                      <h5>
+                        Counties
+                        <br />
+                        Supported
+                      </h5>
+
+                      <h3>30+ Programs Completed</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </form>
+          </div>
+
+          <!-- Image Column -->
+          <div class="col-lg-6 col-md-12 col-sm-12 image-column">
+            <div id="image_block_one">
+              <div class="image-box">
+                <div class="pattern-layer" style="background-image: url(assets/cis-images/shape/shape-1.png)"></div>
+
+                <figure class="image">
+                  <img
+                    src="assets/cis-images/about/community-development.jpg"
+                    alt="CIS team members collaborating with a community development partner in Liberia"
+                  />
+                </figure>
+
+                <div class="award-box">
+                  <div class="box">
+                    <div class="impact-icon" aria-hidden="true">
+                      <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <span class="impact-copy">
+                      <strong>13+ Years</strong>
+                      Empowering Communities Across Liberia
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <!-- protect-form end -->
 
     <!-- our-mission -->
     <section class="our-mission bg-color-1">
@@ -1114,21 +1353,6 @@
                           <li>Deliver locally driven solutions</li>
                           <li>Use innovation and technology</li>
                         </ul>
-                      </div>
-                      <div class="tab active-tab" id="tab-1">
-                        <div class="content-inner">
-                          <h3>Our Vision</h3>
-                          <p>
-                            To be a leading development firm for innovation, research, evidence, and integrated
-                            solutions for sustainable societies across Africa and the world.
-                          </p>
-                          <ul class="list-item clearfix">
-                            <li>Innovation and research</li>
-                            <li>Evidence-led solutions</li>
-                            <li>Integrated development approaches</li>
-                            <li>Sustainable societies across Africa and the world</li>
-                          </ul>
-                        </div>
                       </div>
                     </div>
                     <div class="tab" id="tab-3">
@@ -1457,34 +1681,6 @@
                     innovative, evidence-based solutions that create sustainable impact across Liberia.
                   </p>
                 </div>
-
-                <ul class="info-list clearfix">
-                  <li>
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h4>Our Office</h4>
-                    <p>
-                      Airfield Junction, Sinkor
-                      <br />
-                      Monrovia, Montserrado, Liberia
-                    </p>
-                  </li>
-
-                  <li>
-                    <i class="fas fa-phone-volume"></i>
-                    <h4>Call Us</h4>
-                    <p>
-                      <a href="tel:+231777222021">(231) 777-222-021</a>
-                    </p>
-                  </li>
-
-                  <li>
-                    <i class="fas fa-envelope-open"></i>
-                    <h4>Email Us</h4>
-                    <p>
-                      <a href="mailto:partnership@c4islib.org">partnership@c4islib.org</a>
-                    </p>
-                  </li>
-                </ul>
               </div>
             </div>
           </div>
