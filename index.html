@@ -450,7 +450,10 @@
         background: var(--cis-primary) !important;
       }
 
-      body.cis-home-variant .main-header.style-six .header-top .social-links li a,
+      body.cis-home-variant .main-header.style-two .header-top .social-links li a,
+      body.cis-home-variant .main-header.style-two .header-upper .info-box .info-list li i,
+      body.cis-home-variant .main-header.style-two .header-upper .info-box .info-list li p a:hover,
+      body.cis-home-variant .main-header.style-two .header-lower .search-btn button:hover,
       body.cis-home-variant .service-block-two .inner-box .icon-box,
       body.cis-home-variant .service-block-two .inner-box h4 a:hover,
       body.cis-home-variant .service-block-two .inner-box .link a:hover span,
@@ -459,47 +462,60 @@
         color: var(--cis-primary) !important;
       }
 
-      body.cis-home-variant .main-header.style-six .header-top .social-links li a:hover,
+      body.cis-home-variant .main-header.style-two .header-top .social-links li a:hover,
+      body.cis-home-variant .main-header.style-two .header-upper .info-box .info-list li:hover i,
       body.cis-home-variant .main-menu .navigation > li > ul > li > a,
       body.cis-home-variant .sec-title:not(.light) h2 {
         color: var(--cis-secondary);
       }
 
+      body.cis-home-variant .main-header.style-two .header-upper .info-list li h4 {
+        margin: 0 0 2px;
+        color: var(--cis-secondary);
+        font-size: 15px;
+        line-height: 20px;
+      }
+
+      body.cis-home-variant .main-header.style-two .header-upper .info-list li p {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
       /* Compact contact bar above the main navigation. */
-      body.cis-home-variant .main-header.style-six .header-top .top-inner {
+      body.cis-home-variant .main-header.style-two .header-top .top-inner {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 40px;
       }
 
-      body.cis-home-variant .main-header.style-six .header-top .info-box,
-      body.cis-home-variant .main-header.style-six .header-top .top-right {
+      body.cis-home-variant .main-header.style-two .header-top .info-box,
+      body.cis-home-variant .main-header.style-two .header-top .top-right {
         float: none !important;
       }
 
-      body.cis-home-variant .main-header.style-six .header-top .top-right {
+      body.cis-home-variant .main-header.style-two .header-top .top-right {
         margin-left: 32px;
         margin-right: 10px;
       }
 
-      body.cis-home-variant .main-header.style-six .header-top .social-links {
+      body.cis-home-variant .main-header.style-two .header-top .social-links {
         display: flex;
         align-items: center;
         gap: 22px;
       }
 
-      body.cis-home-variant .main-header.style-six .header-top .social-links li,
-      body.cis-home-variant .main-header.style-six .header-top .social-links li:first-child {
+      body.cis-home-variant .main-header.style-two .header-top .social-links li,
+      body.cis-home-variant .main-header.style-two .header-top .social-links li:first-child {
         margin-right: 0;
       }
 
-      body.cis-home-variant .main-header.style-six .header-top .info-list {
+      body.cis-home-variant .main-header.style-two .header-top .info-list {
         display: flex;
         align-items: center;
       }
 
-      body.cis-home-variant .main-header.style-six .header-top .info-list li {
+      body.cis-home-variant .main-header.style-two .header-top .info-list li {
         display: flex;
         align-items: center;
         gap: 8px;
@@ -508,29 +524,29 @@
         border-right: 1px solid #c1d0e1;
       }
 
-      body.cis-home-variant .main-header.style-six .header-top .info-list li::before {
+      body.cis-home-variant .main-header.style-two .header-top .info-list li::before {
         display: none;
       }
 
-      body.cis-home-variant .main-header.style-six .header-top .info-list li:last-child {
+      body.cis-home-variant .main-header.style-two .header-top .info-list li:last-child {
         margin-right: 0;
         padding-right: 0;
         border-right: 0;
       }
 
-      body.cis-home-variant .main-header.style-six .header-top .info-list li i {
+      body.cis-home-variant .main-header.style-two .header-top .info-list li i {
         color: var(--cis-primary);
         font-size: 15px;
       }
 
-      body.cis-home-variant .main-header.style-six .header-top .info-list li p {
+      body.cis-home-variant .main-header.style-two .header-top .info-list li p {
         margin: 0;
         color: var(--cis-secondary);
         font-size: 12px;
         line-height: 16px;
       }
 
-      body.cis-home-variant .main-header.style-six .header-top .top-label {
+      body.cis-home-variant .main-header.style-two .header-top .top-label {
         display: block;
         color: #6f7a86;
         font-size: 10px;
@@ -540,87 +556,50 @@
         text-transform: uppercase;
       }
 
-      /* Match the About page's desktop header alignment. */
-      @media only screen and (min-width: 992px) {
-        body.cis-home-variant .main-header.style-six .header-lower .outer-box {
-          display: flex;
-          min-height: 120px;
-          align-items: center;
-          justify-content: space-between;
-        }
+      /* Keep the standalone logo row compact and vertically balanced. */
+      body.cis-home-variant .main-header.style-two .header-upper {
+        padding: 8px 0;
+      }
 
-        body.cis-home-variant .main-header.style-six .header-lower .logo-box {
-          display: flex;
-          float: none !important;
-          flex: 0 0 auto;
-          height: 120px;
-          padding-top: 0;
-          align-items: center;
-        }
+      body.cis-home-variant .main-header.style-two .header-upper .upper-inner {
+        display: flex;
+        align-items: center;
+        min-height: 64px;
+      }
 
-        body.cis-home-variant .main-header.style-six .header-lower .logo,
-        body.cis-home-variant .main-header.style-six .header-lower .logo a {
-          display: flex;
-          margin: 0;
-          align-items: center;
-        }
+      body.cis-home-variant .main-header.style-two .header-upper .logo-box,
+      body.cis-home-variant .main-header.style-two .header-upper .logo {
+        margin: 0;
+      }
 
-        body.cis-home-variant .main-header.style-six .header-lower .menu-area {
-          display: flex;
-          float: none !important;
-          height: 120px;
-          margin-left: auto;
-          align-items: center;
-        }
-
-        body.cis-home-variant .main-header.style-six .header-lower .main-menu,
-        body.cis-home-variant .main-header.style-six .header-lower .navbar-collapse,
-        body.cis-home-variant .main-header.style-six .header-lower .navigation {
-          display: flex !important;
-          align-items: center;
-        }
-
-        body.cis-home-variant .main-header.style-six .header-lower .menu-right-content {
-          display: flex;
-          margin-top: 0;
-          margin-left: 28px;
-          align-items: center;
-        }
-
-        body.cis-home-variant .main-header.style-six .header-lower .menu-right-content .theme-btn {
-          display: inline-flex;
-          min-height: 50px;
-          padding: 12px 24px;
-          align-items: center;
-          justify-content: center;
-          gap: 10px;
-          border-radius: 0;
-          white-space: nowrap;
-        }
+      body.cis-home-variant .main-header.style-two .header-upper .logo img {
+        display: block;
+        width: auto;
+        max-height: 64px;
       }
 
       @media only screen and (max-width: 767px) {
-        body.cis-home-variant .main-header.style-six .header-top {
+        body.cis-home-variant .main-header.style-two .header-top {
           display: none;
         }
 
-        body.cis-home-variant .main-header.style-six .header-top .top-inner {
+        body.cis-home-variant .main-header.style-two .header-top .top-inner {
           flex-direction: column;
           gap: 12px;
         }
 
-        body.cis-home-variant .main-header.style-six .header-top .top-right {
+        body.cis-home-variant .main-header.style-two .header-top .top-right {
           margin-right: 0;
           margin-left: 0;
         }
 
-        body.cis-home-variant .main-header.style-six .header-top .info-list {
+        body.cis-home-variant .main-header.style-two .header-top .info-list {
           flex-direction: column;
           align-items: flex-start;
           gap: 8px;
         }
 
-        body.cis-home-variant .main-header.style-six .header-top .info-list li {
+        body.cis-home-variant .main-header.style-two .header-top .info-list li {
           margin: 0;
           padding: 0;
           border: 0;
@@ -814,10 +793,37 @@
     <!-- search-popup end -->
 
     <!-- main header -->
-    <header class="main-header style-one style-six">
+    <header class="main-header style-two">
       <div class="header-top">
         <div class="auto-container">
           <div class="top-inner clearfix">
+            <div class="info-box pull-right">
+              <ul class="info-list clearfix">
+                <li>
+                  <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                  <p>
+                    <span class="top-label">Our Office</span>
+                    Monrovia, Montserrado, Liberia
+                  </p>
+                </li>
+
+                <li>
+                  <i class="fas fa-phone-volume" aria-hidden="true"></i>
+                  <p>
+                    <span class="top-label">Call Us</span>
+                    <a href="tel:+231777222021">(231) 777-222-021</a>
+                  </p>
+                </li>
+
+                <li>
+                  <i class="fas fa-envelope-open" aria-hidden="true"></i>
+                  <p>
+                    <span class="top-label">Email Us</span>
+                    <a href="mailto:partnership@c4islib.org">partnership@c4islib.org</a>
+                  </p>
+                </li>
+              </ul>
+            </div>
             <div class="top-right pull-right">
               <ul class="social-links clearfix">
                 <li>
@@ -835,15 +841,22 @@
         </div>
       </div>
 
-      <div class="header-lower">
+      <div class="header-upper">
         <div class="auto-container">
-          <div class="outer-box clearfix">
+          <div class="upper-inner clearfix">
             <div class="logo-box pull-left">
               <figure class="logo">
                 <a href="index.html"><img src="assets/cis-images/about/cis-logo.webp" alt="" /></a>
               </figure>
             </div>
-            <div class="menu-area pull-right">
+          </div>
+        </div>
+      </div>
+
+      <div class="header-lower">
+        <div class="outer-box">
+          <div class="auto-container">
+            <div class="menu-area clearfix">
               <!--Mobile Navigation Toggler-->
               <div class="mobile-nav-toggler">
                 <i class="icon-bar"></i>
@@ -865,9 +878,6 @@
                       </ul>
                     </li>
                     <li class="dropdown">
-                      <a href="service.html">Services</a>
-                    </li>
-                    <li class="dropdown">
                       <a href="blog-grid.html">Blog</a>
                       <ul>
                         <li><a href="blog-grid.html">Blog Grid</a></li>
@@ -880,11 +890,13 @@
                 </div>
               </nav>
               <div class="menu-right-content clearfix">
+                <div class="search-btn">
+                  <button type="button" class="search-toggler">
+                    <i class="flaticon-search-1"></i>
+                  </button>
+                </div>
                 <div class="btn-box">
-                  <a href="contact.html" class="theme-btn style-one">
-                    Partner With CIS
-                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                  </a>
+                  <a href="index.html" class="theme-btn style-two">Get Free Quote</a>
                 </div>
               </div>
             </div>
