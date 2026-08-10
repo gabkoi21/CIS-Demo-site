@@ -1,80 +1,139 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
-<title>CIS | Center for Integrated Solutions</title>
+    <title>CIS | Center for Integrated Solutions</title>
 
-<!-- Fav Icon -->
-<link rel="icon" href="assets/cis-images/cis-favicon.png" type="image/png" />
+    <!-- Fav Icon -->
+    <link rel="icon" href="assets/cis-images/cis-favicon.png" type="image/png" />
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i&display=swap" rel="stylesheet" />
 
-<!-- Stylesheets -->
-<link href="assets/css/font-awesome-all.css" rel="stylesheet">
-<link href="assets/css/flaticon.css" rel="stylesheet">
-<link href="assets/css/owl.css" rel="stylesheet">
-<link href="assets/css/bootstrap.css" rel="stylesheet">
-<link href="assets/css/jquery.fancybox.min.css" rel="stylesheet">
-<link href="assets/css/animate.css" rel="stylesheet">
-<link href="assets/css/color.css" rel="stylesheet">
-<link href="assets/css/rtl.css" rel="stylesheet">
-<link href="assets/css/style.css" rel="stylesheet">
-<link href="assets/css/responsive.css" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link href="assets/css/font-awesome-all.css" rel="stylesheet" />
+    <link href="assets/css/flaticon.css" rel="stylesheet" />
+    <link href="assets/css/owl.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="assets/css/jquery.fancybox.min.css" rel="stylesheet" />
+    <link href="assets/css/animate.css" rel="stylesheet" />
+    <link href="assets/css/color.css" rel="stylesheet" />
+    <link href="assets/css/rtl.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/responsive.css" rel="stylesheet" />
+    <style>
+      /* Match the primary site header alignment used on the About page. */
+      @media only screen and (min-width: 992px) {
+        body.cis-blog-page .main-header.style-six .header-lower .outer-box {
+          display: flex;
+          min-height: 120px;
+          align-items: center;
+          justify-content: space-between;
+        }
 
-</head>
+        body.cis-blog-page .main-header.style-six .header-lower .logo-box {
+          display: flex;
+          float: none !important;
+          flex: 0 0 auto;
+          height: 120px;
+          padding-top: 0;
+          align-items: center;
+        }
 
+        body.cis-blog-page .main-header.style-six .header-lower .logo,
+        body.cis-blog-page .main-header.style-six .header-lower .logo a {
+          display: flex;
+          margin: 0;
+          align-items: center;
+        }
 
-<!-- page wrapper -->
-<body class="boxed_wrapper ltr">
+        body.cis-blog-page .main-header.style-six .header-lower .menu-area {
+          display: flex;
+          float: none !important;
+          height: 120px;
+          margin-left: auto;
+          align-items: center;
+        }
 
+        body.cis-blog-page .main-header.style-six .header-lower .main-menu,
+        body.cis-blog-page .main-header.style-six .header-lower .navbar-collapse,
+        body.cis-blog-page .main-header.style-six .header-lower .navigation {
+          display: flex !important;
+          align-items: center;
+        }
+
+        body.cis-blog-page .main-header.style-six .header-lower .menu-right-content {
+          display: flex;
+          margin-top: 0;
+          margin-left: 28px;
+          align-items: center;
+        }
+
+        body.cis-blog-page .main-header.style-six .header-lower .menu-right-content .theme-btn {
+          display: inline-flex;
+          min-height: 50px;
+          padding: 12px 24px;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          border-radius: 0;
+          white-space: nowrap;
+        }
+      }
+
+      body.cis-blog-page .news-section.blog-grid .news-block:nth-child(n + 7),
+      body.cis-blog-page .news-section.blog-grid .more-btn {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <!-- page wrapper -->
+  <body class="boxed_wrapper ltr cis-blog-page">
     <!-- Preloader -->
     <div class="loader-wrap">
-        <div class="preloader"><div class="preloader-close">Preloader Close</div></div>
-        <div class="layer layer-one"><span class="overlay"></span></div>
-        <div class="layer layer-two"><span class="overlay"></span></div>        
-        <div class="layer layer-three"><span class="overlay"></span></div>        
+      <div class="preloader"><div class="preloader-close">Preloader Close</div></div>
+      <div class="layer layer-one"><span class="overlay"></span></div>
+      <div class="layer layer-two"><span class="overlay"></span></div>
+      <div class="layer layer-three"><span class="overlay"></span></div>
     </div>
-
-
-    <!-- page-direction -->
-    <div class="page_direction">
-        <div class="demo-rtl direction_switch"><button class="rtl">RTL</button></div>
-        <div class="demo-ltr direction_switch"><button class="ltr">LTR</button></div>
-    </div>
-    <!-- page-direction end -->
-
 
     <!-- search-popup -->
     <div id="search-popup" class="search-popup">
-        <div class="close-search"><span>Close</span></div>
-        <div class="popup-inner">
-            <div class="overlay-layer"></div>
-            <div class="search-form">
-                <form method="post" action="index.html">
-                    <div class="form-group">
-                        <fieldset>
-                            <input type="search" class="form-control" name="search-input" value="" placeholder="Search Here" required >
-                            <input type="submit" value="Search Now!" class="theme-btn style-four">
-                        </fieldset>
-                    </div>
-                </form>
-                <h3>Recent Search Keywords</h3>
-                <ul class="recent-searches">
-                    <li><a href="index.html">Finance</a></li>
-                    <li><a href="index.html">Idea</a></li>
-                    <li><a href="index.html">Service</a></li>
-                    <li><a href="index.html">Growth</a></li>
-                    <li><a href="index.html">Plan</a></li>
-                </ul>
+      <div class="close-search"><span>Close</span></div>
+      <div class="popup-inner">
+        <div class="overlay-layer"></div>
+        <div class="search-form">
+          <form method="post" action="index.html">
+            <div class="form-group">
+              <fieldset>
+                <input
+                  type="search"
+                  class="form-control"
+                  name="search-input"
+                  value=""
+                  placeholder="Search Here"
+                  required
+                />
+                <input type="submit" value="Search Now!" class="theme-btn style-four" />
+              </fieldset>
             </div>
+          </form>
+          <h3>Recent Search Keywords</h3>
+          <ul class="recent-searches">
+            <li><a href="index.html">Finance</a></li>
+            <li><a href="index.html">Idea</a></li>
+            <li><a href="index.html">Service</a></li>
+            <li><a href="index.html">Growth</a></li>
+            <li><a href="index.html">Plan</a></li>
+          </ul>
         </div>
+      </div>
     </div>
     <!-- search-popup end -->
-
 
     <!-- main header -->
     <header class="main-header style-one style-six">
@@ -131,11 +190,11 @@
                     <li class="dropdown">
                       <a href="service.html">Services</a>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown current">
                       <a href="blog-grid.html">Blog</a>
                       <ul>
                         <li><a href="blog-grid.html">Blog Grid</a></li>
-                        <li><a href="blog-classic.html">Blog Classic</a></li>
+                        <!-- <li><a href="blog-classic.html">Blog Classic</a></li> -->
                         <li><a href="blog-details.html">Blog Details</a></li>
                       </ul>
                     </li>
@@ -178,283 +237,517 @@
 
     <!-- Mobile Menu  -->
     <div class="mobile-menu">
-        <div class="menu-backdrop"></div>
-        <div class="close-btn"><i class="fas fa-times"></i></div>
-        
-        <nav class="menu-box">
-            <div class="nav-logo"><a href="index.html"><img src="assets/cis-images/about/cis-logo.webp" alt="" title=""></a></div>
-            <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
-            <div class="contact-info">
-                <h4>Contact Info</h4>
-                <ul>
-                    <li>Airfield Sinkor, Monrovia, Liberia</li>
-                    <li><a href="tel:+8801682648101"></a></li>
-                    <li><a href="mailto:c4islib@gmail.com">c4islib@gmail.com</a></li>
-                </ul>
-            </div>
-            <div class="social-links">
-                <ul class="clearfix">
-                    <li><a href="index.html"><span class="fab fa-twitter"></span></a></li>
-                    <li><a href="index.html"><span class="fab fa-facebook-square"></span></a></li>
-                    <li><a href="index.html"><span class="fab fa-pinterest-p"></span></a></li>
-                    <li><a href="index.html"><span class="fab fa-instagram"></span></a></li>
-                    <li><a href="index.html"><span class="fab fa-youtube"></span></a></li>
-                </ul>
-            </div>
-        </nav>
-    </div><!-- End Mobile Menu -->
+      <div class="menu-backdrop"></div>
+      <div class="close-btn"><i class="fas fa-times"></i></div>
 
+      <nav class="menu-box">
+        <div class="nav-logo">
+          <a href="index.html"><img src="assets/cis-images/about/cis-logo.webp" alt="" title="" /></a>
+        </div>
+        <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
+        <div class="contact-info">
+          <h4>Contact Info</h4>
+          <ul>
+            <li>Airfield Sinkor, Monrovia, Liberia</li>
+            <li><a href="tel:+8801682648101"></a></li>
+            <li><a href="mailto:c4islib@gmail.com">c4islib@gmail.com</a></li>
+          </ul>
+        </div>
+        <div class="social-links">
+          <ul class="clearfix">
+            <li>
+              <a href="index.html"><span class="fab fa-twitter"></span></a>
+            </li>
+            <li>
+              <a href="index.html"><span class="fab fa-facebook-square"></span></a>
+            </li>
+            <li>
+              <a href="index.html"><span class="fab fa-pinterest-p"></span></a>
+            </li>
+            <li>
+              <a href="index.html"><span class="fab fa-instagram"></span></a>
+            </li>
+            <li>
+              <a href="index.html"><span class="fab fa-youtube"></span></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- End Mobile Menu -->
 
     <!--Page Title-->
-    <section class="page-title style-two centred" style="background-image: url(assets/cis-images/background/page-title-5.jpg);">
-        <div class="auto-container">
-            <div class="content-box clearfix">
-                <h1>Blog</h1>
-                <ul class="bread-crumb clearfix">
-                    <li><a href="index.html">Home</a></li>
-                    <li>Blog Grid</li>
-                </ul>
-            </div>
+    <section
+      class="page-title style-two centred"
+      style="background-image: url(assets/cis-images/background/page-title-5.jpg)"
+    >
+      <div class="auto-container">
+        <div class="content-box clearfix">
+          <h1>Blog</h1>
+          <ul class="bread-crumb clearfix">
+            <li><a href="index.html">Home</a></li>
+            <li>Blog Grid</li>
+          </ul>
         </div>
+      </div>
     </section>
     <!--End Page Title-->
 
-
     <!-- news-section -->
     <section class="news-section blog-grid sec-pad">
-        <div class="auto-container">
-            <div class="row clearfix">
-                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                    <div class="news-block-one wow fadeInUp animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <figure class="image-box"><a href="blog-details.html"><img src="assets/cis-images/blog/development-summit-2024.jpg" alt=""></a></figure>
-                            <div class="lower-content">
-                                <ul class="post-info">
-                                    <li>By <a href="index.html">CIS</a></li>
-                                    <li>January 31, 2020</li>
-                                    <li class="share">
-                                        <a href="#"><i class="fas fa-share-alt"></i></a>
-                                        <ul class="social-links">
-                                            <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="index.html"><i class="fab fa-vimeo-v"></i></a></li>
-                                            <li><a href="index.html"><i class="fab fa-linkedin-in"></i></a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <h3><a href="blog-details.html">Take Action For Benefits Of Your Business</a></h3>
-                                <p>Exea conse quat duis irurey dolor sed reprehen derit volupta velit cilum lorem incididunt labore sed magna exceptur aliqua.</p>
-                                <div class="link"><a href="blog-details.html"><i class="fas fa-arrow-right"></i><span>Read More</span></a></div>
-                            </div>
-                        </div>
-                    </div>
+      <div class="auto-container">
+        <div class="row clearfix">
+          <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+            <div class="news-block-one wow fadeInUp animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+              <div class="inner-box">
+                <figure class="image-box">
+                  <a href="blog-details.html">
+                    <img src="assets/cis-images/blog/development-summit-2024.jpg" alt="" />
+                  </a>
+                </figure>
+                <div class="lower-content">
+                  <ul class="post-info">
+                    <li>
+                      By
+                      <a href="index.html">CIS</a>
+                    </li>
+                    <li>January 31, 2020</li>
+                    <li class="share">
+                      <a href="#"><i class="fas fa-share-alt"></i></a>
+                      <ul class="social-links">
+                        <li>
+                          <a href="index.html"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                          <a href="index.html"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                          <a href="index.html"><i class="fab fa-vimeo-v"></i></a>
+                        </li>
+                        <li>
+                          <a href="index.html"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <h3><a href="blog-details.html">Take Action For Benefits Of Your Business</a></h3>
+                  <p>
+                    Exea conse quat duis irurey dolor sed reprehen derit volupta velit cilum lorem incididunt labore sed
+                    magna exceptur aliqua.
+                  </p>
+                  <div class="link">
+                    <a href="blog-details.html">
+                      <i class="fas fa-arrow-right"></i>
+                      <span>Read More</span>
+                    </a>
+                  </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                    <div class="news-block-one wow fadeInUp animated animated" data-wow-delay="300ms" data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <figure class="image-box"><a href="blog-details.html"><img src="assets/cis-images/blog/education-sector-review.jpg" alt=""></a></figure>
-                            <div class="lower-content">
-                                <ul class="post-info">
-                                    <li>By <a href="index.html">CIS</a></li>
-                                    <li>January 30, 2020</li>
-                                    <li class="share">
-                                        <a href="#"><i class="fas fa-share-alt"></i></a>
-                                        <ul class="social-links">
-                                            <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="index.html"><i class="fab fa-vimeo-v"></i></a></li>
-                                            <li><a href="index.html"><i class="fab fa-linkedin-in"></i></a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <h3><a href="blog-details.html">Improve Your Investment Through Money</a></h3>
-                                <p>Exea conse quat duis irurey dolor sed reprehen derit volupta velit cilum lorem incididunt labore sed magna exceptur aliqua.</p>
-                                <div class="link"><a href="blog-details.html"><i class="fas fa-arrow-right"></i><span>Read More</span></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                    <div class="news-block-one wow fadeInUp animated animated" data-wow-delay="600ms" data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <figure class="image-box"><a href="blog-details.html"><img src="assets/cis-images/blog/community-development.jpg" alt=""></a></figure>
-                            <div class="lower-content">
-                                <ul class="post-info">
-                                    <li>By <a href="index.html">CIS</a></li>
-                                    <li>January 29, 2020</li>
-                                    <li class="share">
-                                        <a href="#"><i class="fas fa-share-alt"></i></a>
-                                        <ul class="social-links">
-                                            <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="index.html"><i class="fab fa-vimeo-v"></i></a></li>
-                                            <li><a href="index.html"><i class="fab fa-linkedin-in"></i></a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <h3><a href="blog-details.html">Isolate & Reframe Beliefs For The Future</a></h3>
-                                <p>Exea conse quat duis irurey dolor sed reprehen derit volupta velit cilum lorem incididunt labore sed magna exceptur aliqua.</p>
-                                <div class="link"><a href="blog-details.html"><i class="fas fa-arrow-right"></i><span>Read More</span></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                    <div class="news-block-one wow fadeInUp animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <figure class="image-box"><a href="blog-details.html"><img src="assets/cis-images/blog/locally-led-development-summit.jpg" alt=""></a></figure>
-                            <div class="lower-content">
-                                <ul class="post-info">
-                                    <li>By <a href="index.html">CIS</a></li>
-                                    <li>January 28, 2020</li>
-                                    <li class="share">
-                                        <a href="#"><i class="fas fa-share-alt"></i></a>
-                                        <ul class="social-links">
-                                            <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="index.html"><i class="fab fa-vimeo-v"></i></a></li>
-                                            <li><a href="index.html"><i class="fab fa-linkedin-in"></i></a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <h3><a href="blog-details.html">Take Action For Benefits Of Your Business</a></h3>
-                                <p>Exea conse quat duis irurey dolor sed reprehen derit volupta velit cilum lorem incididunt labore sed magna exceptur aliqua.</p>
-                                <div class="link"><a href="blog-details.html"><i class="fas fa-arrow-right"></i><span>Read More</span></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                    <div class="news-block-one wow fadeInUp animated animated" data-wow-delay="300ms" data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <figure class="image-box"><a href="blog-details.html"><img src="assets/cis-images/blog/news-feature-01.jpg" alt=""></a></figure>
-                            <div class="lower-content">
-                                <ul class="post-info">
-                                    <li>By <a href="index.html">CIS</a></li>
-                                    <li>January 27, 2020</li>
-                                    <li class="share">
-                                        <a href="#"><i class="fas fa-share-alt"></i></a>
-                                        <ul class="social-links">
-                                            <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="index.html"><i class="fab fa-vimeo-v"></i></a></li>
-                                            <li><a href="index.html"><i class="fab fa-linkedin-in"></i></a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <h3><a href="blog-details.html">Improve Your Investment Through Money</a></h3>
-                                <p>Exea conse quat duis irurey dolor sed reprehen derit volupta velit cilum lorem incididunt labore sed magna exceptur aliqua.</p>
-                                <div class="link"><a href="blog-details.html"><i class="fas fa-arrow-right"></i><span>Read More</span></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                    <div class="news-block-one wow fadeInUp animated animated" data-wow-delay="600ms" data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <figure class="image-box"><a href="blog-details.html"><img src="assets/cis-images/blog/news-feature-05.jpg" alt=""></a></figure>
-                            <div class="lower-content">
-                                <ul class="post-info">
-                                    <li>By <a href="index.html">CIS</a></li>
-                                    <li>January 26, 2020</li>
-                                    <li class="share">
-                                        <a href="#"><i class="fas fa-share-alt"></i></a>
-                                        <ul class="social-links">
-                                            <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="index.html"><i class="fab fa-vimeo-v"></i></a></li>
-                                            <li><a href="index.html"><i class="fab fa-linkedin-in"></i></a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <h3><a href="blog-details.html">Isolate & Reframe Beliefs For The Future</a></h3>
-                                <p>Exea conse quat duis irurey dolor sed reprehen derit volupta velit cilum lorem incididunt labore sed magna exceptur aliqua.</p>
-                                <div class="link"><a href="blog-details.html"><i class="fas fa-arrow-right"></i><span>Read More</span></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                    <div class="news-block-one wow fadeInUp animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <figure class="image-box"><a href="blog-details.html"><img src="assets/cis-images/blog/education-program.jpg" alt=""></a></figure>
-                            <div class="lower-content">
-                                <ul class="post-info">
-                                    <li>By <a href="index.html">CIS</a></li>
-                                    <li>January 25, 2020</li>
-                                    <li class="share">
-                                        <a href="#"><i class="fas fa-share-alt"></i></a>
-                                        <ul class="social-links">
-                                            <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="index.html"><i class="fab fa-vimeo-v"></i></a></li>
-                                            <li><a href="index.html"><i class="fab fa-linkedin-in"></i></a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <h3><a href="blog-details.html">Take Action For Benefits Of Your Business</a></h3>
-                                <p>Exea conse quat duis irurey dolor sed reprehen derit volupta velit cilum lorem incididunt labore sed magna exceptur aliqua.</p>
-                                <div class="link"><a href="blog-details.html"><i class="fas fa-arrow-right"></i><span>Read More</span></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                    <div class="news-block-one wow fadeInUp animated animated" data-wow-delay="300ms" data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <figure class="image-box"><a href="blog-details.html"><img src="assets/cis-images/blog/community-poll-results.jpg" alt=""></a></figure>
-                            <div class="lower-content">
-                                <ul class="post-info">
-                                    <li>By <a href="index.html">CIS</a></li>
-                                    <li>January 24, 2020</li>
-                                    <li class="share">
-                                        <a href="#"><i class="fas fa-share-alt"></i></a>
-                                        <ul class="social-links">
-                                            <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="index.html"><i class="fab fa-vimeo-v"></i></a></li>
-                                            <li><a href="index.html"><i class="fab fa-linkedin-in"></i></a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <h3><a href="blog-details.html">Improve Your Investment Through Money</a></h3>
-                                <p>Exea conse quat duis irurey dolor sed reprehen derit volupta velit cilum lorem incididunt labore sed magna exceptur aliqua.</p>
-                                <div class="link"><a href="blog-details.html"><i class="fas fa-arrow-right"></i><span>Read More</span></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                    <div class="news-block-one wow fadeInUp animated animated" data-wow-delay="600ms" data-wow-duration="1500ms">
-                        <div class="inner-box">
-                            <figure class="image-box"><a href="blog-details.html"><img src="assets/cis-images/blog/asset-declaration-requirements.jpg" alt=""></a></figure>
-                            <div class="lower-content">
-                                <ul class="post-info">
-                                    <li>By <a href="index.html">CIS</a></li>
-                                    <li>January 23, 2020</li>
-                                    <li class="share">
-                                        <a href="#"><i class="fas fa-share-alt"></i></a>
-                                        <ul class="social-links">
-                                            <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="index.html"><i class="fab fa-vimeo-v"></i></a></li>
-                                            <li><a href="index.html"><i class="fab fa-linkedin-in"></i></a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <h3><a href="blog-details.html">Isolate & Reframe Beliefs For The Future</a></h3>
-                                <p>Exea conse quat duis irurey dolor sed reprehen derit volupta velit cilum lorem incididunt labore sed magna exceptur aliqua.</p>
-                                <div class="link"><a href="blog-details.html"><i class="fas fa-arrow-right"></i><span>Read More</span></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-            <div class="more-btn centred"><a href="blog-grid.html">Load More</a></div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+            <div
+              class="news-block-one wow fadeInUp animated animated"
+              data-wow-delay="300ms"
+              data-wow-duration="1500ms"
+            >
+              <div class="inner-box">
+                <figure class="image-box">
+                  <a href="blog-details.html">
+                    <img src="assets/cis-images/blog/education-sector-review.jpg" alt="" />
+                  </a>
+                </figure>
+                <div class="lower-content">
+                  <ul class="post-info">
+                    <li>
+                      By
+                      <a href="index.html">CIS</a>
+                    </li>
+                    <li>January 30, 2020</li>
+                    <li class="share">
+                      <a href="#"><i class="fas fa-share-alt"></i></a>
+                      <ul class="social-links">
+                        <li>
+                          <a href="index.html"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                          <a href="index.html"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                          <a href="index.html"><i class="fab fa-vimeo-v"></i></a>
+                        </li>
+                        <li>
+                          <a href="index.html"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <h3><a href="blog-details.html">Improve Your Investment Through Money</a></h3>
+                  <p>
+                    Exea conse quat duis irurey dolor sed reprehen derit volupta velit cilum lorem incididunt labore sed
+                    magna exceptur aliqua.
+                  </p>
+                  <div class="link">
+                    <a href="blog-details.html">
+                      <i class="fas fa-arrow-right"></i>
+                      <span>Read More</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+            <div
+              class="news-block-one wow fadeInUp animated animated"
+              data-wow-delay="600ms"
+              data-wow-duration="1500ms"
+            >
+              <div class="inner-box">
+                <figure class="image-box">
+                  <a href="blog-details.html"><img src="assets/cis-images/blog/community-development.jpg" alt="" /></a>
+                </figure>
+                <div class="lower-content">
+                  <ul class="post-info">
+                    <li>
+                      By
+                      <a href="index.html">CIS</a>
+                    </li>
+                    <li>January 29, 2020</li>
+                    <li class="share">
+                      <a href="#"><i class="fas fa-share-alt"></i></a>
+                      <ul class="social-links">
+                        <li>
+                          <a href="index.html"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                          <a href="index.html"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                          <a href="index.html"><i class="fab fa-vimeo-v"></i></a>
+                        </li>
+                        <li>
+                          <a href="index.html"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <h3><a href="blog-details.html">Isolate & Reframe Beliefs For The Future</a></h3>
+                  <p>
+                    Exea conse quat duis irurey dolor sed reprehen derit volupta velit cilum lorem incididunt labore sed
+                    magna exceptur aliqua.
+                  </p>
+                  <div class="link">
+                    <a href="blog-details.html">
+                      <i class="fas fa-arrow-right"></i>
+                      <span>Read More</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+            <div class="news-block-one wow fadeInUp animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+              <div class="inner-box">
+                <figure class="image-box">
+                  <a href="blog-details.html">
+                    <img src="assets/cis-images/blog/locally-led-development-summit.jpg" alt="" />
+                  </a>
+                </figure>
+                <div class="lower-content">
+                  <ul class="post-info">
+                    <li>
+                      By
+                      <a href="index.html">CIS</a>
+                    </li>
+                    <li>January 28, 2020</li>
+                    <li class="share">
+                      <a href="#"><i class="fas fa-share-alt"></i></a>
+                      <ul class="social-links">
+                        <li>
+                          <a href="index.html"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                          <a href="index.html"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                          <a href="index.html"><i class="fab fa-vimeo-v"></i></a>
+                        </li>
+                        <li>
+                          <a href="index.html"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <h3><a href="blog-details.html">Take Action For Benefits Of Your Business</a></h3>
+                  <p>
+                    Exea conse quat duis irurey dolor sed reprehen derit volupta velit cilum lorem incididunt labore sed
+                    magna exceptur aliqua.
+                  </p>
+                  <div class="link">
+                    <a href="blog-details.html">
+                      <i class="fas fa-arrow-right"></i>
+                      <span>Read More</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+            <div
+              class="news-block-one wow fadeInUp animated animated"
+              data-wow-delay="300ms"
+              data-wow-duration="1500ms"
+            >
+              <div class="inner-box">
+                <figure class="image-box">
+                  <a href="blog-details.html"><img src="assets/cis-images/blog/news-feature-01.jpg" alt="" /></a>
+                </figure>
+                <div class="lower-content">
+                  <ul class="post-info">
+                    <li>
+                      By
+                      <a href="index.html">CIS</a>
+                    </li>
+                    <li>January 27, 2020</li>
+                    <li class="share">
+                      <a href="#"><i class="fas fa-share-alt"></i></a>
+                      <ul class="social-links">
+                        <li>
+                          <a href="index.html"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                          <a href="index.html"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                          <a href="index.html"><i class="fab fa-vimeo-v"></i></a>
+                        </li>
+                        <li>
+                          <a href="index.html"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <h3><a href="blog-details.html">Improve Your Investment Through Money</a></h3>
+                  <p>
+                    Exea conse quat duis irurey dolor sed reprehen derit volupta velit cilum lorem incididunt labore sed
+                    magna exceptur aliqua.
+                  </p>
+                  <div class="link">
+                    <a href="blog-details.html">
+                      <i class="fas fa-arrow-right"></i>
+                      <span>Read More</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+            <div
+              class="news-block-one wow fadeInUp animated animated"
+              data-wow-delay="600ms"
+              data-wow-duration="1500ms"
+            >
+              <div class="inner-box">
+                <figure class="image-box">
+                  <a href="blog-details.html"><img src="assets/cis-images/blog/news-feature-05.jpg" alt="" /></a>
+                </figure>
+                <div class="lower-content">
+                  <ul class="post-info">
+                    <li>
+                      By
+                      <a href="index.html">CIS</a>
+                    </li>
+                    <li>January 26, 2020</li>
+                    <li class="share">
+                      <a href="#"><i class="fas fa-share-alt"></i></a>
+                      <ul class="social-links">
+                        <li>
+                          <a href="index.html"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                          <a href="index.html"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                          <a href="index.html"><i class="fab fa-vimeo-v"></i></a>
+                        </li>
+                        <li>
+                          <a href="index.html"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <h3><a href="blog-details.html">Isolate & Reframe Beliefs For The Future</a></h3>
+                  <p>
+                    Exea conse quat duis irurey dolor sed reprehen derit volupta velit cilum lorem incididunt labore sed
+                    magna exceptur aliqua.
+                  </p>
+                  <div class="link">
+                    <a href="blog-details.html">
+                      <i class="fas fa-arrow-right"></i>
+                      <span>Read More</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+            <div class="news-block-one wow fadeInUp animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+              <div class="inner-box">
+                <figure class="image-box">
+                  <a href="blog-details.html"><img src="assets/cis-images/blog/education-program.jpg" alt="" /></a>
+                </figure>
+                <div class="lower-content">
+                  <ul class="post-info">
+                    <li>
+                      By
+                      <a href="index.html">CIS</a>
+                    </li>
+                    <li>January 25, 2020</li>
+                    <li class="share">
+                      <a href="#"><i class="fas fa-share-alt"></i></a>
+                      <ul class="social-links">
+                        <li>
+                          <a href="index.html"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                          <a href="index.html"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                          <a href="index.html"><i class="fab fa-vimeo-v"></i></a>
+                        </li>
+                        <li>
+                          <a href="index.html"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <h3><a href="blog-details.html">Take Action For Benefits Of Your Business</a></h3>
+                  <p>
+                    Exea conse quat duis irurey dolor sed reprehen derit volupta velit cilum lorem incididunt labore sed
+                    magna exceptur aliqua.
+                  </p>
+                  <div class="link">
+                    <a href="blog-details.html">
+                      <i class="fas fa-arrow-right"></i>
+                      <span>Read More</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+            <div
+              class="news-block-one wow fadeInUp animated animated"
+              data-wow-delay="300ms"
+              data-wow-duration="1500ms"
+            >
+              <div class="inner-box">
+                <figure class="image-box">
+                  <a href="blog-details.html"><img src="assets/cis-images/blog/community-poll-results.jpg" alt="" /></a>
+                </figure>
+                <div class="lower-content">
+                  <ul class="post-info">
+                    <li>
+                      By
+                      <a href="index.html">CIS</a>
+                    </li>
+                    <li>January 24, 2020</li>
+                    <li class="share">
+                      <a href="#"><i class="fas fa-share-alt"></i></a>
+                      <ul class="social-links">
+                        <li>
+                          <a href="index.html"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                          <a href="index.html"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                          <a href="index.html"><i class="fab fa-vimeo-v"></i></a>
+                        </li>
+                        <li>
+                          <a href="index.html"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <h3><a href="blog-details.html">Improve Your Investment Through Money</a></h3>
+                  <p>
+                    Exea conse quat duis irurey dolor sed reprehen derit volupta velit cilum lorem incididunt labore sed
+                    magna exceptur aliqua.
+                  </p>
+                  <div class="link">
+                    <a href="blog-details.html">
+                      <i class="fas fa-arrow-right"></i>
+                      <span>Read More</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+            <div
+              class="news-block-one wow fadeInUp animated animated"
+              data-wow-delay="600ms"
+              data-wow-duration="1500ms"
+            >
+              <div class="inner-box">
+                <figure class="image-box">
+                  <a href="blog-details.html">
+                    <img src="assets/cis-images/blog/asset-declaration-requirements.jpg" alt="" />
+                  </a>
+                </figure>
+                <div class="lower-content">
+                  <ul class="post-info">
+                    <li>
+                      By
+                      <a href="index.html">CIS</a>
+                    </li>
+                    <li>January 23, 2020</li>
+                    <li class="share">
+                      <a href="#"><i class="fas fa-share-alt"></i></a>
+                      <ul class="social-links">
+                        <li>
+                          <a href="index.html"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                          <a href="index.html"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                          <a href="index.html"><i class="fab fa-vimeo-v"></i></a>
+                        </li>
+                        <li>
+                          <a href="index.html"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <h3><a href="blog-details.html">Isolate & Reframe Beliefs For The Future</a></h3>
+                  <p>
+                    Exea conse quat duis irurey dolor sed reprehen derit volupta velit cilum lorem incididunt labore sed
+                    magna exceptur aliqua.
+                  </p>
+                  <div class="link">
+                    <a href="blog-details.html">
+                      <i class="fas fa-arrow-right"></i>
+                      <span>Read More</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="more-btn centred"><a href="blog-grid.html">Load More</a></div>
+      </div>
     </section>
     <!-- news-section end -->
-
 
     <!-- main-footer -->
     <footer class="main-footer alternet-2">
@@ -579,94 +872,113 @@
     </footer>
     <!-- main-footer end -->
 
-
-
     <!--Scroll to top-->
     <button class="scroll-top scroll-to-target" data-target="html">
-        <span class="fa fa-arrow-up"></span>
+      <span class="fa fa-arrow-up"></span>
     </button>
-
 
     <!-- sidebar cart item -->
     <div class="xs-sidebar-group info-group info-sidebar">
-        <div class="xs-overlay xs-bg-black"></div>
-        <div class="xs-sidebar-widget">
-            <div class="sidebar-widget-container">
-                <div class="widget-heading">
-                    <a href="#" class="close-side-widget">X</a>
+      <div class="xs-overlay xs-bg-black"></div>
+      <div class="xs-sidebar-widget">
+        <div class="sidebar-widget-container">
+          <div class="widget-heading">
+            <a href="#" class="close-side-widget">X</a>
+          </div>
+          <div class="sidebar-textwidget">
+            <div class="sidebar-info-contents">
+              <div class="content-inner">
+                <div class="upper-box">
+                  <div class="logo">
+                    <a href="index.html"><img src="assets/cis-images/about/cis-logo.webp" alt="" /></a>
+                  </div>
+                  <div class="text">
+                    <p>
+                      Exercitation ullamco laboris nis aliquip sed conseqrure dolorn repreh deris ptate velit ecepteur
+                      duis.
+                    </p>
+                  </div>
                 </div>
-                <div class="sidebar-textwidget">
-                <div class="sidebar-info-contents">
-                    <div class="content-inner">
-                        <div class="upper-box">
-                            <div class="logo">
-                                <a href="index.html"><img src="assets/cis-images/about/cis-logo.webp" alt="" /></a>
-                            </div>
-                            <div class="text">
-                                <p>Exercitation ullamco laboris nis aliquip sed conseqrure dolorn repreh deris ptate velit ecepteur duis.</p>
-                            </div>
-                        </div>
-                        <div class="side-menu-box">
-                            <div class="side-menu">
-                                <nav class="menu-box">
-                                    <div class="menu-outer">
-                                        
-                                    </div>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="info-box">
-                            <h3>Get in touch</h3>
-                            <ul class="info-list clearfix">
-                                <li><i class="fas fa-map-marker-alt"></i>Airfield Sinkor, Monrovia, Liberia</li>
-                                <li><i class="fas fa-envelope"></i><a href="mailto:c4islib@gmail.com">c4islib@gmail.com</a></li>
-                                <li><i class="fas fa-headphones-alt"></i><a href="tel:101005200369">+1  </a></li>
-                                <li><i class="far fa-clock"></i>Monday to Friday: 9am - 6pm</li>
-                            </ul>
-                            <form action="contact.html" method="post" class="subscribe-form">
-                                <div class="form-group">
-                                    <input type="email" name="email" placeholder="Email address" required="">
-                                    <button type="submit" class="theme-btn style-one">subscribe now</button>
-                                </div>
-                            </form>
-                            <ul class="social-links clearfix">
-                                <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="index.html"><i class="fab fa-linkedin-in"></i></a></li>
-                                <li><a href="index.html"><i class="fab fa-google-plus-g"></i></a></li>
-                                <li><a href="index.html"><i class="fab fa-pinterest-p"></i></a></li>
-                                <li><a href="index.html"><i class="fab fa-instagram"></i></a></li>
-                            </ul>
-                        </div>
+                <div class="side-menu-box">
+                  <div class="side-menu">
+                    <nav class="menu-box">
+                      <div class="menu-outer"></div>
+                    </nav>
+                  </div>
+                </div>
+                <div class="info-box">
+                  <h3>Get in touch</h3>
+                  <ul class="info-list clearfix">
+                    <li>
+                      <i class="fas fa-map-marker-alt"></i>
+                      Airfield Sinkor, Monrovia, Liberia
+                    </li>
+                    <li>
+                      <i class="fas fa-envelope"></i>
+                      <a href="mailto:c4islib@gmail.com">c4islib@gmail.com</a>
+                    </li>
+                    <li>
+                      <i class="fas fa-headphones-alt"></i>
+                      <a href="tel:101005200369">+1</a>
+                    </li>
+                    <li>
+                      <i class="far fa-clock"></i>
+                      Monday to Friday: 9am - 6pm
+                    </li>
+                  </ul>
+                  <form action="contact.html" method="post" class="subscribe-form">
+                    <div class="form-group">
+                      <input type="email" name="email" placeholder="Email address" required="" />
+                      <button type="submit" class="theme-btn style-one">subscribe now</button>
                     </div>
+                  </form>
+                  <ul class="social-links clearfix">
+                    <li>
+                      <a href="index.html"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                      <a href="index.html"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                      <a href="index.html"><i class="fab fa-linkedin-in"></i></a>
+                    </li>
+                    <li>
+                      <a href="index.html"><i class="fab fa-google-plus-g"></i></a>
+                    </li>
+                    <li>
+                      <a href="index.html"><i class="fab fa-pinterest-p"></i></a>
+                    </li>
+                    <li>
+                      <a href="index.html"><i class="fab fa-instagram"></i></a>
+                    </li>
+                  </ul>
                 </div>
-                    
-                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- END sidebar widget item -->
 
+    <!-- jequery plugins -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/validation.js"></script>
+    <script src="assets/js/jquery.fancybox.js"></script>
+    <script src="assets/js/appear.js"></script>
+    <script src="assets/js/jquery.countTo.js"></script>
+    <script src="assets/js/scrollbar.js"></script>
+    <script src="assets/js/nav-tool.js"></script>
+    <script src="assets/js/TweenMax.min.js"></script>
+    <script src="assets/js/circle-progress.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
 
-<!-- jequery plugins -->
-<script src="assets/js/jquery.js"></script>
-<script src="assets/js/popper.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/owl.js"></script>
-<script src="assets/js/wow.js"></script>
-<script src="assets/js/validation.js"></script>
-<script src="assets/js/jquery.fancybox.js"></script>
-<script src="assets/js/appear.js"></script>
-<script src="assets/js/jquery.countTo.js"></script>
-<script src="assets/js/scrollbar.js"></script>
-<script src="assets/js/nav-tool.js"></script>
-<script src="assets/js/TweenMax.min.js"></script>
-<script src="assets/js/circle-progress.js"></script>
-<script src="assets/js/jquery.nice-select.min.js"></script>
-
-<!-- main-js -->
-<script src="assets/js/script.js"></script>
-
-</body><!-- End of .page_wrapper -->
+    <!-- main-js -->
+    <script src="assets/js/script.js"></script>
+  </body>
+  <!-- End of .page_wrapper -->
 </html>
-
