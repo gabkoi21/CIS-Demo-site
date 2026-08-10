@@ -1589,10 +1589,14 @@ div#mCSB_1_container{
 
 .sticky-header .menu-area{
   float: right;
+  margin-left: auto;
 }
 
 .sticky-header .outer-box{
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .sticky-header .main-menu .navigation > li > a:before{
