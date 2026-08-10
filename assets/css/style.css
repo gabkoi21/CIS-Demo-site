@@ -1599,6 +1599,38 @@ div#mCSB_1_container{
   justify-content: space-between;
 }
 
+/* Keep CIS news detail headers aligned with the primary site pages. */
+@media only screen and (min-width: 992px){
+  body.cis-news-detail-page .main-header.style-six .header-lower .outer-box{
+    display: flex;
+    min-height: 120px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  body.cis-news-detail-page .main-header.style-six .header-lower .logo-box{
+    float: none !important;
+    flex: 0 0 auto;
+    height: 120px;
+    padding-top: 0;
+  }
+
+  body.cis-news-detail-page .main-header.style-six .header-lower .menu-area{
+    display: flex;
+    float: none !important;
+    height: 120px;
+    margin-left: auto;
+    align-items: center;
+  }
+
+  body.cis-news-detail-page .main-header.style-six .header-lower .menu-right-content{
+    display: flex;
+    margin-top: 0;
+    margin-left: 28px;
+    align-items: center;
+  }
+}
+
 .sticky-header .main-menu .navigation > li > a:before{
   display: none;
 }
@@ -12979,4 +13011,22 @@ h4 a{
   .impact-stats .impact-stat-grid {
     grid-template-columns: 1fr;
   }
+}
+/* Keep the retired Blog Classic page out of all desktop and mobile navigation copies. */
+nav li:has(> a[href$="blog-classic.html"]),
+.mobile-menu li:has(> a[href$="blog-classic.html"]) {
+  display: none !important;
+}
+
+/* Neutral inner-page header for news article detail pages. */
+body.cis-news-detail-page .page-title::before {
+  display: none;
+}
+
+body.cis-news-detail-page .page-title {
+  background-image:
+    linear-gradient(#0f1214, #0f1214),
+    url("../cis-images/background/page-title.jpg") !important;
+  background-position: center;
+  background-size: cover;
 }

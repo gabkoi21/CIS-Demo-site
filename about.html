@@ -21,7 +21,6 @@
     <link href="assets/css/jquery.fancybox.min.css" rel="stylesheet" />
     <link href="assets/css/animate.css" rel="stylesheet" />
     <link href="assets/css/color.css" rel="stylesheet" />
-    <link href="assets/css/rtl.css" rel="stylesheet" />
     <link href="assets/css/style.css" rel="stylesheet" />
     <link href="assets/css/responsive.css" rel="stylesheet" />
     <style>
@@ -83,6 +82,12 @@
         color: var(--cis-primary) !important;
       }
 
+      body.cis-about-page #image_block_two .image-box .image img {
+        height: 220px;
+        object-fit: cover;
+        object-position: center;
+      }
+
       body.cis-about-page .video-section.about-page-1::before,
       body.cis-about-page .main-footer,
       body.cis-about-page .main-footer .footer-bottom,
@@ -98,11 +103,12 @@
       }
 
       body.cis-about-page .page-title::before {
-        background: var(--cis-secondary);
+        display: none;
       }
 
       body.cis-about-page .page-title {
-        background-image: url("assets/cis-images/blog/news-feature-05.jpg") !important;
+        background-image:
+          linear-gradient(#0f1214, #0f1214), url("assets/cis-images/background/page-title.jpg") !important;
         background-position: center;
         background-size: cover;
       }
@@ -351,11 +357,11 @@
             <div class="top-right pull-right">
               <ul class="social-links clearfix">
                 <li>
-                  <a href="index.html"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.facebook.com/profile.php?id=100089692405632" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
                 </li>
 
                 <li>
-                  <a href="index.html"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="https://www.linkedin.com/company/center-for-integrated-solutions/posts/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
                 </li>
 
                 <li>
@@ -402,8 +408,7 @@
                       <a href="blog-grid.html">Blog</a>
                       <ul>
                         <li><a href="blog-grid.html">Blog Grid</a></li>
-                        <li><a href="blog-classic.html">Blog Classic</a></li>
-                        <li><a href="blog-details.html">Blog Details</a></li>
+                        <!-- <li><a href="blog-details.html">Blog Details</a></li> -->
                       </ul>
                     </li>
                     <li><a href="contact.html">Contact</a></li>
@@ -467,7 +472,7 @@
               <a href="index.html"><span class="fab fa-twitter"></span></a>
             </li>
             <li>
-              <a href="index.html"><span class="fab fa-facebook-square"></span></a>
+              <a href="https://www.facebook.com/profile.php?id=100089692405632" target="_blank" rel="noopener noreferrer"><span class="fab fa-facebook-square"></span></a>
             </li>
             <li>
               <a href="index.html"><span class="fab fa-pinterest-p"></span></a>
@@ -485,7 +490,7 @@
     <!-- End Mobile Menu -->
 
     <!--Page Title-->
-    <section class="page-title centred" style="background-image: url(assets/cis-images/blog/news-feature-05.jpg)">
+    <section class="page-title centred" style="background-image: url(assets/cis-images/background/page-title.jpg)">
       <div class="auto-container">
         <div class="content-box clearfix">
           <h1>About Us</h1>
@@ -602,7 +607,13 @@
             <div id="image_block_two">
               <div class="image-box">
                 <div class="pattern-layer" style="background-image: url(assets/cis-images/shape/shape-25.png)"></div>
-                <figure class="image"><img src="assets/cis-images/about/about-02.jpg" alt="" /></figure>
+                <figure class="image">
+                  <img
+                    src="assets/cis-images/about/about-02.jpg"
+                    alt=""
+                    style="height: 220px; object-fit: cover; object-position: center"
+                  />
+                </figure>
               </div>
             </div>
           </div>
@@ -770,7 +781,7 @@
                   <span class="designation">President &amp; CEO | MPH, MPA</span>
                   <ul class="social-links clearfix">
                     <li>
-                      <a href="how-we-work.html"><i class="fab fa-facebook-f"></i></a>
+                      <a href="https://www.facebook.com/profile.php?id=100089692405632" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
                     </li>
                     <li>
                       <a href="how-we-work.html"><i class="fab fa-twitter"></i></a>
@@ -779,7 +790,7 @@
                       <a href="how-we-work.html"><i class="fab fa-instagram"></i></a>
                     </li>
                     <li>
-                      <a href="how-we-work.html"><i class="fab fa-linkedin-in"></i></a>
+                      <a href="https://www.linkedin.com/company/center-for-integrated-solutions/posts/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
                     </li>
                   </ul>
                 </div>
@@ -799,7 +810,7 @@
                   <span class="designation">Chief Strategy Officer | M.Ed</span>
                   <ul class="social-links clearfix">
                     <li>
-                      <a href="how-we-work.html"><i class="fab fa-facebook-f"></i></a>
+                      <a href="https://www.facebook.com/profile.php?id=100089692405632" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
                     </li>
                     <li>
                       <a href="how-we-work.html"><i class="fab fa-twitter"></i></a>
@@ -808,7 +819,7 @@
                       <a href="how-we-work.html"><i class="fab fa-instagram"></i></a>
                     </li>
                     <li>
-                      <a href="how-we-work.html"><i class="fab fa-linkedin-in"></i></a>
+                      <a href="https://www.linkedin.com/company/center-for-integrated-solutions/posts/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
                     </li>
                   </ul>
                 </div>
@@ -829,7 +840,7 @@
                   <span class="designation">Senior Program Manager | B.Sc., MPH, Ph.D.</span>
                   <ul class="social-links clearfix">
                     <li>
-                      <a href="how-we-work.html"><i class="fab fa-facebook-f"></i></a>
+                      <a href="https://www.facebook.com/profile.php?id=100089692405632" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
                     </li>
                     <li>
                       <a href="how-we-work.html"><i class="fab fa-twitter"></i></a>
@@ -838,7 +849,7 @@
                       <a href="how-we-work.html"><i class="fab fa-instagram"></i></a>
                     </li>
                     <li>
-                      <a href="how-we-work.html"><i class="fab fa-linkedin-in"></i></a>
+                      <a href="https://www.linkedin.com/company/center-for-integrated-solutions/posts/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
                     </li>
                   </ul>
                 </div>
@@ -859,7 +870,7 @@
                   <span class="designation">Sr. Technical Lead - Innovation, Science & Technology | Ph.D.</span>
                   <ul class="social-links clearfix">
                     <li>
-                      <a href="how-we-work.html"><i class="fab fa-facebook-f"></i></a>
+                      <a href="https://www.facebook.com/profile.php?id=100089692405632" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
                     </li>
                     <li>
                       <a href="how-we-work.html"><i class="fab fa-twitter"></i></a>
@@ -868,7 +879,7 @@
                       <a href="how-we-work.html"><i class="fab fa-instagram"></i></a>
                     </li>
                     <li>
-                      <a href="how-we-work.html"><i class="fab fa-linkedin-in"></i></a>
+                      <a href="https://www.linkedin.com/company/center-for-integrated-solutions/posts/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
                     </li>
                   </ul>
                 </div>
@@ -888,7 +899,7 @@
                   <span class="designation">Technical Lead - Education Leadership | MPA</span>
                   <ul class="social-links clearfix">
                     <li>
-                      <a href="how-we-work.html"><i class="fab fa-facebook-f"></i></a>
+                      <a href="https://www.facebook.com/profile.php?id=100089692405632" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
                     </li>
                     <li>
                       <a href="how-we-work.html"><i class="fab fa-twitter"></i></a>
@@ -897,7 +908,7 @@
                       <a href="how-we-work.html"><i class="fab fa-instagram"></i></a>
                     </li>
                     <li>
-                      <a href="how-we-work.html"><i class="fab fa-linkedin-in"></i></a>
+                      <a href="https://www.linkedin.com/company/center-for-integrated-solutions/posts/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
                     </li>
                   </ul>
                 </div>
@@ -917,7 +928,7 @@
                   <span class="designation">Technical Advisor - Health Systems | MD (candidate)</span>
                   <ul class="social-links clearfix">
                     <li>
-                      <a href="how-we-work.html"><i class="fab fa-facebook-f"></i></a>
+                      <a href="https://www.facebook.com/profile.php?id=100089692405632" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
                     </li>
                     <li>
                       <a href="how-we-work.html"><i class="fab fa-twitter"></i></a>
@@ -926,7 +937,7 @@
                       <a href="how-we-work.html"><i class="fab fa-instagram"></i></a>
                     </li>
                     <li>
-                      <a href="how-we-work.html"><i class="fab fa-linkedin-in"></i></a>
+                      <a href="https://www.linkedin.com/company/center-for-integrated-solutions/posts/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
                     </li>
                   </ul>
                 </div>
@@ -947,7 +958,7 @@
                   <span class="designation">Technical Advisor - WASH | M.Sc</span>
                   <ul class="social-links clearfix">
                     <li>
-                      <a href="how-we-work.html"><i class="fab fa-facebook-f"></i></a>
+                      <a href="https://www.facebook.com/profile.php?id=100089692405632" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
                     </li>
                     <li>
                       <a href="how-we-work.html"><i class="fab fa-twitter"></i></a>
@@ -956,7 +967,7 @@
                       <a href="how-we-work.html"><i class="fab fa-instagram"></i></a>
                     </li>
                     <li>
-                      <a href="how-we-work.html"><i class="fab fa-linkedin-in"></i></a>
+                      <a href="https://www.linkedin.com/company/center-for-integrated-solutions/posts/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
                     </li>
                   </ul>
                 </div>
@@ -981,7 +992,7 @@
                   </span>
                   <ul class="social-links clearfix">
                     <li>
-                      <a href="how-we-work.html"><i class="fab fa-facebook-f"></i></a>
+                      <a href="https://www.facebook.com/profile.php?id=100089692405632" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
                     </li>
                     <li>
                       <a href="how-we-work.html"><i class="fab fa-twitter"></i></a>
@@ -990,7 +1001,7 @@
                       <a href="how-we-work.html"><i class="fab fa-instagram"></i></a>
                     </li>
                     <li>
-                      <a href="how-we-work.html"><i class="fab fa-linkedin-in"></i></a>
+                      <a href="https://www.linkedin.com/company/center-for-integrated-solutions/posts/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
                     </li>
                   </ul>
                 </div>
@@ -1189,13 +1200,13 @@
                   </ul>
                   <ul class="social-links clearfix">
                     <li>
-                      <a href="index.html"><i class="fab fa-facebook-f"></i></a>
+                      <a href="https://www.facebook.com/profile.php?id=100089692405632" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
                     </li>
                     <li>
                       <a href="index.html"><i class="fab fa-instagram"></i></a>
                     </li>
                     <li>
-                      <a href="index.html"><i class="fab fa-linkedin-in"></i></a>
+                      <a href="https://www.linkedin.com/company/center-for-integrated-solutions/posts/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
                     </li>
                     <li>
                       <!-- <a href="index.html"><i class="fab fa-pinterest-p"></i></a> -->
@@ -1348,10 +1359,10 @@
                       <a href="index.html"><i class="fab fa-twitter"></i></a>
                     </li>
                     <li>
-                      <a href="index.html"><i class="fab fa-facebook-f"></i></a>
+                      <a href="https://www.facebook.com/profile.php?id=100089692405632" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
                     </li>
                     <li>
-                      <a href="index.html"><i class="fab fa-linkedin-in"></i></a>
+                      <a href="https://www.linkedin.com/company/center-for-integrated-solutions/posts/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
                     </li>
                     <li>
                       <a href="index.html"><i class="fab fa-google-plus-g"></i></a>
