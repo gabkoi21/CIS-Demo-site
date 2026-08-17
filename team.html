@@ -25,6 +25,30 @@
     <link href="assets/css/responsive.css" rel="stylesheet" />
     <style>
       /* Match the About page's desktop header alignment. */
+      /* Reveal CIS green behind team portraits on hover. */
+      body.cis-team-page .team-block-one .inner-box .image-box {
+        background: #4db19e;
+      }
+
+      /* Give long job titles, such as Dr. Dorley's, clear space below the name. */
+      body.cis-team-page .team-block-one .inner-box .lower-content .designation {
+        margin-top: 8px;
+      }
+
+      /* Leave room for taller hover panels and keep their social links visible. */
+      body.cis-team-page .expert-team-grid {
+        column-gap: 30px;
+        row-gap: 90px;
+      }
+
+      body.cis-team-page .team-block-one .inner-box:hover {
+        z-index: 2;
+      }
+
+      body.cis-team-page .team-block-one .inner-box .lower-content .ovellay-box {
+        z-index: 3;
+      }
+
       @media only screen and (min-width: 992px) {
         body.cis-team-page .main-header.style-six .header-lower .outer-box {
           display: flex;
@@ -559,15 +583,19 @@
 
           <div class="team-block-one">
             <div class="inner-box">
-              <figure class="image-box"><img src="assets/cis-images/avatar/team-member-0015.jpg" alt="" /></figure>
+              <figure class="image-box"><img src="assets/cis-images/avatar/team-member-011.jpg" alt="" /></figure>
               <div class="lower-content">
                 <div class="content-box">
-                  <h3><a href="team.html#">Winston Smith</a></h3>
-                  <span class="designation">Technical Advisor - WASH | M.Sc</span>
+                  <h3><a href="team.html#">Shadrach Wolo</a></h3>
+                  <span class="designation">
+                    Technical Advisor - Economic & Human Capital Development | MBA, Ph.D (candidate)
+                  </span>
                 </div>
                 <div class="ovellay-box">
-                  <h3><a href="team.html#">Winston Smith</a></h3>
-                  <span class="designation">Technical Advisor - WASH | M.Sc</span>
+                  <h3><a href="team.html#">Shadrach Wolo</a></h3>
+                  <span class="designation">
+                    Technical Advisor - Economic & Human Capital Development | MBA, Ph.D (candidate)
+                  </span>
                   <ul class="social-links clearfix">
                     <li>
                       <a
@@ -598,22 +626,17 @@
               </div>
             </div>
           </div>
-
           <div class="team-block-one">
             <div class="inner-box">
-              <figure class="image-box"><img src="assets/cis-images/avatar/team-member-011.jpg" alt="" /></figure>
+              <figure class="image-box"><img src="assets/cis-images/avatar/team-member-0015.jpg" alt="" /></figure>
               <div class="lower-content">
                 <div class="content-box">
-                  <h3><a href="team.html#">Shadrach Wolo</a></h3>
-                  <span class="designation">
-                    Technical Advisor - Economic & Human Capital Development | MBA, Ph.D (candidate)
-                  </span>
+                  <h3><a href="team.html#">Winston Smith</a></h3>
+                  <span class="designation">Technical Advisor - WASH | M.Sc</span>
                 </div>
                 <div class="ovellay-box">
-                  <h3><a href="team.html#">Shadrach Wolo</a></h3>
-                  <span class="designation">
-                    Technical Advisor - Economic & Human Capital Development | MBA, Ph.D (candidate)
-                  </span>
+                  <h3><a href="team.html#">Winston Smith</a></h3>
+                  <span class="designation">Technical Advisor - WASH | M.Sc</span>
                   <ul class="social-links clearfix">
                     <li>
                       <a
@@ -914,11 +937,11 @@
 
           <div class="team-block-one">
             <div class="inner-box">
-              <figure class="image-box"><img src="assets/cis-images/avatar/team-member-0015.jpg" alt="" /></figure>
+              <figure class="image-box"><img src="assets/cis-images/avatar/team-member-0020.jpg" alt="" /></figure>
               <div class="lower-content">
                 <div class="content-box">
-                  <h3><a href="team.html#">Winston Smith</a></h3>
-                  <span class="designation">Technical Advisor - WASH | M.Sc</span>
+                  <h3><a href="team.html#">Stevina R.A.N George</a></h3>
+                  <span class="designation">Technical Program Officer | B.Sc</span>
                 </div>
                 <div class="ovellay-box">
                   <h3><a href="team.html#">Winston Smith</a></h3>
@@ -956,13 +979,11 @@
 
           <div class="team-block-one">
             <div class="inner-box">
-              <figure class="image-box"><img src="assets/cis-images/avatar/team-member-011.jpg" alt="" /></figure>
+              <figure class="image-box"><img src="assets/cis-images/avatar/team-member-0022.png" alt="" /></figure>
               <div class="lower-content">
                 <div class="content-box">
-                  <h3><a href="team.html#">Shadrach Wolo</a></h3>
-                  <span class="designation">
-                    Technical Advisor - Economic & Human Capital Development | MBA, Ph.D (candidate)
-                  </span>
+                  <h3><a href="team.html#">Gabriel Akoi</a></h3>
+                  <span class="designation">Technical Support Assistant Intern | B.Sc. Candidate</span>
                 </div>
                 <div class="ovellay-box">
                   <h3><a href="team.html#">Shadrach Wolo</a></h3>
@@ -1255,6 +1276,49 @@
     <script src="assets/js/TweenMax.min.js"></script>
     <script src="assets/js/circle-progress.js"></script>
     <script src="assets/js/jquery.nice-select.min.js"></script>
+
+    <script>
+      // Verified individual LinkedIn profiles from c4islib.org/team.html.
+      (function () {
+        const linkedInProfiles = {
+          "Varlee A. Sannor": "https://www.linkedin.com/in/varleesannor/",
+          "Asmaa Ahmed": "https://www.linkedin.com/in/asmaa-ahmed-m-ed-2709a912a/",
+          "Dr. Zuleka R. Woods": "https://www.linkedin.com/in/zulekaw/",
+          "Dr. Emmanuel Dorley": "https://www.linkedin.com/in/johnsonemmanuel/",
+          "Alplato Chukpue-Padmore": "https://www.linkedin.com/in/alplato-chukpue-padmore-mpa-csm-76b792b9/",
+          "Dr. Deddeh Supuwood": "https://www.linkedin.com/in/deddeh-supuwood-a1305b107/",
+          "Shadrach Wolo": "https://www.linkedin.com/in/shadrach-toteh-wolo-8562715b/",
+          "Stevina R.A.N George": "https://www.linkedin.com/in/stevina-george-4038322a0/"
+        };
+
+        document.querySelectorAll(".team-block-one .inner-box").forEach(function (card) {
+          card.querySelectorAll(".social-links li").forEach(function (socialItem) {
+            if (!socialItem.querySelector(".fa-linkedin-in")) {
+              socialItem.remove();
+            }
+          });
+
+          const nameLink = card.querySelector(".content-box h3 a");
+          const profileUrl = nameLink && linkedInProfiles[nameLink.textContent.trim()];
+          const linkedInLink = card.querySelector(".fa-linkedin-in")?.closest("a");
+
+          if (profileUrl) {
+            nameLink.href = profileUrl;
+            nameLink.target = "_blank";
+            nameLink.rel = "noopener noreferrer";
+            if (linkedInLink) {
+              linkedInLink.href = profileUrl;
+              linkedInLink.target = "_blank";
+              linkedInLink.rel = "noopener noreferrer";
+            }
+          } else if (linkedInLink) {
+            linkedInLink.href = "https://www.linkedin.com/company/center-for-integrated-solutions/posts/";
+            linkedInLink.target = "_blank";
+            linkedInLink.rel = "noopener noreferrer";
+          }
+        });
+      })();
+    </script>
 
     <!-- main-js -->
     <script src="assets/js/script.js"></script>
